@@ -1,14 +1,14 @@
-import express from 'express';
+import express, { Router } from 'express';
 import * as bodyParser from 'body-parser';
 import { Server } from 'http';
 
 import errorMiddleware from '@/middleware/error.middleware';
 import loggerMiddleware from '@/middleware/logger.middleware';
-import UserController from '@/user/user.controller';
+import user from '@/user/user.controller';
 import * as env from '@/env';
 import { logger } from '@/logger';
 
-class App {
+export default class App {
   private app: express.Application;
   private server: Server;
 
@@ -44,12 +44,7 @@ class App {
   }
 
   private initializeControllers() {
-    const controllers = [];
-    controllers.push(new UserController());
-    controllers.forEach((controller) => {
-      this.app.use('/', controller.router);
-    });
+    const routes = Router().use('/user', user);
+    this.app.use('/', routes);
   }
 }
-
-export default App;

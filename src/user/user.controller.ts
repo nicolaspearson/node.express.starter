@@ -2,56 +2,55 @@ import * as express from 'express';
 
 import LoginUserDto from '@/common/dto/user.login.dto';
 import RegisterUserDto from '@/common/dto/user.register.dto';
-import Controller from '@/common/interfaces/controller.interface';
-import UserRepository from '@/db/repositories/user.repository';
 import validationMiddleware from '@/middleware/validation.middleware';
-import UserService from '@/user/user.service';
+import { login, register } from '@/user/user.service';
 
-export default class UserController implements Controller {
-  public path = '/user';
-  public router = express.Router();
-  public userService = new UserService(new UserRepository());
-
-  constructor() {
-    this.initializeRoutes();
+/**
+ * POST /user/login
+ *
+ * @param req The http request.
+ * @param res The http response.
+ */
+async function postLogin(req: express.Request, res: express.Response, next: express.NextFunction) {
+  try {
+    const loginUserDto: LoginUserDto = req.body;
+    const { cookie, user } = await login(loginUserDto);
+    res.status(200).json(user).setHeader('Set-Cookie', [cookie]);
+  } catch (error) {
+    next(error);
   }
-
-  private initializeRoutes() {
-    this.router.post(
-      `${this.path}/register`,
-      validationMiddleware(RegisterUserDto),
-      this.registration
-    );
-    this.router.post(`${this.path}/login`, validationMiddleware(LoginUserDto), this.login);
-  }
-
-  private registration = async (
-    request: express.Request,
-    response: express.Response,
-    next: express.NextFunction
-  ) => {
-    const userData: RegisterUserDto = request.body;
-    try {
-      const { cookie, user } = await this.userService.register(userData);
-      response.setHeader('Set-Cookie', [cookie]);
-      response.send(user);
-    } catch (error) {
-      next(error);
-    }
-  };
-
-  private login = async (
-    request: express.Request,
-    response: express.Response,
-    next: express.NextFunction
-  ) => {
-    const userData: LoginUserDto = request.body;
-    try {
-      const { cookie, user } = await this.userService.login(userData);
-      response.setHeader('Set-Cookie', [cookie]);
-      response.send(user);
-    } catch (error) {
-      next(error);
-    }
-  };
 }
+
+/**
+ * POST /user/register
+ *
+ * @param req The http request.
+ * @param res The http response.
+ */
+async function postRegister(
+  req: express.Request,
+  res: express.Response,
+  next: express.NextFunction
+) {
+  try {
+    const registerUserDto: RegisterUserDto = req.body;
+    const { cookie, user } = await register(registerUserDto);
+    res.status(201).json(user).setHeader('Set-Cookie', [cookie]);
+  } catch (error) {
+    next(error);
+  }
+}
+
+/** The /user routes. */
+export default express
+  .Router()
+  .post(
+    '/login',
+    validationMiddleware(LoginUserDto, 'Invalid email address or password.'),
+    postLogin
+  )
+  .post(
+    '/register',
+    validationMiddleware(RegisterUserDto, 'User registration failed.'),
+    postRegister
+  );

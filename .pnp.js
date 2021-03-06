@@ -54,6 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["body-parser", "npm:1.19.0"],
             ["boom", "npm:7.3.0"],
             ["class-transformer", "npm:0.4.0"],
+            ["class-transformer-validator", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.9.1"],
             ["class-validator", "npm:0.13.1"],
             ["commitlint", "npm:12.0.1"],
             ["concurrently", "npm:6.0.0"],
@@ -3286,6 +3287,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/class-transformer-npm-0.4.0-7e25d375bc-915db33779.zip/node_modules/class-transformer/",
           "packageDependencies": [
             ["class-transformer", "npm:0.4.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["class-transformer-validator", [
+        ["npm:0.9.1", {
+          "packageLocation": "./.yarn/cache/class-transformer-validator-npm-0.9.1-7975459b24-fd91690d8a.zip/node_modules/class-transformer-validator/",
+          "packageDependencies": [
+            ["class-transformer-validator", "npm:0.9.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.9.1", {
+          "packageLocation": "./.yarn/$$virtual/class-transformer-validator-virtual-b4a7553a0d/0/cache/class-transformer-validator-npm-0.9.1-7975459b24-fd91690d8a.zip/node_modules/class-transformer-validator/",
+          "packageDependencies": [
+            ["class-transformer-validator", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.9.1"],
+            ["@types/class-transformer", null],
+            ["@types/class-validator", null],
+            ["class-transformer", "npm:0.4.0"],
+            ["class-validator", "npm:0.13.1"]
+          ],
+          "packagePeers": [
+            "@types/class-transformer",
+            "@types/class-validator",
+            "class-transformer",
+            "class-validator"
           ],
           "linkType": "HARD",
         }]
@@ -8425,6 +8452,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["body-parser", "npm:1.19.0"],
             ["boom", "npm:7.3.0"],
             ["class-transformer", "npm:0.4.0"],
+            ["class-transformer-validator", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.9.1"],
             ["class-validator", "npm:0.13.1"],
             ["commitlint", "npm:12.0.1"],
             ["concurrently", "npm:6.0.0"],

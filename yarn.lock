@@ -2656,6 +2656,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-transformer-validator@npm:~0.9.1":
+  version: 0.9.1
+  resolution: "class-transformer-validator@npm:0.9.1"
+  peerDependencies:
+    class-transformer: ">=0.2.3"
+    class-validator: ">=0.12.0"
+  checksum: fd91690d8afc1333e220ca1665c4451a08014e6e423cb8b3f09ef820a0b4c6c71adf67cefce689827b64de413f69b3252331f82c0d08e47cc7551c5fde26be38
+  languageName: node
+  linkType: hard
+
 "class-transformer@npm:~0.4.0":
   version: 0.4.0
   resolution: "class-transformer@npm:0.4.0"
@@ -7207,6 +7217,7 @@ __metadata:
     body-parser: ~1.19.0
     boom: ~7.3.0
     class-transformer: ~0.4.0
+    class-transformer-validator: ~0.9.1
     class-validator: ~0.13.1
     commitlint: ~12.0.1
     concurrently: ~6.0.0

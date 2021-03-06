@@ -1,0 +1,16 @@
+@baseUrl = http://localhost:3000
+@token = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImRldi5taW5kZG9jLmNvbSJ9.eyJjb21tdW5pdHkiOiJsaXZlIiwiZmlhdCI6MTYwMDI0Nzk4NiwiZ3JvdXAiOiJhZG1pbiIsImxlZ2FsVGVybXMiOnsiZ21iaCI6dHJ1ZSwibXZ6Ijp0cnVlfSwicGxhdGZvcm0iOiJ3ZWIiLCJyb2xlcyI6WyJzdXBlciJdLCJ1dWlkIjoiYWJjYTM5MjgtMWZlOS0xMWU4LWEyOTYtMDI0MmFjMTEwMTIzIiwiaWF0IjoxNjAwMjQ3OTg2LCJleHAiOjE2MDAzMzQzODYsImlzcyI6ImRldmVsb3BtZW50QG1pbmRkb2MuY29tIiwianRpIjoiNTg2ODA2ZGYtOWMxNC00MmFmLTgxZGMtZmQwYWNlMjZiNGY0In0.KNzMqZXcngUyWE211ZCZvB6u3Q4_5z4LlcKZaQRZN9si6OhOL7DKuqRRj4_l5DwqTEQAp5Ci92MhoiCYjD_o9Gx0TpSqO5vWV4FA0duT9_rSIpxavaALVLq2p3AYy5OCHr7nuzHdOS_Q9mWIpmftjts-H4D16c8i3pf6cdRBypS0H8VtWKLDI6NGlrzRt-gEv5bhHW246nYZsnaMX3_gvn6FltKsA-9_PhvmTebt4D67V_1psDmCiVB0uuoaQcpD527B2RVgMUzlR0rvLyOeeqQ-iACJAvxgawrmtGGxP9ZjxG9CyYCwi8r8LNHXUsbGPsowfimH9Q5PHNAu7macxw
+
+########################################################################
+###########                       USER                       ###########
+########################################################################
+
+### Login
+POST {{baseUrl}}/user/login HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "emailAddress": "test@example.com",
+  "password": "secret"
+}
