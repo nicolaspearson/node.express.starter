@@ -1,44 +1,31 @@
 {
-	"compilerOptions": {
-		"moduleResolution": "node",
-		"target": "es2017",
-		"module": "commonjs",
-		"outDir": "dist",
-		"rootDir": ".",
-		"baseUrl": "src",
-		"paths": {
-			"@app": ["app"],
-			"@controllers/*": ["controllers/*"],
-			"@db/*": ["db/*"],
-			"@dto/*": ["dto/*"],
-			"@entities/*": ["entities/*"],
-			"@env": ["env/index"],
-			"@interfaces/*": ["interfaces/*"],
-			"@logger": ["logger/index"],
-			"@middleware/*": ["middleware/*"],
-			"@repositories/*": ["repositories/*"],
-			"@services/*": ["services/*"],
-			"@utils/*": ["utils/*"]
-		},
-		"noEmitOnError": true,
-		"strictNullChecks": true,
-		"esModuleInterop": true,
-		"removeComments": true /* Do not emit comments to output. */,
-		"strict": true /* Enable all strict type-checking options. */,
-		"noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
-		"inlineSourceMap": true /* Emit a single file with source maps instead of having a separate file. */,
-		"inlineSources": true /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */,
-		"noUnusedLocals": true,
-		"pretty": true,
-		"typeRoots": [
-			"node_modules/@types",
-			"src/types/**/*"
-		] /* List of folders to include type definitions from. */,
-		"experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
-		"emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
-		"allowJs": true,
-		"strictPropertyInitialization": false /* This flag performs checks to ensure that each instance property of a class gets initialized in the constructor body, or by a property initializer. */
-	},
-	"include": ["src/**/*"],
-	"exclude": ["node_modules", "scripts", "test", "**/*.js"]
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "esnext",
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "#/*": ["test/*"]
+    },
+    "noEmitOnError": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "removeComments": true /* Do not emit comments to output. */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
+    "inlineSourceMap": true /* Emit a single file with source maps instead of having a separate file. */,
+    "inlineSources": true /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */,
+    "noUnusedLocals": true,
+    "pretty": true,
+    "typeRoots": ["src/types/**/*"] /* List of folders to include type definitions from. */,
+    "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+    "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
+    "allowJs": true,
+    "strictPropertyInitialization": false /* This flag performs checks to ensure that each instance property of a class gets initialized in the constructor body, or by a property initializer. */
+  },
+  "include": ["src", "test"],
+  "exclude": ["dist", "**/*.js"]
 }

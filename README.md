@@ -13,21 +13,20 @@ git clone https://github.com/nicolaspearson/node.express.starter.git
 **2. Start the database**
 
 ```bash
-cd docker
-docker-compose  up
+yarn db:start
 ```
 
 **3. Build and run the app**
 
-#### Run the app in development mode:
+### Run the app in development mode:
 
 ```bash
-yarn start
+yarn start:dev
 ```
 
 The app will start running at <http://localhost:3000>
 
-#### Run the app in release mode:
+### Run the app in release mode:
 
 ```bash
 yarn global add http-server
@@ -40,7 +39,7 @@ The app will start running at <http://localhost:3000>
 ## Migrations
 
 ```
-npm run typeorm:cli -- migration:create -n Initial
+yarn run typeorm:cli migration:generate -n InitialSchema
 ```
 
 ## Contribution Guidelines

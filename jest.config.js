@@ -19,18 +19,8 @@ module.exports = {
 
   // Map aliases
   moduleNameMapper: {
-    '^@app(.*)$': '<rootDir>/src/app$1',
-    '^@controllers(.*)$': '<rootDir>/src/controllers$1',
-    '^@db(.*)$': '<rootDir>/src/db$1',
-    '^@dto(.*)$': '<rootDir>/src/dto$1',
-    '^@entities(.*)$': '<rootDir>/src/entities$1',
-    '^@env(.*)$': '<rootDir>/src/env$1',
-    '^@interfaces(.*)$': '<rootDir>/src/interfaces$1',
-    '^@logger(.*)$': '<rootDir>/src/logger$1',
-    '^@middleware(.*)$': '<rootDir>/src/middleware$1',
-    '^@repositories(.*)$': '<rootDir>/src/repositories$1',
-    '^@services(.*)$': '<rootDir>/src/services$1',
-    '^@utils(.*)$': '<rootDir>/src/utils$1',
+    '^@(.*)$': '<rootDir>/src/$1',
+    '^#(.*)$': '<rootDir>/test/$1',
   },
 
   // The root directories
@@ -43,13 +33,7 @@ module.exports = {
   testEnvironment: 'node',
 
   // The glob patterns Jest uses to detect test files
-  testMatch: ['**/__tests__/**/*.ts?(x)', '**/?(*.)+(spec|test).ts?(x)'],
-
-  // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: ['\\\\node_modules\\\\'],
-
-  // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  testMatch: ['**/__tests__/**/*.ts', '**/?(*.)+(spec|test).ts'],
 
   transform: {
     '^.+\\.ts?$': 'ts-jest',
