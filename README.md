@@ -38,8 +38,10 @@ The app will start running at <http://localhost:3000>
 
 ## Migrations
 
-```
-yarn run typeorm:cli migration:generate -n InitialSchema
+To generate missing migrations:
+
+```bash
+yarn db:migration:generate:missing InitialSchema
 ```
 
 ## Contribution Guidelines
