@@ -1,11 +1,11 @@
 import * as express from 'express';
 
-import LoginUserDto from '@/dto/user.login.dto';
-import RegisterUserDto from '@/dto/user.register.dto';
-import Controller from '@/interfaces/controller.interface';
+import LoginUserDto from '@/common/dto/user.login.dto';
+import RegisterUserDto from '@/common/dto/user.register.dto';
+import Controller from '@/common/interfaces/controller.interface';
+import UserRepository from '@/db/repositories/user.repository';
 import validationMiddleware from '@/middleware/validation.middleware';
-import UserRepository from '@/repositories/user.repository';
-import UserService from '@/services/user.service';
+import UserService from '@/user/user.service';
 
 export default class UserController implements Controller {
   public path = '/user';

@@ -1,7 +1,7 @@
 import Boom from 'boom';
 import { NextFunction, Request, Response } from 'express';
 
-import HttpException from '@/interfaces/http-exception.interface';
+import HttpException from '@/common/interfaces/http-exception.interface';
 
 function errorMiddleware(
   error: HttpException,

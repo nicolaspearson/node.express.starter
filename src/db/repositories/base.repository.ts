@@ -9,7 +9,7 @@ import {
   getRepository,
 } from 'typeorm';
 
-import TypeOrmRepository from '@/repositories/type-orm.repository';
+import TypeOrmRepository from '@/db/repositories/type-orm.repository';
 
 // The functions in this class are wrapped to throw consistent errors
 export default abstract class BaseRepository<T> extends TypeOrmRepository<T> {

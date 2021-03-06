@@ -2,9 +2,9 @@ import express from 'express';
 import * as bodyParser from 'body-parser';
 import { Server } from 'http';
 
-import UserController from '@/controllers/user.controller';
 import errorMiddleware from '@/middleware/error.middleware';
 import loggerMiddleware from '@/middleware/logger.middleware';
+import UserController from '@/user/user.controller';
 import * as env from '@/env';
 import { logger } from '@/logger';
 

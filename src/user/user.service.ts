@@ -1,14 +1,14 @@
 import Boom from 'boom';
 import * as bcrypt from 'bcrypt';
 
-import LoginUserDto from '@/dto/user.login.dto';
-import RegisterUserDto from '@/dto/user.register.dto';
-import User from '@/entities/user.entity';
-import CookieUser from '@/interfaces/cookie-user';
-import Token from '@/interfaces/token';
-import TokenContents from '@/interfaces/token-contents.interface';
-import TokenData from '@/interfaces/token-data.interface';
-import UserRepository from '@/repositories/user.repository';
+import LoginUserDto from '@/common/dto/user.login.dto';
+import RegisterUserDto from '@/common/dto/user.register.dto';
+import CookieUser from '@/common/interfaces/cookie-user';
+import Token from '@/common/interfaces/token';
+import TokenContents from '@/common/interfaces/token-contents.interface';
+import TokenData from '@/common/interfaces/token-data.interface';
+import User from '@/db/entities/user.entity';
+import UserRepository from '@/db/repositories/user.repository';
 import BaseService from '@/services/base.service';
 
 export default class UserService extends BaseService<User> {

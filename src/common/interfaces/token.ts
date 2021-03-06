@@ -1,6 +1,6 @@
 import * as jwt from 'jsonwebtoken';
 
-import TokenContents from '@/interfaces/token-contents.interface';
+import TokenContents from '@/common/interfaces/token-contents.interface';
 import * as env from '@/env';
 
 export default class Token {

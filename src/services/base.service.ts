@@ -2,7 +2,7 @@ import Boom from 'boom';
 import { ValidationError, validate } from 'class-validator';
 import { DeepPartial, DeleteResult, FindManyOptions, FindOneOptions } from 'typeorm';
 
-import BaseRepository from '@/repositories/base.repository';
+import BaseRepository from '@/db/repositories/base.repository';
 
 export default abstract class BaseService<T extends DeepPartial<T>> {
   constructor(private repository: BaseRepository<T>) {
