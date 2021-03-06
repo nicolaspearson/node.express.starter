@@ -27,7 +27,7 @@
     "start:debug": "nodemon --inspect=5858 dist/index.js",
     "start:dev": "run build && run watch",
     "start": "nodemon dist/index.js --delay 3",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:coverage": "yarn test -- --coverage",
     "test:badges": "run test:coverage && jest-coverage-badges",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"run watch:ts\" \"run start\"",
