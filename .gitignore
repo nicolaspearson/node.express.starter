@@ -1,0 +1,23 @@
+# Generated files
+coverage/
+dist/
+
+# Env files
+.env
+
+# Log files
+logs/*.log
+
+# OS Files
+.DS_Store
+
+# Database files
+/docker/db/data
+
+# Yarn files
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
