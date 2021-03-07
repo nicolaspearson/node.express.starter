@@ -13,8 +13,10 @@ jobs:
       - name: set release version
         id: vars
         run: echo ::set-output name=tag::$(echo ${{ github.event.release.tag_name }} | cut -d "v" -f 2)
-      - name: set up qemu
-        uses: docker/setup-qemu-action@v1
+      - name: yarn install, and build
+        run: |
+          yarn install
+          yarn build
       - name: set up docker buildx
         uses: docker/setup-buildx-action@v1
       - name: login to dockerhub
