@@ -1,4 +1,4 @@
-# Node + Express
+# node.express.starter
 
 A simple Node.js API, written using Typescript, and Express.
 

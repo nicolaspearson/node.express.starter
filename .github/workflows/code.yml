@@ -72,3 +72,24 @@ jobs:
       DB_PORT: 5432
       DB_DATABASE: express
       DB_SCHEMA: public
+  release:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    needs:
+      - build
+      - test_unit
+      - test_integration
+    steps:
+      - uses: actions/checkout@v2
+      - name: clean old release drafts
+        run: hub release -f "%T (%S) %n" --include-drafts | grep " (draft)" | awk '{print $1}' | xargs --no-run-if-empty -t -n1 hub release delete
+        env:
+          GITHUB_USER: nicolaspearson
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: create release
+        uses: minddocdev/mou-release-action@master
+        with:
+          draft: true
+          prerelease: false
+          templatePath: RELEASE_DRAFT/default.md
+          token: ${{ secrets.GITHUB_TOKEN }}
