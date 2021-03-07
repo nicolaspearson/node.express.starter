@@ -38,3 +38,37 @@ jobs:
         run: yarn install
       - name: yarn test:unit
         run: yarn test:unit
+  test_integration:
+    name: test integration
+    runs-on: ubuntu-latest
+    container: minddocdev/node-alpine-ci:latest
+    needs:
+      - build
+    strategy:
+      matrix:
+        node-version: [15]
+    steps:
+      - uses: actions/checkout@v2
+      - name: using node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: yarn install
+        run: yarn install
+      - name: yarn test:integration:ci
+        run: yarn test:integration:ci
+    services:
+      postgres:
+        image: postgres:13-alpine
+        env:
+          POSTGRES_DB: express
+          POSTGRES_PASSWORD: masterkey
+          POSTGRES_USER: master
+        ports:
+          - 5432:5432
+        options: " --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10 "
+    env:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_DATABASE: express
+      DB_SCHEMA: public
