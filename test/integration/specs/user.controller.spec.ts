@@ -32,11 +32,13 @@ describe('User Controller', () => {
   });
 
   describe(`POST ${baseUrl}/register`, () => {
-    describe('if the email address is not in use', () => {
+    describe('if the user does not exist', () => {
       test('response should have the Set-Cookie header with the Authorization token', async () => {
-        const response = await testApp.post(`${baseUrl}/register`).send(userRegisterDto);
-        expect(response.status).toEqual(201);
-        // .expect('Set-Cookie', /^Authorization=.+/);
+        const response = await testApp
+          .post(`${baseUrl}/register`)
+          .send(userRegisterDto)
+          .expect(201)
+          .expect('Set-Cookie', /^Authorization=.+/);
         expect(JSON.parse(response.text)).toMatchObject({
           id: expect.any(Number),
           firstName: userRegisterDto.firstName,
@@ -49,15 +51,24 @@ describe('User Controller', () => {
           deletedAt: null,
         });
       });
+
+      describe('if the user exists', () => {
+        test('response should be a 409', async () => {
+          const response = await testApp.post(`${baseUrl}/register`).send(userRegisterDto);
+          expect(response.status).toEqual(409);
+        });
+      });
     });
   });
 
   describe(`POST ${baseUrl}/login`, () => {
-    describe('if the email address is valid', () => {
+    describe('if the user exists', () => {
       test('response should have the Set-Cookie header with the Authorization token', async () => {
-        const response = await testApp.post(`${baseUrl}/login`).send(userLoginDto);
-        expect(response.status).toEqual(200);
-        // .expect('Set-Cookie', /^Authorization=.+/);
+        const response = await testApp
+          .post(`${baseUrl}/login`)
+          .send(userLoginDto)
+          .expect(200)
+          .expect('Set-Cookie', /^Authorization=.+/);
         expect(JSON.parse(response.text)).toMatchObject({
           id: expect.any(Number),
           firstName: userRegisterDto.firstName,

@@ -44,6 +44,14 @@ To generate missing migrations:
 yarn db:migration:generate:missing InitialSchema
 ```
 
+## TODO
+
+- Rework environment variable implementation
+- Rework the request DTO implementation
+- Add a response DTO implementation
+- Work on migrations implementation
+- Add fixtures
+
 ## Contribution Guidelines
 
 Never commit directly to master, create a feature branch and submit a pull request.

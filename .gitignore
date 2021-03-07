@@ -2,9 +2,6 @@
 coverage/
 dist/
 
-# Env files
-.env
-
 # Log files
 logs/*.log
 

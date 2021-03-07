@@ -15,7 +15,8 @@ async function postLogin(req: express.Request, res: express.Response, next: expr
   try {
     const userLoginDto: UserLoginDto = req.body;
     const { cookie, user } = await login(userLoginDto);
-    res.status(200).json(user).setHeader('Set-Cookie', [cookie]);
+    res.setHeader('Set-Cookie', [cookie]);
+    res.status(200).json(user);
   } catch (error) {
     next(error);
   }
@@ -35,7 +36,8 @@ async function postRegister(
   try {
     const userRegisterDto: UserRegisterDto = req.body;
     const { cookie, user } = await register(userRegisterDto);
-    res.status(201).json(user).setHeader('Set-Cookie', [cookie]);
+    res.setHeader('Set-Cookie', [cookie]);
+    res.status(201).json(user);
   } catch (error) {
     next(error);
   }

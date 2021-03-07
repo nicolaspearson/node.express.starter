@@ -14,3 +14,15 @@ Content-Type: application/json
   "emailAddress": "test@example.com",
   "password": "secret"
 }
+
+### Register
+POST {{baseUrl}}/user/register HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "emailAddress": "test@example.com",
+  "password": "secret"
+}
