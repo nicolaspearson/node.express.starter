@@ -26,7 +26,6 @@
     "db:migration:revert": "typeorm migration:revert",
     "db:migration:run": "typeorm migration:run",
     "db:start": "run exec:docker-compose up -d --renew-anon-volumes --force-recreate postgres",
-    "db:start:foreground": "run exec:docker-compose up postgres",
     "debug": "run build && run watch:debug",
     "exec:docker-compose": "docker-compose -f $(pwd)/docker-compose.yaml",
     "exec:jest": "jest --version && jest --coverage --detectOpenHandles --color --forceExit",

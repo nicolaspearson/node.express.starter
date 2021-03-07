@@ -6,7 +6,9 @@ module.exports = {
   clearMocks: true,
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
   coverageDirectory: 'coverage',
-  coverageReporters: process.env.GITHUB_ACTIONS ? ['lcovonly', 'text'] : ['html', 'lcov', 'text'],
+  coverageReporters: process.env.GITHUB_ACTIONS
+    ? ['lcovonly', 'text']
+    : ['html', 'json-summary', 'lcov', 'text'],
   coverageThreshold: {
     global: {
       branches: 100,
