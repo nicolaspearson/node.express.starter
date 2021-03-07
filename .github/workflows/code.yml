@@ -15,9 +15,23 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install, lint, test, and build
+      - name: install, lint, and build
         run: |
           yarn install
           yarn lint
           yarn build
-          yarn test
+  test_unit:
+    name: test unit
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 15]
+    steps:
+      - uses: actions/checkout@v2
+      - name: using node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: yarn test:unit
+        run: |
+          yarn test:unit
