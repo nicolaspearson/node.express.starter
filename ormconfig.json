@@ -5,8 +5,8 @@
   "username": "master",
   "password": "masterkey",
   "database": "express",
-  "entities": ["src/db/entities/*.entity.ts"],
-  "migrations": ["src/db/migrations/*.ts"],
+  "entities": ["src/db/entities/*.entity.{js,ts}"],
+  "migrations": ["src/db/migrations/*.{js,ts}"],
   "cli": {
     "migrationsDir": "src/db/migrations"
   }
