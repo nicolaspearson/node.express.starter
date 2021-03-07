@@ -29,6 +29,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: nicpearson/node.express.starter:${{ RELEASE_VERSION }}
+          tags: nicpearson/node.express.starter:${{ steps.vars.outputs.tag }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
