@@ -5832,7 +5832,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-environment-node@npm:^26.6.2":
+"jest-environment-node@npm:^26.6.2, jest-environment-node@npm:~26.6.2":
   version: 26.6.2
   resolution: "jest-environment-node@npm:26.6.2"
   dependencies:
@@ -7395,6 +7395,7 @@ __metadata:
     husky: ~5.1.3
     jest: ~26.6.3
     jest-coverage-badges: ~1.1.2
+    jest-environment-node: ~26.6.2
     jsonwebtoken: ~8.5.1
     logform: ~2.2.0
     module-alias: ~2.2.2

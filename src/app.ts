@@ -19,7 +19,7 @@ export default class App {
     this.initializeErrorHandling();
   }
 
-  public getExpressApp(): express.Application {
+  public getApp(): express.Application {
     return this.app;
   }
 
@@ -29,9 +29,12 @@ export default class App {
 
   public listen(): void {
     const port = Number(env.get().API_PORT);
-    this.server = this.app.listen(port, () => {
-      logger.debug(`App: Listening on port ${port}!`);
-    });
+    this.server = this.app.listen(
+      port,
+      /* istanbul ignore next */ () => {
+        logger.debug(`listening on port ${port}!`);
+      }
+    );
   }
 
   private initializeMiddleware() {

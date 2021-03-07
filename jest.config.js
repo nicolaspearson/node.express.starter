@@ -1,22 +1,37 @@
-// For a detailed explanation regarding each configuration property, visit:
-// https://jestjs.io/docs/en/configuration.html
+const path = require('path');
+
+const rootDir = path.resolve(__dirname);
 
 module.exports = {
   clearMocks: true,
-  collectCoverageFrom: ['src/**/*.{js,ts}'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
   coverageDirectory: 'coverage',
-  coverageReporters: ['json-summary', 'text', 'lcov'],
-  moduleFileExtensions: ['ts', 'js', 'json', 'node'],
+  coverageReporters: process.env.GITHUB_ACTIONS ? ['lcovonly', 'text'] : ['html', 'lcov', 'text'],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+    },
+  },
+  globals: {
+    'ts-jest': {
+      tsconfig: '<rootDir>/tsconfig.json',
+    },
+  },
+  moduleFileExtensions: ['js', 'json', 'node', 'ts'],
   moduleNameMapper: {
-    '^@(.*)$': '<rootDir>/src/$1',
-    '^#(.*)$': '<rootDir>/test/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^#/(.*)$': '<rootDir>/test/$1',
   },
-  roots: ['<rootDir>/src', '<rootDir>/test'],
   preset: 'ts-jest',
-  testEnvironment: 'node',
-  testMatch: ['**/__tests__/**/*.ts', '**/?(*.)+(spec|test).ts'],
+  reporters: ['default'],
+  rootDir,
+  testEnvironment: require.resolve('jest-environment-node'),
+  testMatch: ['<rootDir>/test/**/*.spec.ts'],
   transform: {
-    '^.+\\.ts?$': 'ts-jest',
+    '^.+\\.ts?$': require.resolve('ts-jest'),
   },
+  transformIgnorePatterns: ['/.pnp.js$'],
   verbose: false,
 };
