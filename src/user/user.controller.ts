@@ -1,7 +1,7 @@
 import * as express from 'express';
 
-import LoginUserDto from '@/common/dto/user.login.dto';
-import RegisterUserDto from '@/common/dto/user.register.dto';
+import UserLoginDto from '@/common/dto/user.login.dto';
+import UserRegisterDto from '@/common/dto/user.register.dto';
 import validationMiddleware from '@/middleware/validation.middleware';
 import { login, register } from '@/user/user.service';
 
@@ -13,8 +13,8 @@ import { login, register } from '@/user/user.service';
  */
 async function postLogin(req: express.Request, res: express.Response, next: express.NextFunction) {
   try {
-    const loginUserDto: LoginUserDto = req.body;
-    const { cookie, user } = await login(loginUserDto);
+    const userLoginDto: UserLoginDto = req.body;
+    const { cookie, user } = await login(userLoginDto);
     res.status(200).json(user).setHeader('Set-Cookie', [cookie]);
   } catch (error) {
     next(error);
@@ -33,8 +33,8 @@ async function postRegister(
   next: express.NextFunction
 ) {
   try {
-    const registerUserDto: RegisterUserDto = req.body;
-    const { cookie, user } = await register(registerUserDto);
+    const userRegisterDto: UserRegisterDto = req.body;
+    const { cookie, user } = await register(userRegisterDto);
     res.status(201).json(user).setHeader('Set-Cookie', [cookie]);
   } catch (error) {
     next(error);
@@ -46,11 +46,11 @@ export default express
   .Router()
   .post(
     '/login',
-    validationMiddleware(LoginUserDto, 'Invalid email address or password.'),
+    validationMiddleware(UserLoginDto, 'Invalid email address or password.'),
     postLogin
   )
   .post(
     '/register',
-    validationMiddleware(RegisterUserDto, 'User registration failed.'),
+    validationMiddleware(UserRegisterDto, 'User registration failed.'),
     postRegister
   );

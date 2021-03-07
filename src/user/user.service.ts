@@ -2,8 +2,8 @@ import Boom from 'boom';
 import * as bcrypt from 'bcrypt';
 import { getCustomRepository } from 'typeorm';
 
-import LoginUserDto from '@/common/dto/user.login.dto';
-import RegisterUserDto from '@/common/dto/user.register.dto';
+import UserLoginDto from '@/common/dto/user.login.dto';
+import UserRegisterDto from '@/common/dto/user.register.dto';
 import CookieUser from '@/common/interfaces/cookie-user';
 import Token from '@/common/interfaces/token';
 import TokenContents from '@/common/interfaces/token-contents.interface';
@@ -11,44 +11,42 @@ import TokenData from '@/common/interfaces/token-data.interface';
 import User from '@/db/entities/user.entity';
 import UserRepository from '@/db/repositories/user.repository';
 
+function createCookie(tokenData: TokenData): string {
+  return `Authorization=${tokenData.token}; HttpOnly; Max-Age=${String(tokenData.expiresIn!)}`;
+}
+
 function createToken(user: User): Token {
   const expiresIn = 60 * 60; // 1 hour
   const tokenContents: TokenContents = {
     id: user.id,
   };
-  // Create a token
+  // Generate a token
   const token: Token = new Token();
   token.expiresIn = expiresIn;
   token.generateToken(tokenContents);
   return token;
 }
 
-function createCookie(tokenData: TokenData): string {
-  return `Authorization=${tokenData.token}; HttpOnly; Max-Age=${String(tokenData.expiresIn!)}`;
+function validatePassword(dbPassword: string, password: string): Promise<boolean> {
+  return bcrypt.compare(dbPassword, password);
 }
 
-async function encryptPassword(password: string): Promise<string> {
+export async function encryptPassword(password: string): Promise<string> {
   const salt: string = await bcrypt.genSalt(10);
   return bcrypt.hash(password, salt);
 }
 
-async function validatePassword(dbPassword: string, password: string): Promise<boolean> {
-  return bcrypt.compare(dbPassword, password);
-}
-
-export async function login(loginUserDto: LoginUserDto): Promise<CookieUser> {
+export async function login(userLoginDto: UserLoginDto): Promise<CookieUser> {
   const userRepository = getCustomRepository(UserRepository);
-  const user: User = await userRepository.findByEmailOrFail(loginUserDto.emailAddress);
+  const user: User = await userRepository.findByEmailOrFail(userLoginDto.emailAddress);
   if (!user.enabled) {
     throw Boom.unauthorized('User account has been disabled');
   }
-
   // Validate the provided password
-  const valid = await validatePassword(loginUserDto.password, user.password);
+  const valid = await validatePassword(userLoginDto.password, user.password);
   if (!valid) {
     throw Boom.unauthorized('Invalid email address or password');
   }
-
   // Create a token for the user
   const tokenData = createToken(user);
   const cookie = createCookie(tokenData);
@@ -58,24 +56,23 @@ export async function login(loginUserDto: LoginUserDto): Promise<CookieUser> {
   };
 }
 
-export async function register(registerUserDto: RegisterUserDto): Promise<CookieUser> {
+export async function register(userRegisterDto: UserRegisterDto): Promise<CookieUser> {
   const userRepository = getCustomRepository(UserRepository);
-  if (await userRepository.findByEmail(registerUserDto.emailAddress)) {
-    throw Boom.badRequest('The provided email address is already in registered');
+  if (await userRepository.findByEmail(userRegisterDto.emailAddress)) {
+    throw Boom.conflict('The provided email address is already in use');
   }
-  const hashedPassword = await encryptPassword(registerUserDto.password);
+  const hashedPassword = await encryptPassword(userRegisterDto.password);
   const user = await userRepository.create({
     attributes: {
-      ...registerUserDto,
+      ...userRegisterDto,
       password: hashedPassword,
     },
   });
-
   // Create a token for the user
   const tokenData = createToken(user);
   const cookie = createCookie(tokenData);
   return {
     cookie,
-    user: { ...user, password: '' },
+    user,
   };
 }

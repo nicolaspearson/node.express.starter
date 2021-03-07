@@ -7,6 +7,8 @@ module.exports = Object.assign({}, require(`../../jest.config.js`), {
     '!src/common/dto/**/*.ts',
     '!src/common/interfaces/**/*.ts',
     '!src/db/**/*.ts',
+    '!src/env/index.ts',
+    '!src/logger/index.ts',
     '!src/index.ts',
     '!src/utils.ts',
   ],

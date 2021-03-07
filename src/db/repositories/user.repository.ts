@@ -46,11 +46,15 @@ export default class UserRepository extends AbstractRepository<User> {
     return this.userQuery().clone().where('"user"."id" = :id', { id }).getOne();
   }
 
-  async findByUuidOrFail(id: number): Promise<User> {
+  async findByIdOrFail(id: number): Promise<User> {
     const user = await this.findById(id);
     if (!user) {
       throw Boom.notFound(`User with id ${id} does not exist`);
     }
     return user;
+  }
+
+  getManager(): EntityManager {
+    return this.manager;
   }
 }

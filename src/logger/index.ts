@@ -2,10 +2,6 @@ import * as winston from 'winston';
 
 export let logger: winston.Logger;
 
-export function getLogger(): winston.Logger {
-  return logger;
-}
-
 export function init(): void {
   // Configure levels and transports, and set local variable
   logger = winston.createLogger({
