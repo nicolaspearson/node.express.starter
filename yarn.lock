@@ -3811,7 +3811,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:~24.1.8":
+"eslint-plugin-jest@npm:~24.1.0":
   version: 24.1.8
   resolution: "eslint-plugin-jest@npm:24.1.8"
   dependencies:
@@ -7400,7 +7400,7 @@ __metadata:
     eslint: ~7.21.0
     eslint-config-prettier: ~8.1.0
     eslint-plugin-import: ~2.22.1
-    eslint-plugin-jest: ~24.1.8
+    eslint-plugin-jest: ~24.1.0
     eslint-plugin-ordered-imports: ~0.4.1
     eslint-plugin-prettier: ~3.3.1
     express: ~4.17.1
