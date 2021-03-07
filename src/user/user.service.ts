@@ -11,11 +11,11 @@ import TokenData from '@/common/interfaces/token-data.interface';
 import User from '@/db/entities/user.entity';
 import UserRepository from '@/db/repositories/user.repository';
 
-function createCookie(tokenData: TokenData): string {
+export function createCookie(tokenData: TokenData): string {
   return `Authorization=${tokenData.token}; HttpOnly; Max-Age=${String(tokenData.expiresIn!)}`;
 }
 
-function createToken(user: User): Token {
+export function createToken(user: User): Token {
   const expiresIn = 60 * 60; // 1 hour
   const tokenContents: TokenContents = {
     id: user.id,
@@ -25,10 +25,6 @@ function createToken(user: User): Token {
   token.expiresIn = expiresIn;
   token.generateToken(tokenContents);
   return token;
-}
-
-function validatePassword(dbPassword: string, password: string): Promise<boolean> {
-  return bcrypt.compare(dbPassword, password);
 }
 
 export async function encryptPassword(password: string): Promise<string> {
@@ -75,4 +71,8 @@ export async function register(userRegisterDto: UserRegisterDto): Promise<Cookie
     cookie,
     user,
   };
+}
+
+export function validatePassword(dbPassword: string, password: string): Promise<boolean> {
+  return bcrypt.compare(dbPassword, password);
 }

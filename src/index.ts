@@ -1,12 +1,11 @@
 import 'dotenv/config';
 import 'module-alias/register';
 import 'reflect-metadata';
-import { createConnection, getConnectionOptions } from 'typeorm';
 
 import App from '@/app';
+import * as db from '@/db';
 import * as env from '@/env';
 import * as logger from '@/logger';
-import { configureConnectionOptions } from '@/db/config.db';
 
 // We use dotenv and nconf to control
 // environment variables in the app.
@@ -18,13 +17,7 @@ logger.init();
 
 (async () => {
   try {
-    // Connect to the database
-    const connectionOptions = await getConnectionOptions();
-    configureConnectionOptions(connectionOptions);
-    const connection = await createConnection(connectionOptions);
-    if (env.environment() !== 'development')
-      // Run migrations
-      await connection.runMigrations();
+    await db.init();
   } catch (error) {
     logger.logger.error(`Database: Error connecting!`, error);
     return error;

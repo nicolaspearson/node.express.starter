@@ -2,8 +2,9 @@ import Boom from 'boom';
 
 import UserLoginDto from '@/common/dto/user.login.dto';
 import UserRegisterDto from '@/common/dto/user.register.dto';
+import TokenData from '@/common/interfaces/token-data.interface';
 import * as env from '@/env';
-import { encryptPassword, login, register } from '@/user/user.service';
+import { createCookie, encryptPassword, login, register } from '@/user/user.service';
 
 import { mockUser } from '../../utils/fixtures';
 import { userMockRepo } from '../../utils/repo.mocks';
@@ -15,6 +16,16 @@ typeorm.getCustomRepository = () => userMockRepo;
 describe('User Service', () => {
   beforeAll(() => {
     env.init();
+  });
+
+  describe('createCookie', () => {
+    const tokenData: TokenData = {
+      token: 'token',
+      expiresIn: 1,
+    };
+    test('should return a string when creating a cookie', () => {
+      expect(typeof createCookie(tokenData)).toEqual('string');
+    });
   });
 
   describe('login', () => {

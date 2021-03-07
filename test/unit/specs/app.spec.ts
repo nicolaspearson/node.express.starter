@@ -38,7 +38,7 @@ describe('app', () => {
 
   test('starts the app', () => {
     app.listen();
-    expect(app.getApp()).toBeDefined();
+    expect(app.getExpressApp()).toBeDefined();
     expect(app.getServer()).toBeDefined();
   });
 });

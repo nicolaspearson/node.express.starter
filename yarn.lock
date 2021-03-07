@@ -1287,6 +1287,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/pg@npm:~7.14.11":
+  version: 7.14.11
+  resolution: "@types/pg@npm:7.14.11"
+  dependencies:
+    "@types/node": "*"
+    pg-protocol: ^1.2.0
+    pg-types: ^2.2.0
+  checksum: 215f6e64416db9582fc502edcc3700d5ff542a96cb6f764d558a8e8610d24ef8fccd48d849110021a28c94ad7def57ba212985d6fb681db7f5af59ec8f32f5fb
+  languageName: node
+  linkType: hard
+
 "@types/prettier@npm:^2.0.0, @types/prettier@npm:~2":
   version: 2.2.2
   resolution: "@types/prettier@npm:2.2.2"
@@ -7371,6 +7382,7 @@ __metadata:
     "@types/jsonwebtoken": ~8.5.0
     "@types/nconf": ~0.10.0
     "@types/node": ~14.14.32
+    "@types/pg": ~7.14.11
     "@types/prettier": ~2
     "@types/supertest": ~2.0.10
     "@typescript-eslint/eslint-plugin": ~4.16.1
@@ -8195,14 +8207,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pg-protocol@npm:^1.4.0":
+"pg-protocol@npm:^1.2.0, pg-protocol@npm:^1.4.0":
   version: 1.4.0
   resolution: "pg-protocol@npm:1.4.0"
   checksum: 2b5ebfccd014a4a9127a04e34a423a9e7fe6f6b96c32698929e0860e32c453e64438c935068405ee923ab99788345b9591a6dbaa30bba70e724d7fc4d5f5d21e
   languageName: node
   linkType: hard
 
-"pg-types@npm:^2.1.0":
+"pg-types@npm:^2.1.0, pg-types@npm:^2.2.0":
   version: 2.2.0
   resolution: "pg-types@npm:2.2.0"
   dependencies:

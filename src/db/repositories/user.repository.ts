@@ -42,10 +42,12 @@ export default class UserRepository extends AbstractRepository<User> {
     return user;
   }
 
+  /* istanbul ignore next: currently unused */
   findById(id: number): Promise<User | undefined> {
     return this.userQuery().clone().where('"user"."id" = :id', { id }).getOne();
   }
 
+  /* istanbul ignore next: currently unused */
   async findByIdOrFail(id: number): Promise<User> {
     const user = await this.findById(id);
     if (!user) {
@@ -54,6 +56,7 @@ export default class UserRepository extends AbstractRepository<User> {
     return user;
   }
 
+  /* istanbul ignore next: currently unused */
   getManager(): EntityManager {
     return this.manager;
   }

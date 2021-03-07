@@ -1,6 +1,6 @@
 process.env.JEST_SUITE_NAME = 'api unit tests';
 
-module.exports = Object.assign({}, require(`../../jest.config.js`), {
+module.exports = Object.assign({}, require('../../jest.config.js'), {
   collectCoverageFrom: [
     'src/**/*.ts',
     '!src/**/*.controller.ts',

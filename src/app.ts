@@ -19,7 +19,7 @@ export default class App {
     this.initializeErrorHandling();
   }
 
-  public getApp(): express.Application {
+  public getExpressApp(): express.Application {
     return this.app;
   }
 
