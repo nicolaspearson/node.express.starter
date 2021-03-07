@@ -3811,14 +3811,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:~24.1.7":
-  version: 24.1.7
-  resolution: "eslint-plugin-jest@npm:24.1.7"
+"eslint-plugin-jest@npm:~24.1.8":
+  version: 24.1.8
+  resolution: "eslint-plugin-jest@npm:24.1.8"
   dependencies:
     "@typescript-eslint/experimental-utils": ^4.0.1
   peerDependencies:
     eslint: ">=5"
-  checksum: 5b1d3130609e0e20395bb6b55444ed1ac4797be6366646f57e74ab57d16cc18c586f1f04b4fcaaa98bdbf14ef04e48645a64211ae92086cb64135b12d485c85b
+  checksum: d59d7cf49fb13633c7b66603985874224e2e5d43a0815454c3825fc2d43c9397d28e3db5c60c26fe89c3a5294ea0a15cc0989c1962ccdaae4972030ddecf0530
   languageName: node
   linkType: hard
 
@@ -7400,7 +7400,7 @@ __metadata:
     eslint: ~7.21.0
     eslint-config-prettier: ~8.1.0
     eslint-plugin-import: ~2.22.1
-    eslint-plugin-jest: ~24.1.7
+    eslint-plugin-jest: ~24.1.8
     eslint-plugin-ordered-imports: ~0.4.1
     eslint-plugin-prettier: ~3.3.1
     express: ~4.17.1
@@ -7413,7 +7413,7 @@ __metadata:
     module-alias: ~2.2.2
     nconf: ~0.11.2
     nodemon: ~2.0.7
-    npm-check-updates: ~11.1.10
+    npm-check-updates: ~11.1.11
     pg: ~8.5.1
     prettier: ~2.2.1
     pretty-quick: ~3.1.0
@@ -7537,9 +7537,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:~11.1.10":
-  version: 11.1.10
-  resolution: "npm-check-updates@npm:11.1.10"
+"npm-check-updates@npm:~11.1.11":
+  version: 11.1.11
+  resolution: "npm-check-updates@npm:11.1.11"
   dependencies:
     chalk: ^4.1.0
     cint: ^8.2.1
@@ -7570,7 +7570,7 @@ __metadata:
   bin:
     ncu: bin/cli.js
     npm-check-updates: bin/cli.js
-  checksum: d8c23d15d235083d61334d603ad400e49e06bd5dc0e9d2275418c2a446f6ed7369dff21da30ba5715af310405631a6f94d32265d2cae248824bb584d474ecbef
+  checksum: 9a9b0902d1281107ab66299988fd3801a99aed1da47d374c778698c51aae74a832ca57c23d5556c41f877690054fa461144fee0001bab2ee516e1fd6c1405bb5
   languageName: node
   linkType: hard
 

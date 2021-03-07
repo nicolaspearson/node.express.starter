@@ -20,7 +20,7 @@ services:
       - .env
     expose:
       - 3000
-    image: api:1.0
+    image: nicpearson/node.express.starter:1.0.0
     networks:
       - development
     ports:

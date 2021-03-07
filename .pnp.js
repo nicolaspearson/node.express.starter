@@ -63,7 +63,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.21.0"],
             ["eslint-config-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.1.0"],
             ["eslint-plugin-import", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:2.22.1"],
-            ["eslint-plugin-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:24.1.7"],
+            ["eslint-plugin-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:24.1.8"],
             ["eslint-plugin-ordered-imports", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.4.1"],
             ["eslint-plugin-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.3.1"],
             ["express", "npm:4.17.1"],
@@ -76,7 +76,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["nconf", "npm:0.11.2"],
             ["nodemon", "npm:2.0.7"],
-            ["npm-check-updates", "npm:11.1.10"],
+            ["npm-check-updates", "npm:11.1.11"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.5.1"],
             ["prettier", "npm:2.2.1"],
             ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0"],
@@ -4688,17 +4688,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["eslint-plugin-jest", [
-        ["npm:24.1.7", {
-          "packageLocation": "./.yarn/cache/eslint-plugin-jest-npm-24.1.7-4e9f2dec0e-5b1d313060.zip/node_modules/eslint-plugin-jest/",
+        ["npm:24.1.8", {
+          "packageLocation": "./.yarn/cache/eslint-plugin-jest-npm-24.1.8-71844dde13-d59d7cf49f.zip/node_modules/eslint-plugin-jest/",
           "packageDependencies": [
-            ["eslint-plugin-jest", "npm:24.1.7"]
+            ["eslint-plugin-jest", "npm:24.1.8"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:24.1.7", {
-          "packageLocation": "./.yarn/$$virtual/eslint-plugin-jest-virtual-69f39e0093/0/cache/eslint-plugin-jest-npm-24.1.7-4e9f2dec0e-5b1d313060.zip/node_modules/eslint-plugin-jest/",
+        ["virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:24.1.8", {
+          "packageLocation": "./.yarn/$$virtual/eslint-plugin-jest-virtual-314edfe389/0/cache/eslint-plugin-jest-npm-24.1.8-71844dde13-d59d7cf49f.zip/node_modules/eslint-plugin-jest/",
           "packageDependencies": [
-            ["eslint-plugin-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:24.1.7"],
+            ["eslint-plugin-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:24.1.8"],
             ["@types/eslint", null],
             ["@typescript-eslint/experimental-utils", "virtual:1771c3f43f7c2fabbe9f494013b632a8e1f074a988a413c25833de0b1676ff5f70bf6516b7b846dd0191c53f84a4bd0bf2ed68a8953804e9f9d9ed9c375cf849#npm:4.16.1"],
             ["eslint", "npm:7.21.0"]
@@ -8640,7 +8640,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:7.21.0"],
             ["eslint-config-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.1.0"],
             ["eslint-plugin-import", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:2.22.1"],
-            ["eslint-plugin-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:24.1.7"],
+            ["eslint-plugin-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:24.1.8"],
             ["eslint-plugin-ordered-imports", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.4.1"],
             ["eslint-plugin-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.3.1"],
             ["express", "npm:4.17.1"],
@@ -8653,7 +8653,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["nconf", "npm:0.11.2"],
             ["nodemon", "npm:2.0.7"],
-            ["npm-check-updates", "npm:11.1.10"],
+            ["npm-check-updates", "npm:11.1.11"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.5.1"],
             ["prettier", "npm:2.2.1"],
             ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0"],
@@ -8779,10 +8779,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["npm-check-updates", [
-        ["npm:11.1.10", {
-          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.1.10-71b9a17fe6-d8c23d15d2.zip/node_modules/npm-check-updates/",
+        ["npm:11.1.11", {
+          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.1.11-4bf1ad0e36-9a9b0902d1.zip/node_modules/npm-check-updates/",
           "packageDependencies": [
-            ["npm-check-updates", "npm:11.1.10"],
+            ["npm-check-updates", "npm:11.1.11"],
             ["chalk", "npm:4.1.0"],
             ["cint", "npm:8.2.1"],
             ["cli-table", "npm:0.3.5"],
