@@ -76,7 +76,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["nconf", "npm:0.11.2"],
             ["nodemon", "npm:2.0.7"],
-            ["npm-check-updates", "npm:11.1.11"],
+            ["npm-check-updates", "npm:11.2.0"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.5.1"],
             ["prettier", "npm:2.2.1"],
             ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0"],
@@ -8653,7 +8653,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["nconf", "npm:0.11.2"],
             ["nodemon", "npm:2.0.7"],
-            ["npm-check-updates", "npm:11.1.11"],
+            ["npm-check-updates", "npm:11.2.0"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.5.1"],
             ["prettier", "npm:2.2.1"],
             ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0"],
@@ -8683,7 +8683,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["nodemon", [
         ["npm:2.0.7", {
-          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.7-7b95e46511/node_modules/nodemon/",
+          "packageLocation": "./.yarn/cache/nodemon-npm-2.0.7-7b95e46511-e1e8acb584.zip/node_modules/nodemon/",
           "packageDependencies": [
             ["nodemon", "npm:2.0.7"],
             ["chokidar", "npm:3.5.1"],
@@ -8779,10 +8779,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["npm-check-updates", [
-        ["npm:11.1.11", {
-          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.1.11-4bf1ad0e36-9a9b0902d1.zip/node_modules/npm-check-updates/",
+        ["npm:11.2.0", {
+          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.2.0-04ea4156ee-c9073e4ea2.zip/node_modules/npm-check-updates/",
           "packageDependencies": [
-            ["npm-check-updates", "npm:11.1.11"],
+            ["npm-check-updates", "npm:11.2.0"],
             ["chalk", "npm:4.1.0"],
             ["cint", "npm:8.2.1"],
             ["cli-table", "npm:0.3.5"],
@@ -8797,6 +8797,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["libnpmconfig", "npm:1.2.1"],
             ["lodash", "npm:4.17.21"],
             ["mem", "npm:8.0.0"],
+            ["minimatch", "npm:3.0.4"],
             ["p-map", "npm:4.0.0"],
             ["pacote", "npm:11.2.7"],
             ["parse-github-url", "npm:1.0.2"],
