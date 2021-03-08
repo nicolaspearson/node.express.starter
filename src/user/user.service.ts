@@ -22,8 +22,8 @@ export async function login(userLoginDto: UserLoginDto): Promise<CookieUser> {
     throw Boom.unauthorized('Invalid email address or password');
   }
   // Create a token for the user
-  const tokenData = createToken(user);
-  const cookie = createCookie(tokenData);
+  const token = createToken(user);
+  const cookie = createCookie(token);
   return {
     cookie,
     user,

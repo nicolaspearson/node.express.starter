@@ -8,7 +8,7 @@ declare namespace Api {
   }
 
   interface TokenData {
-    token: string;
+    tokenString: string;
     expiresIn?: number | string;
   }
 }
