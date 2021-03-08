@@ -8,10 +8,10 @@ import {
 } from 'typeorm';
 import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
 
-import User from '@/db/entities/user.entity';
+import { User } from '@/db/entities/user.entity';
 
 @EntityRepository(User)
-export default class UserRepository extends AbstractRepository<User> {
+export class UserRepository extends AbstractRepository<User> {
   constructor(protected readonly manager: EntityManager) {
     super();
   }

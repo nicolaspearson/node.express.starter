@@ -7,9 +7,15 @@ import {
 } from 'typeorm';
 
 @Entity({ name: 'user' })
-export default class User {
+export class User {
   @PrimaryGeneratedColumn()
-  public id?: number;
+  public id: number;
+
+  @Column({ name: 'email_address', length: 500 })
+  public emailAddress: string;
+
+  @Column({ name: 'enabled', nullable: false, default: true })
+  public enabled: boolean;
 
   @Column({ name: 'first_name', length: 500 })
   public firstName: string;
@@ -17,21 +23,15 @@ export default class User {
   @Column({ name: 'last_name', length: 500 })
   public lastName: string;
 
-  @Column({ name: 'email_address', length: 500 })
-  public emailAddress: string;
-
   @Column({ name: 'password', length: 500 })
   public password: string;
 
-  @Column({ name: 'enabled', nullable: false, default: true })
-  public enabled?: boolean;
-
   @CreateDateColumn({ name: 'created_at', type: 'timestamp with time zone' })
-  public createdAt?: Date;
+  public createdAt: Date;
 
   @UpdateDateColumn({ name: 'updated_at', type: 'timestamp with time zone' })
-  public updatedAt?: Date;
+  public updatedAt: Date;
 
   @Column({ name: 'deleted_at', nullable: true, type: 'timestamp with time zone' })
-  public deletedAt?: Date;
+  public deletedAt: Nullable<Date>;
 }

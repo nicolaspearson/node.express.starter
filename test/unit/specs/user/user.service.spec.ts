@@ -1,7 +1,6 @@
 import Boom from 'boom';
 
-import UserLoginDto from '@/common/dto/user.login.dto';
-import UserRegisterDto from '@/common/dto/user.register.dto';
+import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
 import { login, register } from '@/user/user.service';
 import { createCookie } from '@/utils/cookie.utils';
 import { encryptPassword } from '@/utils/password.utils';
@@ -25,7 +24,7 @@ describe('User Service', () => {
   });
 
   describe('login', () => {
-    const dto = new UserLoginDto();
+    const dto = new LoginReqDto();
     dto.emailAddress = mockUser.emailAddress;
     dto.password = mockUser.password;
 
@@ -60,7 +59,7 @@ describe('User Service', () => {
   });
 
   describe('register', () => {
-    const dto = new UserRegisterDto();
+    const dto = new RegisterUserReqDto();
     dto.firstName = mockUser.firstName;
     dto.lastName = mockUser.lastName;
     dto.emailAddress = mockUser.emailAddress;

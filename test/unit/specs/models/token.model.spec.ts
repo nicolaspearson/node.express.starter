@@ -1,4 +1,4 @@
-import Token from '@/common/models/token.model';
+import { Token } from '@/common/models/token.model';
 
 describe('Token', () => {
   test('should generate and verify a token correctly', async () => {

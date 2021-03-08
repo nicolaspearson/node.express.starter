@@ -2,6 +2,8 @@ process.env.JEST_SUITE_NAME = 'core-therapy integration tests';
 
 module.exports = Object.assign({}, require('../../jest.config.js'), {
   collectCoverageFrom: [
+    'src/common/dto/**/*.ts',
+    '!src/common/dto/index.ts',
     'src/db/**/*.ts',
     '!src/db/config.db.ts',
     '!src/db/index.ts',

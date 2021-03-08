@@ -1,6 +1,6 @@
 import { ConnectionOptions } from 'typeorm';
 
-import { Environment } from '@/common/config';
+import { Environment } from '@/common/enums/environment.enum';
 
 const type = 'postgres';
 export function configureConnectionOptions(

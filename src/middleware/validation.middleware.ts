@@ -10,7 +10,7 @@ import { NextFunction, Request, RequestHandler, Response } from 'express';
  * @param message the error message to throw.
  * @param location to location of the object.
  */
-export default function validationMiddleware(
+export function validationMiddleware(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dto: ClassType<any>,
   message: string,

@@ -1,6 +1,6 @@
 import { getCustomRepository as gcr } from 'typeorm';
 
-import UserRepository from '@/db/repositories/user.repository';
+import { UserRepository } from '@/db/repositories/user.repository';
 
 import { mockUser } from './fixtures';
 

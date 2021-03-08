@@ -1,9 +1,9 @@
 import Boom from 'boom';
 import { NextFunction, Request, Response } from 'express';
 
-import HttpException from '@/common/models/http-exception.model';
+import { HttpException } from '@/common/models/http-exception.model';
 
-export default function errorMiddleware(
+export function errorMiddleware(
   error: HttpException,
   _: Request,
   res: Response,

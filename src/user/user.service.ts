@@ -1,23 +1,22 @@
 import Boom from 'boom';
 import { getCustomRepository } from 'typeorm';
 
-import UserLoginDto from '@/common/dto/user.login.dto';
-import UserRegisterDto from '@/common/dto/user.register.dto';
-import CookieUser from '@/common/models/cookie-user.model';
-import User from '@/db/entities/user.entity';
-import UserRepository from '@/db/repositories/user.repository';
+import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
+import { CookieUser } from '@/common/models/cookie-user.model';
+import { User } from '@/db/entities/user.entity';
+import { UserRepository } from '@/db/repositories/user.repository';
 import { createCookie } from '@/utils/cookie.utils';
 import { encryptPassword, validatePassword } from '@/utils/password.utils';
 import { createTokenPayload } from '@/utils/token.utils';
 
-export async function login(userLoginDto: UserLoginDto): Promise<CookieUser> {
+export async function login(loginReqDto: LoginReqDto): Promise<CookieUser> {
   const userRepository = getCustomRepository(UserRepository);
-  const user: User = await userRepository.findByEmailOrFail(userLoginDto.emailAddress);
+  const user: User = await userRepository.findByEmailOrFail(loginReqDto.emailAddress);
   if (!user.enabled) {
     throw Boom.unauthorized('User account has been disabled');
   }
   // Validate the provided password
-  const valid = await validatePassword(userLoginDto.password, user.password);
+  const valid = await validatePassword(loginReqDto.password, user.password);
   if (!valid) {
     throw Boom.unauthorized('Invalid email address or password');
   }
@@ -30,15 +29,15 @@ export async function login(userLoginDto: UserLoginDto): Promise<CookieUser> {
   };
 }
 
-export async function register(userRegisterDto: UserRegisterDto): Promise<CookieUser> {
+export async function register(registerUserReqDto: RegisterUserReqDto): Promise<CookieUser> {
   const userRepository = getCustomRepository(UserRepository);
-  if (await userRepository.findByEmail(userRegisterDto.emailAddress)) {
+  if (await userRepository.findByEmail(registerUserReqDto.emailAddress)) {
     throw Boom.conflict('The provided email address is already in use');
   }
-  const hashedPassword = await encryptPassword(userRegisterDto.password);
+  const hashedPassword = await encryptPassword(registerUserReqDto.password);
   const user = await userRepository.create({
     attributes: {
-      ...userRegisterDto,
+      ...registerUserReqDto,
       password: hashedPassword,
     },
   });

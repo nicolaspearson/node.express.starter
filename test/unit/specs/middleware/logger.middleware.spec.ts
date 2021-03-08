@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 
-import loggerMiddleware from '@/middleware/logger.middleware';
 import { logger } from '@/logger';
+import { loggerMiddleware } from '@/middleware/logger.middleware';
 
 jest.mock('@/logger', () => ({
   logger: {

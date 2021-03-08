@@ -1,7 +1,6 @@
 import { Connection } from 'typeorm';
 
-import UserLoginDto from '@/common/dto/user.login.dto';
-import UserRegisterDto from '@/common/dto/user.register.dto';
+import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
 
 import { closeConnections, setupDatabase } from '../db';
 import { testApp } from '../factories';
@@ -10,14 +9,14 @@ describe('User Controller', () => {
   const baseUrl = '/user';
   let connection: Connection;
 
-  const userRegisterDto: UserRegisterDto = {
+  const registerUserReqDto: RegisterUserReqDto = {
     firstName: 'John',
     lastName: 'Doe',
     emailAddress: 'john.doe@test.com',
     password: 'testing',
   };
 
-  const userLoginDto: UserLoginDto = {
+  const loginReqDto: LoginReqDto = {
     emailAddress: 'john.doe@test.com',
     password: 'testing',
   };
@@ -36,25 +35,21 @@ describe('User Controller', () => {
       test('response should have the Set-Cookie header with the Authorization token', async () => {
         const response = await testApp
           .post(`${baseUrl}/register`)
-          .send(userRegisterDto)
+          .send(registerUserReqDto)
           .expect(201)
           .expect('Set-Cookie', /^Authorization=.+/);
         expect(JSON.parse(response.text)).toMatchObject({
           id: expect.any(Number),
-          firstName: userRegisterDto.firstName,
-          lastName: userRegisterDto.lastName,
-          emailAddress: userRegisterDto.emailAddress,
-          password: expect.any(String),
+          emailAddress: registerUserReqDto.emailAddress,
           enabled: true,
-          createdAt: expect.any(String),
-          updatedAt: expect.any(String),
-          deletedAt: null,
+          firstName: registerUserReqDto.firstName,
+          lastName: registerUserReqDto.lastName,
         });
       });
 
       describe('if the user exists', () => {
         test('response should be a 409', async () => {
-          const response = await testApp.post(`${baseUrl}/register`).send(userRegisterDto);
+          const response = await testApp.post(`${baseUrl}/register`).send(registerUserReqDto);
           expect(response.status).toEqual(409);
         });
       });
@@ -66,19 +61,15 @@ describe('User Controller', () => {
       test('response should have the Set-Cookie header with the Authorization token', async () => {
         const response = await testApp
           .post(`${baseUrl}/login`)
-          .send(userLoginDto)
+          .send(loginReqDto)
           .expect(200)
           .expect('Set-Cookie', /^Authorization=.+/);
         expect(JSON.parse(response.text)).toMatchObject({
           id: expect.any(Number),
-          firstName: userRegisterDto.firstName,
-          lastName: userRegisterDto.lastName,
-          emailAddress: userRegisterDto.emailAddress,
-          password: expect.any(String),
+          emailAddress: registerUserReqDto.emailAddress,
           enabled: true,
-          createdAt: expect.any(String),
-          updatedAt: expect.any(String),
-          deletedAt: null,
+          firstName: registerUserReqDto.firstName,
+          lastName: registerUserReqDto.lastName,
         });
       });
     });
@@ -87,7 +78,7 @@ describe('User Controller', () => {
       test('response should be a 404', async () => {
         const response = await testApp
           .post(`${baseUrl}/login`)
-          .send({ ...userLoginDto, emailAddress: 'new.user@test.com' });
+          .send({ ...loginReqDto, emailAddress: 'new.user@test.com' });
         expect(response.status).toEqual(404);
       });
     });

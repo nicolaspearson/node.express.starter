@@ -2,10 +2,10 @@ import express, { Router } from 'express';
 import * as bodyParser from 'body-parser';
 import { Server } from 'http';
 
-import errorMiddleware from '@/middleware/error.middleware';
-import loggerMiddleware from '@/middleware/logger.middleware';
-import user from '@/user/user.controller';
+import userController from '@/user/user.controller';
 import { logger } from '@/logger';
+import { errorMiddleware } from '@/middleware/error.middleware';
+import { loggerMiddleware } from '@/middleware/logger.middleware';
 
 export default class App {
   private app: express.Application;
@@ -46,7 +46,7 @@ export default class App {
   }
 
   private initializeControllers() {
-    const routes = Router().use('/user', user);
+    const routes = Router().use('/user', userController);
     this.app.use('/', routes);
   }
 }

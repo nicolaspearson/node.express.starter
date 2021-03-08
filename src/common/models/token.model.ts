@@ -1,6 +1,6 @@
 import * as jwt from 'jsonwebtoken';
 
-export default class Token implements Api.TokenPayload {
+export class Token implements Api.TokenPayload {
   public expiresIn?: number | string;
   public tokenString: string;
 

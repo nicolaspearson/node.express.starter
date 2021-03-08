@@ -1,6 +1,6 @@
 import { Connection, createConnection, getConnectionOptions } from 'typeorm';
 
-import { Environment } from '@/common/config';
+import { Environment } from '@/common/enums/environment.enum';
 import { configureConnectionOptions } from '@/db/config.db';
 import { logger } from '@/logger';
 

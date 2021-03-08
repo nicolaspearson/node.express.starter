@@ -3,12 +3,7 @@ import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import { resolve } from 'path';
 
-export enum Environment {
-  Test = 'test',
-  Development = 'development',
-  Staging = 'staging',
-  Production = 'production',
-}
+import { Environment } from '@/common/enums/environment.enum';
 
 export const environments: Environment[] = [
   Environment.Test,

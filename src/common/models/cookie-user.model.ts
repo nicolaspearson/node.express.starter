@@ -1,6 +1,6 @@
-import User from '@/db/entities/user.entity';
+import { User } from '@/db/entities/user.entity';
 
-export default interface CookieUser {
+export interface CookieUser {
   cookie: string;
   user: User;
 }

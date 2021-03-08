@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsNumber } from 'class-validator';
 
-export default class IdDto {
+export class FindUserByIdReqDto {
   @IsNumber()
   @IsNotEmpty()
   readonly id!: number;
