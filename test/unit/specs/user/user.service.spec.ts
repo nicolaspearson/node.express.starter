@@ -15,12 +15,12 @@ typeorm.getCustomRepository = () => userMockRepo;
 
 describe('User Service', () => {
   describe('createCookie', () => {
-    const tokenData: Api.TokenData = {
-      token: 'token',
+    const tokenPayload: Api.TokenPayload = {
       expiresIn: 1,
+      tokenString: 'token',
     };
     test('should return a string when creating a cookie', () => {
-      expect(typeof createCookie(tokenData)).toEqual('string');
+      expect(typeof createCookie(tokenPayload)).toEqual('string');
     });
   });
 

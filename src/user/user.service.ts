@@ -8,7 +8,7 @@ import User from '@/db/entities/user.entity';
 import UserRepository from '@/db/repositories/user.repository';
 import { createCookie } from '@/utils/cookie.utils';
 import { encryptPassword, validatePassword } from '@/utils/password.utils';
-import { createToken } from '@/utils/token.utils';
+import { createTokenPayload } from '@/utils/token.utils';
 
 export async function login(userLoginDto: UserLoginDto): Promise<CookieUser> {
   const userRepository = getCustomRepository(UserRepository);
@@ -22,8 +22,8 @@ export async function login(userLoginDto: UserLoginDto): Promise<CookieUser> {
     throw Boom.unauthorized('Invalid email address or password');
   }
   // Create a token for the user
-  const token = createToken(user);
-  const cookie = createCookie(token);
+  const tokenPayload = createTokenPayload(user);
+  const cookie = createCookie(tokenPayload);
   return {
     cookie,
     user,
@@ -43,8 +43,8 @@ export async function register(userRegisterDto: UserRegisterDto): Promise<Cookie
     },
   });
   // Create a token for the user
-  const tokenData = createToken(user);
-  const cookie = createCookie(tokenData);
+  const tokenPayload = createTokenPayload(user);
+  const cookie = createCookie(tokenPayload);
   return {
     cookie,
     user,

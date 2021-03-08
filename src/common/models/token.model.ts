@@ -1,12 +1,12 @@
 import * as jwt from 'jsonwebtoken';
 
-export default class Token {
+export default class Token implements Api.TokenPayload {
   public expiresIn?: number | string;
   public tokenString: string;
 
-  constructor(token?: string) {
-    if (token) {
-      this.tokenString = token;
+  constructor(existingTokenString?: string) {
+    if (existingTokenString) {
+      this.tokenString = existingTokenString;
     }
   }
 

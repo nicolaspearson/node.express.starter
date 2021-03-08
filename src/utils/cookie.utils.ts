@@ -1,5 +1,5 @@
-export function createCookie(tokenData: Api.TokenData): string {
-  return `Authorization=${tokenData.tokenString}; HttpOnly; Max-Age=${String(
-    tokenData.expiresIn!
+export function createCookie(tokenPayload: Api.TokenPayload): string {
+  return `Authorization=${tokenPayload.tokenString}; HttpOnly; Max-Age=${String(
+    tokenPayload.expiresIn!
   )}`;
 }
