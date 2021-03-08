@@ -1,6 +1,7 @@
 import * as express from 'express';
 
 import { FindUserByIdReqDto, LoginReqDto, RegisterUserReqDto, UserResDto } from '@/common/dto';
+import { authMiddleware } from '@/middleware/auth.middleware';
 import { validationMiddleware } from '@/middleware/validation.middleware';
 import { findUserById, login, register } from '@/user/user.service';
 import { safe } from '@/utils/express.utils';
@@ -48,6 +49,7 @@ export default express
   .Router()
   .get(
     '/:id',
+    authMiddleware,
     validationMiddleware(FindUserByIdReqDto, 'Invalid user id provided.', 'params'),
     safe(getUserById)
   )

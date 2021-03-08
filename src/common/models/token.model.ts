@@ -10,8 +10,8 @@ export class Token implements Api.TokenPayload {
     }
   }
 
-  public generateToken(contents: Api.TokenContents): void {
-    this.tokenString = jwt.sign(contents, process.env.JWT_SECRET!, this.getTokenSigningOptions());
+  public generateToken(jwtPayload: Api.JwtPayload): void {
+    this.tokenString = jwt.sign(jwtPayload, process.env.JWT_SECRET!, this.getTokenSigningOptions());
   }
 
   private getTokenSigningOptions(): jwt.SignOptions {

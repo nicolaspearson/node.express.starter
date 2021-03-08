@@ -8,8 +8,15 @@ declare namespace Api {
     envFilePath: string[];
   }
 
-  interface TokenContents {
-    id?: number;
+  type JwtPayload = {
+    id: number;
+  };
+
+  interface Jwt extends JwtPayload {
+    iat: number;
+    exp: number;
+    jti: UUID;
+    iss: string;
   }
 
   interface TokenPayload {
