@@ -30,7 +30,7 @@ export default class App {
     const port = Number(process.env.API_PORT);
     this.server = this.app.listen(
       port,
-      /* istanbul ignore next */ () => {
+      /* istanbul ignore next: ignore callback */ () => {
         logger.debug(`App: Listening on port ${port}!`);
       }
     );

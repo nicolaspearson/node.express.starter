@@ -4,10 +4,12 @@ import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
 
 import { closeConnections, setupDatabase } from '../db';
 import { testApp } from '../factories';
+import { getTokenStringFromCookieResponse } from '../utils';
 
 describe('User Controller', () => {
   const baseUrl = '/user';
   let connection: Connection;
+  let tokenString: string;
 
   const registerUserReqDto: RegisterUserReqDto = {
     firstName: 'John',
@@ -64,6 +66,7 @@ describe('User Controller', () => {
           .send(loginReqDto)
           .expect(200)
           .expect('Set-Cookie', /^Authorization=.+/);
+        tokenString = getTokenStringFromCookieResponse(response);
         expect(JSON.parse(response.text)).toMatchObject({
           id: expect.any(Number),
           email: registerUserReqDto.email,
@@ -79,6 +82,33 @@ describe('User Controller', () => {
         const response = await testApp
           .post(`${baseUrl}/login`)
           .send({ ...loginReqDto, email: 'new.user@test.com' });
+        expect(response.status).toEqual(404);
+      });
+    });
+  });
+
+  describe(`GET ${baseUrl}/:id`, () => {
+    describe('if the user exists', () => {
+      test('response should return the user', async () => {
+        const response = await testApp
+          .get(`${baseUrl}/1`)
+          .set('Authorization', ` Bearer ${tokenString}`)
+          .expect(200);
+        expect(JSON.parse(response.text)).toMatchObject({
+          id: 1,
+          email: expect.any(String),
+          enabled: expect.any(Boolean),
+          firstName: expect.any(String),
+          lastName: expect.any(String),
+        });
+      });
+    });
+
+    describe('if the user does not exist', () => {
+      test('response should be a 404', async () => {
+        const response = await testApp
+          .get(`${baseUrl}/999`)
+          .set('Authorization', ` Bearer ${tokenString}`);
         expect(response.status).toEqual(404);
       });
     });

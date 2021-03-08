@@ -34,7 +34,7 @@ describe('Validation Middleware', () => {
     const middleware = validationMiddleware(FindUserByIdReqDto, 'Invalid id provided', 'params');
     await middleware(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      { params: { id: 1 } as any } as Request,
+      { params: { id: '1' } as any } as Request,
       {} as Response,
       mockNext
     );
