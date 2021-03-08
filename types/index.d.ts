@@ -1,0 +1,1 @@
+type ConfigOptions = { envFilePath: string[] };

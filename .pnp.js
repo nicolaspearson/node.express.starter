@@ -71,6 +71,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "npm:26.6.3"],
             ["jest-coverage-badges", "npm:1.1.2"],
             ["jest-environment-node", "npm:26.6.2"],
+            ["joi", "npm:17.4.0"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["logform", "npm:2.2.0"],
             ["module-alias", "npm:2.2.2"],
@@ -904,6 +905,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@hapi/hoek", [
+        ["npm:9.1.1", {
+          "packageLocation": "./.yarn/cache/@hapi-hoek-npm-9.1.1-9cb487d073-e5be371c57.zip/node_modules/@hapi/hoek/",
+          "packageDependencies": [
+            ["@hapi/hoek", "npm:9.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@hapi/topo", [
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/@hapi-topo-npm-5.0.0-2bfaee40f2-f92797d5ef.zip/node_modules/@hapi/topo/",
+          "packageDependencies": [
+            ["@hapi/topo", "npm:5.0.0"],
+            ["@hapi/hoek", "npm:9.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@istanbuljs/load-nyc-config", [
         ["npm:1.1.0", {
           "packageLocation": "./.yarn/cache/@istanbuljs-load-nyc-config-npm-1.1.0-42d17c9cb1-f7f3b1c922.zip/node_modules/@istanbuljs/load-nyc-config/",
@@ -1258,6 +1278,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["node-gyp", "npm:7.1.2"],
             ["puka", "npm:1.0.1"],
             ["read-package-json-fast", "npm:2.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@sideway/address", [
+        ["npm:4.1.1", {
+          "packageLocation": "./.yarn/cache/@sideway-address-npm-4.1.1-2c7d8b653f-ba8678372e.zip/node_modules/@sideway/address/",
+          "packageDependencies": [
+            ["@sideway/address", "npm:4.1.1"],
+            ["@hapi/hoek", "npm:9.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@sideway/formula", [
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@sideway-formula-npm-3.0.0-8688cb96b6-b83ecd35fe.zip/node_modules/@sideway/formula/",
+          "packageDependencies": [
+            ["@sideway/formula", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@sideway/pinpoint", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/@sideway-pinpoint-npm-2.0.0-66d94e687e-e5528639ae.zip/node_modules/@sideway/pinpoint/",
+          "packageDependencies": [
+            ["@sideway/pinpoint", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -7307,6 +7355,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["joi", [
+        ["npm:17.4.0", {
+          "packageLocation": "./.yarn/cache/joi-npm-17.4.0-cfd6f2d54c-2f6203d451.zip/node_modules/joi/",
+          "packageDependencies": [
+            ["joi", "npm:17.4.0"],
+            ["@hapi/hoek", "npm:9.1.1"],
+            ["@hapi/topo", "npm:5.0.0"],
+            ["@sideway/address", "npm:4.1.1"],
+            ["@sideway/formula", "npm:3.0.0"],
+            ["@sideway/pinpoint", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["js-tokens", [
         ["npm:4.0.0", {
           "packageLocation": "./.yarn/cache/js-tokens-npm-4.0.0-0ac852e9e2-1fc4e4667a.zip/node_modules/js-tokens/",
@@ -8648,6 +8710,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "npm:26.6.3"],
             ["jest-coverage-badges", "npm:1.1.2"],
             ["jest-environment-node", "npm:26.6.2"],
+            ["joi", "npm:17.4.0"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["logform", "npm:2.2.0"],
             ["module-alias", "npm:2.2.2"],
