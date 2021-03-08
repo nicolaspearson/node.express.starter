@@ -11,6 +11,7 @@ module.exports = Object.assign({}, require('../../jest.config.js'), {
     '!src/logger/index.ts',
     '!src/utils/express.utils.ts',
   ],
+  coverageDirectory: '<rootDir>/coverage/unit',
   setupFiles: ['<rootDir>/test/unit/setup.ts'],
   testMatch: ['**/test/unit/**/*.spec.ts'],
 });

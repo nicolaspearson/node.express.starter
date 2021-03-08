@@ -5,7 +5,6 @@ const rootDir = path.resolve(__dirname);
 module.exports = {
   clearMocks: true,
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
-  coverageDirectory: 'coverage',
   coverageReporters: process.env.GITHUB_ACTIONS
     ? ['lcovonly', 'text']
     : ['html', 'json-summary', 'lcov', 'text'],

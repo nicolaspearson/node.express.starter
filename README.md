@@ -4,10 +4,10 @@ A simple Node.js API, written using Typescript, and Express.
 
 ## Test Coverage
 
-![Coverage lines](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/badge-lines.svg?sanitize=true)
-![Coverage functions](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/badge-functions.svg?sanitize=true)
-![Coverage branches](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/badge-branches.svg?sanitize=true)
-![Coverage statements](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/badge-statements.svg?sanitize=true)
+![Coverage lines](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/unit/badge-lines.svg?sanitize=true)
+![Coverage functions](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/unit/badge-functions.svg?sanitize=true)
+![Coverage branches](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/unit/badge-branches.svg?sanitize=true)
+![Coverage statements](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/unit/badge-statements.svg?sanitize=true)
 
 ## Getting Started
 

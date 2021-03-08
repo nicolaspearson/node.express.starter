@@ -8,13 +8,7 @@ module.exports = Object.assign({}, require('../../jest.config.js'), {
     '!src/db/migrations/*.ts',
     'src/**/*.controller.ts',
   ],
-  coverageThreshold: {
-    global: {
-      branches: 100,
-      functions: 100,
-      lines: 100,
-    },
-  },
+  coverageDirectory: '<rootDir>/coverage/integration',
   setupFiles: ['<rootDir>/test/integration/setup.ts'],
   testMatch: ['**/test/integration/**/*.spec.ts'],
 });
