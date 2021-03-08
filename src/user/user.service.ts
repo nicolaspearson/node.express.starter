@@ -11,7 +11,7 @@ import { createTokenPayload } from '@/utils/token.utils';
 
 export async function login(loginReqDto: LoginReqDto): Promise<CookieUser> {
   const userRepository = getCustomRepository(UserRepository);
-  const user: User = await userRepository.findByEmailOrFail(loginReqDto.emailAddress);
+  const user: User = await userRepository.findByEmailOrFail(loginReqDto.email);
   if (!user.enabled) {
     throw Boom.unauthorized('User account has been disabled');
   }
@@ -31,7 +31,7 @@ export async function login(loginReqDto: LoginReqDto): Promise<CookieUser> {
 
 export async function register(registerUserReqDto: RegisterUserReqDto): Promise<CookieUser> {
   const userRepository = getCustomRepository(UserRepository);
-  if (await userRepository.findByEmail(registerUserReqDto.emailAddress)) {
+  if (await userRepository.findByEmail(registerUserReqDto.email)) {
     throw Boom.conflict('The provided email address is already in use');
   }
   const hashedPassword = await encryptPassword(registerUserReqDto.password);

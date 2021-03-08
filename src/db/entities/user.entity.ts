@@ -2,6 +2,7 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  Index,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -9,29 +10,30 @@ import {
 @Entity({ name: 'user' })
 export class User {
   @PrimaryGeneratedColumn()
-  public id: number;
+  id: number;
 
-  @Column({ name: 'email_address', length: 500 })
-  public emailAddress: string;
+  @Column({ name: 'email', length: 75, unique: true })
+  @Index('IDX_USER_EMAIL', { synchronize: false })
+  email: string;
 
   @Column({ name: 'enabled', nullable: false, default: true })
-  public enabled: boolean;
+  enabled: boolean;
 
-  @Column({ name: 'first_name', length: 500 })
-  public firstName: string;
+  @Column({ name: 'first_name', length: 100 })
+  firstName: string;
 
-  @Column({ name: 'last_name', length: 500 })
-  public lastName: string;
+  @Column({ name: 'last_name', length: 100 })
+  lastName: string;
 
-  @Column({ name: 'password', length: 500 })
-  public password: string;
+  @Column({ name: 'password' })
+  password: string;
 
   @CreateDateColumn({ name: 'created_at', type: 'timestamp with time zone' })
-  public createdAt: Date;
+  createdAt: Date;
 
   @UpdateDateColumn({ name: 'updated_at', type: 'timestamp with time zone' })
-  public updatedAt: Date;
+  updatedAt: Date;
 
   @Column({ name: 'deleted_at', nullable: true, type: 'timestamp with time zone' })
-  public deletedAt: Nullable<Date>;
+  deletedAt: Nullable<Date>;
 }

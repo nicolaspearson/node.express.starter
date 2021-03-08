@@ -27,17 +27,14 @@ export class UserRepository extends AbstractRepository<User> {
     return this.manager.save(User, payload as User);
   }
 
-  findByEmail(emailAddress: string): Promise<User | undefined> {
-    return this.userQuery()
-      .clone()
-      .where('"user"."email_address" = :emailAddress', { emailAddress })
-      .getOne();
+  findByEmail(email: Email): Promise<User | undefined> {
+    return this.userQuery().clone().where('"user"."email" = :email', { email }).getOne();
   }
 
-  async findByEmailOrFail(emailAddress: string): Promise<User> {
-    const user = await this.findByEmail(emailAddress);
+  async findByEmailOrFail(email: Email): Promise<User> {
+    const user = await this.findByEmail(email);
     if (!user) {
-      throw Boom.notFound(`User with email ${emailAddress} does not exist`);
+      throw Boom.notFound(`User with email ${email} does not exist`);
     }
     return user;
   }

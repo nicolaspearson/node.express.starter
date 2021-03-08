@@ -2,19 +2,19 @@ import { IsEmail, IsString, Length } from 'class-validator';
 
 export class RegisterUserReqDto {
   @IsString()
-  @Length(1, 500)
+  @IsEmail()
+  @Length(1, 75)
+  public email: Email;
+
+  @IsString()
+  @Length(1, 100)
   public firstName: string;
 
   @IsString()
-  @Length(1, 500)
+  @Length(1, 100)
   public lastName: string;
 
   @IsString()
-  @IsEmail()
-  @Length(1, 500)
-  public emailAddress: string;
-
-  @IsString()
-  @Length(6, 500)
+  @Length(6, 50)
   public password: string;
 }

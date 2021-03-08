@@ -9,7 +9,7 @@ describe('Validation Middleware', () => {
     const mockNext = jest.fn();
     const middleware = validationMiddleware(LoginReqDto, 'Invalid email address or password');
     await middleware(
-      { body: { emailAddress: 'test@example.com', password: '123456' } } as Request,
+      { body: { email: 'test@example.com', password: '123456' } } as Request,
       {} as Response,
       mockNext
     );
@@ -21,7 +21,7 @@ describe('Validation Middleware', () => {
     const mockNext = jest.fn();
     const middleware = validationMiddleware(LoginReqDto, 'Invalid email address or password');
     await middleware(
-      { body: { emailAddress: 'not-a-valid-email-address', password: '123456' } } as Request,
+      { body: { email: 'not-a-valid-email-address', password: '123456' } } as Request,
       {} as Response,
       mockNext
     );

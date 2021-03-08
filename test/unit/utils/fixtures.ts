@@ -4,11 +4,11 @@ export const newDate = new Date();
 
 export const mockUser: User = {
   id: 1,
+  email: 'rick.sanchez@example.com' as Email,
+  enabled: true,
   firstName: 'Rick',
   lastName: 'Sanchez',
-  emailAddress: 'rick.sanchez@example.com',
   password: '123456',
-  enabled: true,
   createdAt: newDate,
   updatedAt: newDate,
   deletedAt: null,

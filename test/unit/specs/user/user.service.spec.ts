@@ -25,7 +25,7 @@ describe('User Service', () => {
 
   describe('login', () => {
     const dto = new LoginReqDto();
-    dto.emailAddress = mockUser.emailAddress;
+    dto.email = mockUser.email;
     dto.password = mockUser.password;
 
     test("should throw if the user's account is not enabled", async () => {
@@ -62,7 +62,7 @@ describe('User Service', () => {
     const dto = new RegisterUserReqDto();
     dto.firstName = mockUser.firstName;
     dto.lastName = mockUser.lastName;
-    dto.emailAddress = mockUser.emailAddress;
+    dto.email = mockUser.email;
     dto.password = mockUser.password;
 
     test("should throw if the user's account is already registered", async () => {

@@ -12,12 +12,12 @@ describe('User Controller', () => {
   const registerUserReqDto: RegisterUserReqDto = {
     firstName: 'John',
     lastName: 'Doe',
-    emailAddress: 'john.doe@test.com',
+    email: 'john.doe@test.com' as Email,
     password: 'testing',
   };
 
   const loginReqDto: LoginReqDto = {
-    emailAddress: 'john.doe@test.com',
+    email: 'john.doe@test.com' as Email,
     password: 'testing',
   };
 
@@ -40,7 +40,7 @@ describe('User Controller', () => {
           .expect('Set-Cookie', /^Authorization=.+/);
         expect(JSON.parse(response.text)).toMatchObject({
           id: expect.any(Number),
-          emailAddress: registerUserReqDto.emailAddress,
+          email: registerUserReqDto.email,
           enabled: true,
           firstName: registerUserReqDto.firstName,
           lastName: registerUserReqDto.lastName,
@@ -66,7 +66,7 @@ describe('User Controller', () => {
           .expect('Set-Cookie', /^Authorization=.+/);
         expect(JSON.parse(response.text)).toMatchObject({
           id: expect.any(Number),
-          emailAddress: registerUserReqDto.emailAddress,
+          email: registerUserReqDto.email,
           enabled: true,
           firstName: registerUserReqDto.firstName,
           lastName: registerUserReqDto.lastName,
@@ -78,7 +78,7 @@ describe('User Controller', () => {
       test('response should be a 404', async () => {
         const response = await testApp
           .post(`${baseUrl}/login`)
-          .send({ ...loginReqDto, emailAddress: 'new.user@test.com' });
+          .send({ ...loginReqDto, email: 'new.user@test.com' });
         expect(response.status).toEqual(404);
       });
     });

@@ -11,7 +11,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "emailAddress": "test@example.com",
+  "email": "test@example.com",
   "password": "secret"
 }
 
@@ -21,8 +21,8 @@ Accept: application/json
 Content-Type: application/json
 
 {
+  "email": "test@example.com",
   "firstName": "John",
   "lastName": "Doe",
-  "emailAddress": "test@example.com",
   "password": "secret"
 }
