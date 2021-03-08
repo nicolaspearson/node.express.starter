@@ -1,15 +1,16 @@
 import 'dotenv/config';
 import 'module-alias/register';
 import 'reflect-metadata';
+import { resolve } from 'path';
 
 import App from '@/app';
+import * as config from '@/common/config';
 import * as db from '@/db';
-import * as env from '@/env';
 import * as logger from '@/logger';
 
-// We use dotenv and nconf to control
+// We use dotenv and joi to set the
 // environment variables in the app.
-env.init();
+config.init({ envFilePath: [resolve(process.cwd(), '.env')] });
 
 // Winston is used for logging, lets
 // prepare the logger implementation.

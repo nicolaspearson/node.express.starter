@@ -4,6 +4,7 @@ import UserLoginDto from '@/common/dto/user.login.dto';
 import UserRegisterDto from '@/common/dto/user.register.dto';
 import validationMiddleware from '@/middleware/validation.middleware';
 import { login, register } from '@/user/user.service';
+import { safe } from '@/utils/express.utils';
 
 /**
  * POST /user/login
@@ -11,15 +12,11 @@ import { login, register } from '@/user/user.service';
  * @param req The http request.
  * @param res The http response.
  */
-async function postLogin(req: express.Request, res: express.Response, next: express.NextFunction) {
-  try {
-    const userLoginDto: UserLoginDto = req.body;
-    const { cookie, user } = await login(userLoginDto);
-    res.setHeader('Set-Cookie', [cookie]);
-    res.status(200).json(user);
-  } catch (error) {
-    next(error);
-  }
+async function postLogin(req: express.Request, res: express.Response) {
+  const userLoginDto: UserLoginDto = req.body;
+  const { cookie, user } = await login(userLoginDto);
+  res.setHeader('Set-Cookie', [cookie]);
+  res.status(200).json(user);
 }
 
 /**
@@ -28,19 +25,11 @@ async function postLogin(req: express.Request, res: express.Response, next: expr
  * @param req The http request.
  * @param res The http response.
  */
-async function postRegister(
-  req: express.Request,
-  res: express.Response,
-  next: express.NextFunction
-) {
-  try {
-    const userRegisterDto: UserRegisterDto = req.body;
-    const { cookie, user } = await register(userRegisterDto);
-    res.setHeader('Set-Cookie', [cookie]);
-    res.status(201).json(user);
-  } catch (error) {
-    next(error);
-  }
+async function postRegister(req: express.Request, res: express.Response) {
+  const userRegisterDto: UserRegisterDto = req.body;
+  const { cookie, user } = await register(userRegisterDto);
+  res.setHeader('Set-Cookie', [cookie]);
+  res.status(201).json(user);
 }
 
 /** The /user routes. */
@@ -49,10 +38,10 @@ export default express
   .post(
     '/login',
     validationMiddleware(UserLoginDto, 'Invalid email address or password.'),
-    postLogin
+    safe(postLogin)
   )
   .post(
     '/register',
     validationMiddleware(UserRegisterDto, 'User registration failed.'),
-    postRegister
+    safe(postRegister)
   );

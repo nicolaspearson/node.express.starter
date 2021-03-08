@@ -68,10 +68,10 @@ jobs:
           - 5432:5432
         options: " --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10 "
     env:
-      DB_HOST: postgres
-      DB_PORT: 5432
-      DB_DATABASE: express
-      DB_SCHEMA: public
+      TYPEORM_HOST: postgres
+      TYPEORM_PORT: 5432
+      TYPEORM_DATABASE: express
+      TYPEORM_SCHEMA: public
   release:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest

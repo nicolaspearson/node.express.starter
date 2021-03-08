@@ -4,22 +4,44 @@ import * as fs from 'fs';
 import { resolve } from 'path';
 
 export enum Environment {
-  Unit = 'unit',
-  Integration = 'integration',
+  Test = 'test',
   Development = 'development',
   Staging = 'staging',
   Production = 'production',
 }
 
 export const environments: Environment[] = [
-  Environment.Unit,
-  Environment.Integration,
+  Environment.Test,
   Environment.Development,
   Environment.Staging,
   Environment.Production,
 ];
 
-export function getValidationSchema(): Joi.ObjectSchema {
+export function init(options: Api.ConfigOptions): void {
+  const config = loadEnvFile(options);
+  const validationOptions: Joi.ValidationOptions = {
+    abortEarly: false,
+    allowUnknown: false,
+  };
+  const { error, value: validatedConfig } = getValidationSchema().validate(
+    config,
+    validationOptions
+  );
+  if (error) {
+    throw new Error(`Config validation error: ${error.message}`);
+  }
+  assignVariablesToProcess(validatedConfig);
+}
+
+function assignVariablesToProcess(config: Record<string, string>) {
+  if (!(config !== null && typeof config === 'object')) {
+    return;
+  }
+  const keys = Object.keys(config).filter((key) => !(key in process.env));
+  keys.forEach((key) => (process.env[key] = config[key]));
+}
+
+function getValidationSchema(): Joi.ObjectSchema {
   return Joi.object({
     API_HOST: Joi.string().hostname().description('The API server host url').default('localhost'),
     API_PORT: Joi.number().port().description('The API server port').default(3000),
@@ -36,6 +58,9 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .valid('postgres')
       .description('The database connection type to be used by TypeORM')
       .default('postgres'),
+    TYPEORM_CONNECTION_NAME: Joi.string()
+      .description('The connection name to be used by TypeORM')
+      .default('default'),
     TYPEORM_DATABASE: Joi.string()
       .description('The database name to be used by TypeORM')
       .example('express')
@@ -45,20 +70,20 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .default(false),
     TYPEORM_ENTITIES: Joi.string()
       .description('The path to the entities to be used by TypeORM')
-      .default('dist/src/db/entities/*.js'),
+      .default('src/db/entities/*.entity.{js,ts}'),
     TYPEORM_HOST: Joi.string()
       .hostname()
       .description('The database host to be used by TypeORM')
       .required(),
     TYPEORM_MIGRATIONS_DIR: Joi.string()
       .description('The path to the migrations dir to be used by TypeORM')
-      .default('dist/src/db/migrations'),
+      .default('src/db/migrations'),
     TYPEORM_MIGRATIONS_RUN: Joi.boolean()
       .description('Whether or not TypeORM should run migrations')
       .default(true),
     TYPEORM_MIGRATIONS: Joi.string()
       .description('The path to the migrations to be used by TypeORM')
-      .default('dist/src/db/migrations/*.js'),
+      .default('src/db/migrations/*.{js,ts}'),
     TYPEORM_PASSWORD: Joi.string()
       .description('The database password to be used by TypeORM')
       .example('masterkey')
@@ -81,32 +106,7 @@ export function getValidationSchema(): Joi.ObjectSchema {
   });
 }
 
-export function init(options: ConfigOptions): void {
-  const config = loadEnvFile(options);
-  const validationOptions: Joi.ValidationOptions = {
-    abortEarly: false,
-    allowUnknown: true,
-  };
-  const { error, value: validatedConfig } = getValidationSchema().validate(
-    config,
-    validationOptions
-  );
-  if (error) {
-    throw new Error(`Config validation error: ${error.message}`);
-  }
-  assignVariablesToProcess(validatedConfig);
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function assignVariablesToProcess(config: Record<string, any>) {
-  if (!(config !== null && typeof config === 'object')) {
-    return;
-  }
-  const keys = Object.keys(config).filter((key) => !(key in process.env));
-  keys.forEach((key) => (process.env[key] = config[key]));
-}
-
-function loadEnvFile(options: ConfigOptions): dotenv.DotenvParseOutput {
+function loadEnvFile(options: Api.ConfigOptions): dotenv.DotenvParseOutput {
   const envFilePaths = Array.isArray(options.envFilePath)
     ? options.envFilePath
     : [options.envFilePath || resolve(process.cwd(), '.env')];

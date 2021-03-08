@@ -1,7 +1,7 @@
 import Boom from 'boom';
 import { Request, Response } from 'express';
 
-import HttpException from '@/common/interfaces/http-exception.interface';
+import HttpException from '@/common/models/http-exception.model';
 import errorMiddleware from '@/middleware/error.middleware';
 
 describe('Error Middleware', () => {

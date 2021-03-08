@@ -2,7 +2,6 @@ import { Client } from 'pg';
 import { Connection } from 'typeorm';
 
 import * as db from '@/db';
-import * as env from '@/env';
 
 export async function closeConnections(connection?: Connection): Promise<void> {
   if (connection) {
@@ -12,19 +11,18 @@ export async function closeConnections(connection?: Connection): Promise<void> {
 }
 
 export async function setupDatabase(database: string): Promise<Connection> {
-  env.init();
   const client = new Client({
-    user: env.get().DB_USERNAME,
-    password: env.get().DB_PASSWORD,
-    host: env.get().DB_HOST,
-    database: env.get().DB_NAME,
-    port: Number(env.get().DB_PORT),
+    user: process.env.TYPEORM_USERNAME,
+    password: process.env.TYPEORM_PASSWORD,
+    host: process.env.TYPEORM_HOST,
+    database: process.env.TYPEORM_DATABASE,
+    port: Number(process.env.TYPEORM_PORT),
   });
   await client.connect();
   // Create database if it does not exist (ignoring errors if it does)
   try {
     // Force creation of required extensions
-    await client.query(`CREATE DATABASE ${database} WITH OWNER ${env.get().DB_USERNAME}`);
+    await client.query(`CREATE DATABASE ${database} WITH OWNER ${process.env.TYPEORM_USERNAME!}`);
   } catch (err) {
     // empty
   }

@@ -1,3 +1,6 @@
+# Env files
+.env
+
 # Generated files
 /coverage/**
 !/coverage/badge-branches.svg

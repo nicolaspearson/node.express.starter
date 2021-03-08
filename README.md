@@ -53,7 +53,6 @@ yarn db:migration:generate:missing InitialSchema
 
 ## TODO
 
-- Rework environment variable implementation
 - Rework the request DTO implementation
 - Add a response DTO implementation
 - Work on migrations implementation

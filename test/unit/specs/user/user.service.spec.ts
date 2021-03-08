@@ -2,9 +2,9 @@ import Boom from 'boom';
 
 import UserLoginDto from '@/common/dto/user.login.dto';
 import UserRegisterDto from '@/common/dto/user.register.dto';
-import TokenData from '@/common/interfaces/token-data.interface';
-import * as env from '@/env';
-import { createCookie, encryptPassword, login, register } from '@/user/user.service';
+import { login, register } from '@/user/user.service';
+import { createCookie } from '@/utils/cookie.utils';
+import { encryptPassword } from '@/utils/password.utils';
 
 import { mockUser } from '../../utils/fixtures';
 import { userMockRepo } from '../../utils/repo.mocks';
@@ -14,12 +14,8 @@ const typeorm = require('typeorm');
 typeorm.getCustomRepository = () => userMockRepo;
 
 describe('User Service', () => {
-  beforeAll(() => {
-    env.init();
-  });
-
   describe('createCookie', () => {
-    const tokenData: TokenData = {
+    const tokenData: Api.TokenData = {
       token: 'token',
       expiresIn: 1,
     };

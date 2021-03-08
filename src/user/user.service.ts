@@ -1,36 +1,14 @@
 import Boom from 'boom';
-import * as bcrypt from 'bcrypt';
 import { getCustomRepository } from 'typeorm';
 
 import UserLoginDto from '@/common/dto/user.login.dto';
 import UserRegisterDto from '@/common/dto/user.register.dto';
-import CookieUser from '@/common/interfaces/cookie-user';
-import Token from '@/common/interfaces/token';
-import TokenContents from '@/common/interfaces/token-contents.interface';
-import TokenData from '@/common/interfaces/token-data.interface';
+import CookieUser from '@/common/models/cookie-user.model';
 import User from '@/db/entities/user.entity';
 import UserRepository from '@/db/repositories/user.repository';
-
-export function createCookie(tokenData: TokenData): string {
-  return `Authorization=${tokenData.token}; HttpOnly; Max-Age=${String(tokenData.expiresIn!)}`;
-}
-
-export function createToken(user: User): Token {
-  const expiresIn = 60 * 60; // 1 hour
-  const tokenContents: TokenContents = {
-    id: user.id,
-  };
-  // Generate a token
-  const token: Token = new Token();
-  token.expiresIn = expiresIn;
-  token.generateToken(tokenContents);
-  return token;
-}
-
-export async function encryptPassword(password: string): Promise<string> {
-  const salt: string = await bcrypt.genSalt(10);
-  return bcrypt.hash(password, salt);
-}
+import { createCookie } from '@/utils/cookie.utils';
+import { encryptPassword, validatePassword } from '@/utils/password.utils';
+import { createToken } from '@/utils/token.utils';
 
 export async function login(userLoginDto: UserLoginDto): Promise<CookieUser> {
   const userRepository = getCustomRepository(UserRepository);
@@ -71,8 +49,4 @@ export async function register(userRegisterDto: UserRegisterDto): Promise<Cookie
     cookie,
     user,
   };
-}
-
-export function validatePassword(dbPassword: string, password: string): Promise<boolean> {
-  return bcrypt.compare(dbPassword, password);
 }

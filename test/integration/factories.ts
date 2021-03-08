@@ -1,7 +1,6 @@
 import request from 'supertest';
 
 import App from '@/app';
-import * as env from '@/env';
 
 export type HttpMethod = 'delete' | 'get' | 'patch' | 'post' | 'put';
 
@@ -11,7 +10,6 @@ function createRequest(
   bearer?: string,
   contentType?: RegExp | null
 ): request.Test {
-  env.init();
   const app = new App();
   const testApp = request(app.getExpressApp())
     [method](url)

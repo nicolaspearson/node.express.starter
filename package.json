@@ -18,8 +18,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsc --build $(pwd)/tsconfig-build.json --verbose && run copy:env",
-    "copy:env": "cp $(pwd)/src/env/*.json $(pwd)/dist/src/env/",
+    "build": "tsc --build $(pwd)/tsconfig-build.json --verbose",
     "db:migration:create": "typeorm migration:create -n",
     "db:migration:generate:missing": "rm -rf $(pwd)/dist && run build && run exec:script:generate-migration",
     "db:migration:generate": "typeorm migration:generate -n",

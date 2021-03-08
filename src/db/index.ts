@@ -1,6 +1,6 @@
 import { Connection, createConnection, getConnectionOptions } from 'typeorm';
 
-import * as env from '@/env';
+import { Environment } from '@/common/config';
 import { configureConnectionOptions } from '@/db/config.db';
 
 interface AdditionalConnectionOptions {
@@ -18,9 +18,12 @@ export async function init(options?: AdditionalConnectionOptions): Promise<Conne
   const connectionOptions = await getConnectionOptions();
   configureConnectionOptions(connectionOptions);
   const connection = await createConnection(Object.assign(connectionOptions, options));
-  if (env.environment() !== 'development' && env.environment() !== 'test') {
+  if (
+    process.env.NODE_ENV !== Environment.Development &&
+    process.env.NODE_ENV !== Environment.Test
+  ) {
     // TODO: Improve production migrations
-    await connection.runMigrations();
+    // await connection.runMigrations();
   }
   return connection;
 }

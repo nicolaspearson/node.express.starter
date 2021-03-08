@@ -5,7 +5,6 @@ import { Server } from 'http';
 import errorMiddleware from '@/middleware/error.middleware';
 import loggerMiddleware from '@/middleware/logger.middleware';
 import user from '@/user/user.controller';
-import * as env from '@/env';
 import { logger } from '@/logger';
 
 export default class App {
@@ -28,11 +27,11 @@ export default class App {
   }
 
   public listen(): void {
-    const port = Number(env.get().API_PORT);
+    const port = Number(process.env.API_PORT);
     this.server = this.app.listen(
       port,
       /* istanbul ignore next */ () => {
-        logger.debug(`listening on port ${port}!`);
+        logger.debug(`App: Listening on port ${port}!`);
       }
     );
   }
