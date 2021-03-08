@@ -2,13 +2,6 @@ import { NextFunction, Request, Response } from 'express';
 
 import App from '@/app';
 
-jest.mock('@/logger', () => ({
-  logger: {
-    debug: jest.fn(),
-    error: jest.fn(),
-    info: jest.fn(),
-  },
-}));
 jest.mock('@/middleware/error.middleware');
 jest.mock('@/middleware/logger.middleware');
 jest.mock('@/user/user.controller');

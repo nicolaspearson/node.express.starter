@@ -1,8 +1,7 @@
 import Boom from 'boom';
 
 import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
-import { login, register } from '@/user/user.service';
-import { createCookie } from '@/utils/cookie.utils';
+import { findUserById, login, register } from '@/user/user.service';
 import { encryptPassword } from '@/utils/password.utils';
 
 import { mockUser } from '../../utils/fixtures';
@@ -13,13 +12,14 @@ const typeorm = require('typeorm');
 typeorm.getCustomRepository = () => userMockRepo;
 
 describe('User Service', () => {
-  describe('createCookie', () => {
-    const tokenPayload: Api.TokenPayload = {
-      expiresIn: 1,
-      tokenString: 'token',
-    };
-    test('should return a string when creating a cookie', () => {
-      expect(typeof createCookie(tokenPayload)).toEqual('string');
+  describe('findUserById', () => {
+    const dto = new LoginReqDto();
+    dto.email = mockUser.email as Email;
+    dto.password = mockUser.password;
+
+    test('should find the user by id correctly', async () => {
+      userMockRepo.findByIdOrFail!.mockResolvedValueOnce(mockUser);
+      expect(await findUserById({ id: mockUser.id })).toMatchObject(mockUser);
     });
   });
 
