@@ -6,6 +6,7 @@ module.exports = Object.assign({}, require('../../jest.config.js'), {
     '!src/common/dto/index.ts',
     'src/db/**/*.ts',
     '!src/db/config.db.ts',
+    '!src/db/fixtures/**/*.ts',
     '!src/db/index.ts',
     '!src/db/migrations/*.ts',
     'src/**/*.controller.ts',

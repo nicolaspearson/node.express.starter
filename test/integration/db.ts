@@ -2,6 +2,7 @@ import { Client } from 'pg';
 import { Connection } from 'typeorm';
 
 import * as db from '@/db';
+import { seedDatabase } from '@/db/fixtures/seeder';
 
 export async function closeConnections(connection?: Connection): Promise<void> {
   if (connection) {
@@ -34,6 +35,6 @@ export async function setupDatabase(database: string): Promise<Connection> {
     dropSchema: true,
     logging: false,
   });
-  // TODO: load fixtures
+  await seedDatabase(connection);
   return connection;
 }

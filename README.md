@@ -53,7 +53,6 @@ yarn db:migration:generate:missing InitialSchema
 
 ## TODO
 
-- Add fixtures
 - Improve README
 
 ## Contribution Guidelines

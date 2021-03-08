@@ -5,7 +5,17 @@
 ###########                       USER                       ###########
 ########################################################################
 
-### Login
+### Login (with fixture user)
+POST {{baseUrl}}/user/login HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "msmith@fixture.example.com",
+  "password": "secret"
+}
+
+### Login (with created user)
 POST {{baseUrl}}/user/login HTTP/1.1
 Accept: application/json
 Content-Type: application/json
