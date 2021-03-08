@@ -2,6 +2,7 @@ import { Connection, createConnection, getConnectionOptions } from 'typeorm';
 
 import { Environment } from '@/common/config';
 import { configureConnectionOptions } from '@/db/config.db';
+import { logger } from '@/logger';
 
 interface AdditionalConnectionOptions {
   database?: string;
@@ -18,12 +19,9 @@ export async function init(options?: AdditionalConnectionOptions): Promise<Conne
   const connectionOptions = await getConnectionOptions();
   configureConnectionOptions(connectionOptions);
   const connection = await createConnection(Object.assign(connectionOptions, options));
-  if (
-    process.env.NODE_ENV !== Environment.Development &&
-    process.env.NODE_ENV !== Environment.Test
-  ) {
-    // TODO: Improve production migrations
-    // await connection.runMigrations();
+  if (process.env.NODE_ENV === Environment.Development) {
+    // TODO: Seed the database with fixtures
+    logger.debug('Seeding database');
   }
   return connection;
 }

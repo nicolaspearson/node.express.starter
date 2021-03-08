@@ -55,8 +55,8 @@ yarn db:migration:generate:missing InitialSchema
 
 - Rework the request DTO implementation
 - Add a response DTO implementation
-- Work on migrations implementation
 - Add fixtures
+- Improve README
 
 ## Contribution Guidelines
 
