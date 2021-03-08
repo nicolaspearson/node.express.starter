@@ -36,3 +36,9 @@ Content-Type: application/json
   "lastName": "Doe",
   "password": "secret"
 }
+
+### Get user by id
+GET {{baseUrl}}/user/1 HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}

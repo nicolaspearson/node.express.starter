@@ -1,9 +1,21 @@
 import * as express from 'express';
 
-import { LoginReqDto, RegisterUserReqDto, UserResDto } from '@/common/dto';
+import { FindUserByIdReqDto, LoginReqDto, RegisterUserReqDto, UserResDto } from '@/common/dto';
 import { validationMiddleware } from '@/middleware/validation.middleware';
-import { login, register } from '@/user/user.service';
+import { findUserById, login, register } from '@/user/user.service';
 import { safe } from '@/utils/express.utils';
+
+/**
+ * GET /user/:id
+ *
+ * @param req The http request.
+ * @param res The http response.
+ */
+async function getUserById(req: express.Request, res: express.Response) {
+  const { id } = req.params;
+  const user = await findUserById({ id });
+  res.status(200).json(new UserResDto(user));
+}
 
 /**
  * POST /user/login
@@ -34,6 +46,11 @@ async function postRegister(req: express.Request, res: express.Response) {
 /** The /user routes. */
 export default express
   .Router()
+  .get(
+    '/:id',
+    validationMiddleware(FindUserByIdReqDto, 'Invalid user id provided.', 'params'),
+    safe(getUserById)
+  )
   .post(
     '/login',
     validationMiddleware(LoginReqDto, 'Invalid email address or password.'),

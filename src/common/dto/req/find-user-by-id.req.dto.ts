@@ -1,7 +1,7 @@
-import { IsNotEmpty, IsNumber } from 'class-validator';
+import { IsNotEmpty, IsNumberString } from 'class-validator';
 
 export class FindUserByIdReqDto {
-  @IsNumber()
+  @IsNumberString()
   @IsNotEmpty()
-  readonly id!: number;
+  readonly id!: number | string;
 }

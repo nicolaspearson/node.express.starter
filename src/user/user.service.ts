@@ -1,13 +1,18 @@
 import Boom from 'boom';
 import { getCustomRepository } from 'typeorm';
 
-import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
+import { FindUserByIdReqDto, LoginReqDto, RegisterUserReqDto } from '@/common/dto';
 import { CookieUser } from '@/common/models/cookie-user.model';
 import { User } from '@/db/entities/user.entity';
 import { UserRepository } from '@/db/repositories/user.repository';
 import { createCookie } from '@/utils/cookie.utils';
 import { encryptPassword, validatePassword } from '@/utils/password.utils';
 import { createTokenPayload } from '@/utils/token.utils';
+
+export async function findUserById(findUserByIdReqDto: FindUserByIdReqDto): Promise<User> {
+  const userRepository = getCustomRepository(UserRepository);
+  return userRepository.findByIdOrFail(Number(findUserByIdReqDto.id));
+}
 
 export async function login(loginReqDto: LoginReqDto): Promise<CookieUser> {
   const userRepository = getCustomRepository(UserRepository);
