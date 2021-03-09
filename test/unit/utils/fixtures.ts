@@ -1,7 +1,6 @@
 import { User } from '@/db/entities/user.entity';
 
-export const mockTokenString =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE1MjQyODE1LCJleHAiOjE2MTUyNDY0MTV9.jKTluPxezE-r5zPpNU27ONezm7Bcy4Qsi0CIZldeJrY';
+export const mockJwtString = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE1MjQyODE1LCJleHAiOjE2MTUyNDY0MTV9.jKTluPxezE-r5zPpNU27ONezm7Bcy4Qsi0CIZldeJrY' as JwtString;
 
 export const newDate = new Date();
 

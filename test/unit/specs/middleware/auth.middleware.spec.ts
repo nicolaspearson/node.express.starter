@@ -1,22 +1,23 @@
 import Boom from 'boom';
 import { Request, Response } from 'express';
 
-import { Token } from '@/common/models/token.model';
 import { authMiddleware } from '@/middleware/auth.middleware';
+import { generateJwtTokens } from '@/utils/jwt.utils';
 
-import { mockTokenString } from '../../utils/fixtures';
+import { mockJwtString } from '../../utils/fixtures';
 
 describe('Auth Middleware', () => {
   test('should parse a valid jwt correctly', () => {
     const mockNext = jest.fn();
-    const token = new Token();
-    token.generateToken({ id: 1 });
-    const request = { headers: { authorization: `Bearer ${token.tokenString}` } } as Request;
+    const jwtTokens = generateJwtTokens({ id: 1 });
+    const request = {
+      headers: { authorization: `Bearer ${jwtTokens.accessToken.jwtString}` },
+    } as Request;
     authMiddleware(request, {} as Response, mockNext);
     expect(mockNext).toBeCalledTimes(1);
     expect(mockNext).toBeCalledWith();
     expect(request.jwt).toBeDefined();
-    expect(request.tokenString).toEqual(token.tokenString);
+    expect(request.jwtString).toEqual(jwtTokens.accessToken.jwtString);
   });
 
   test('should throw if the authorization header is missing', () => {
@@ -27,7 +28,7 @@ describe('Auth Middleware', () => {
     );
     expect(mockNext).not.toBeCalled();
     expect(request.jwt).toBeUndefined();
-    expect(request.tokenString).toBeUndefined();
+    expect(request.jwtString).toBeUndefined();
   });
 
   test('should throw if the authorization header is invalid', () => {
@@ -38,30 +39,29 @@ describe('Auth Middleware', () => {
     );
     expect(mockNext).not.toBeCalled();
     expect(request.jwt).toBeUndefined();
-    expect(request.tokenString).toBeUndefined();
+    expect(request.jwtString).toBeUndefined();
   });
 
   test('should throw if the jwt payload is invalid', () => {
     const mockNext = jest.fn();
-    const tokenString =
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
-    const request = { headers: { authorization: `Bearer ${tokenString}` } } as Request;
+    const jwtString = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c' as JwtString;
+    const request = { headers: { authorization: `Bearer ${jwtString}` } } as Request;
     expect(() => authMiddleware(request, {} as Response, mockNext)).toThrowError(
       Boom.unauthorized('Invalid jwt provided.')
     );
     expect(mockNext).not.toBeCalled();
     expect(request.jwt).toBeUndefined();
-    expect(request.tokenString).toEqual(tokenString);
+    expect(request.jwtString).toEqual(jwtString);
   });
 
   test('should throw if the jwt has expired', () => {
     const mockNext = jest.fn();
-    const request = { headers: { authorization: `Bearer ${mockTokenString}` } } as Request;
+    const request = { headers: { authorization: `Bearer ${mockJwtString}` } } as Request;
     expect(() => authMiddleware(request, {} as Response, mockNext)).toThrowError(
       Boom.unauthorized('Invalid jwt provided.')
     );
     expect(mockNext).not.toBeCalled();
     expect(request.jwt).toBeUndefined();
-    expect(request.tokenString).toEqual(mockTokenString);
+    expect(request.jwtString).toEqual(mockJwtString);
   });
 });

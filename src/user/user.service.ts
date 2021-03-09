@@ -5,9 +5,7 @@ import { FindUserByIdReqDto, LoginReqDto, RegisterUserReqDto } from '@/common/dt
 import { CookieUser } from '@/common/models/cookie-user.model';
 import { User } from '@/db/entities/user.entity';
 import { UserRepository } from '@/db/repositories/user.repository';
-import { createCookie } from '@/utils/cookie.utils';
 import { encryptPassword, validatePassword } from '@/utils/password.utils';
-import { createTokenPayload } from '@/utils/token.utils';
 
 export async function findUserById(findUserByIdReqDto: FindUserByIdReqDto): Promise<User> {
   const userRepository = getCustomRepository(UserRepository);
@@ -25,13 +23,7 @@ export async function login(loginReqDto: LoginReqDto): Promise<CookieUser> {
   if (!valid) {
     throw Boom.unauthorized('Invalid email address or password');
   }
-  // Create a token for the user
-  const tokenPayload = createTokenPayload(user);
-  const cookie = createCookie(tokenPayload);
-  return {
-    cookie,
-    user,
-  };
+  return new CookieUser(user);
 }
 
 export async function register(registerUserReqDto: RegisterUserReqDto): Promise<CookieUser> {
@@ -46,11 +38,5 @@ export async function register(registerUserReqDto: RegisterUserReqDto): Promise<
       password: hashedPassword,
     },
   });
-  // Create a token for the user
-  const tokenPayload = createTokenPayload(user);
-  const cookie = createCookie(tokenPayload);
-  return {
-    cookie,
-    user,
-  };
+  return new CookieUser(user);
 }

@@ -1,7 +1,9 @@
 type Nullable<T> = T | null;
 type Opaque<K, T> = T & { type: K };
 
+type Cookie = Opaque<'Cookie', string>;
 type Email = Opaque<'Email', string>;
+type JwtString = Opaque<'JwtString', string>;
 
 declare namespace Api {
   interface ConfigOptions {
@@ -19,8 +21,7 @@ declare namespace Api {
     iss: string;
   }
 
-  interface TokenPayload {
-    expiresIn?: number | string;
-    tokenString: string;
+  interface JwtTokens {
+    accessToken: { jwtString: JwtString; options: { expiresIn?: number | string } };
   }
 }

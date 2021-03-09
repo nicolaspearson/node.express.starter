@@ -1,5 +1,5 @@
-export function createCookie(tokenPayload: Api.TokenPayload): string {
-  return `Authorization=${tokenPayload.tokenString}; HttpOnly; Max-Age=${String(
-    tokenPayload.expiresIn!
-  )}`;
+export function createCookie(jwtTokens: Api.JwtTokens): Cookie {
+  const commonFlags = 'domain=localhost; HttpOnly; secure';
+  const maxAge = String(jwtTokens.accessToken.options.expiresIn);
+  return `Authorization=${jwtTokens.accessToken.jwtString}; Max-Age=${maxAge}; ${commonFlags}` as Cookie;
 }
