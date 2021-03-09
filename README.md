@@ -1,6 +1,18 @@
 # node.express.starter
 
-A simple Node.js API, written using Typescript, and Express.
+An `Express.js` starter project, built using `Yarn2` and `Typescript`.
+
+The starter project includes the following out of the box:
+
+- Authorization middleware
+- Error handling middleware
+- Logger middleware
+- Validation middleware
+- Database integration (TypeORM + PostgreSQL)
+- Containerization via Docker
+- Unit tests (100% coverage)
+- Integration tests (100% coverage)
+- Complete CI workflow (build -> test -> publish)
 
 ## Test Coverage
 
@@ -17,13 +29,7 @@ A simple Node.js API, written using Typescript, and Express.
 git clone https://github.com/nicolaspearson/node.express.starter.git
 ```
 
-**2. Start the database**
-
-```bash
-yarn db:start
-```
-
-**3. Build and run the app**
+**2. Build and run the app**
 
 ### Run the app in development mode:
 
@@ -36,9 +42,7 @@ The app will start running at <http://localhost:3000>
 ### Run the app in release mode:
 
 ```bash
-yarn global add http-server
-yarn build
-http-server -p 3000 ./build
+yarn start:docker
 ```
 
 The app will start running at <http://localhost:3000>
@@ -50,10 +54,6 @@ To generate missing migrations:
 ```bash
 yarn db:migration:generate:missing InitialSchema
 ```
-
-## TODO
-
-- Improve README
 
 ## Contribution Guidelines
 
