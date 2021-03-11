@@ -7527,7 +7527,7 @@ __metadata:
     module-alias: ~2.2.2
     nconf: ~0.11.2
     nodemon: ~2.0.7
-    npm-check-updates: ~11.2.0
+    npm-check-updates: ~11.2.1
     pg: ~8.5.1
     prettier: ~2.2.1
     pretty-quick: ~3.1.0
@@ -7651,9 +7651,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:~11.2.0":
-  version: 11.2.0
-  resolution: "npm-check-updates@npm:11.2.0"
+"npm-check-updates@npm:~11.2.1":
+  version: 11.2.1
+  resolution: "npm-check-updates@npm:11.2.1"
   dependencies:
     chalk: ^4.1.0
     cint: ^8.2.1
@@ -7685,7 +7685,7 @@ __metadata:
   bin:
     ncu: bin/cli.js
     npm-check-updates: bin/cli.js
-  checksum: c9073e4ea22547ca925d596ad5f597713d8ade2ad4e9d0a1a31013b5202dfa7e441a7a524937413797a8357ae5c9d35a0eb62ec9f565833e655d667af95369c5
+  checksum: b202ac1985768a855b200b42ba849d78b384611dc5529e9814ef61e1795202c88a572a22b1a7a8d088a1d15ca9bf920bbb698a56adf27cbae7238974ab4404e5
   languageName: node
   linkType: hard
 
