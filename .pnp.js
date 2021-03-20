@@ -42,7 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/dotenv", "npm:8.2.0"],
             ["@types/express", "npm:4.17.11"],
             ["@types/jest", "npm:26.0.21"],
-            ["@types/jsonwebtoken", "npm:8.5.0"],
+            ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/nconf", "npm:0.10.0"],
             ["@types/node", "npm:14.14.34"],
             ["@types/pg", "npm:7.14.11"],
@@ -1610,10 +1610,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/jsonwebtoken", [
-        ["npm:8.5.0", {
-          "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-8.5.0-9d7d29ea0b-d1a6b28f82.zip/node_modules/@types/jsonwebtoken/",
+        ["npm:8.5.1", {
+          "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-8.5.1-c01e6c9a08-f66ee4a125.zip/node_modules/@types/jsonwebtoken/",
           "packageDependencies": [
-            ["@types/jsonwebtoken", "npm:8.5.0"],
+            ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/node", "npm:14.14.32"]
           ],
           "linkType": "HARD",
@@ -8784,7 +8784,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/dotenv", "npm:8.2.0"],
             ["@types/express", "npm:4.17.11"],
             ["@types/jest", "npm:26.0.21"],
-            ["@types/jsonwebtoken", "npm:8.5.0"],
+            ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/nconf", "npm:0.10.0"],
             ["@types/node", "npm:14.14.34"],
             ["@types/pg", "npm:7.14.11"],
