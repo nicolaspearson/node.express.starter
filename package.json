@@ -71,7 +71,7 @@
     "@types/dotenv": "~8.2.0",
     "@types/express": "~4.17.11",
     "@types/jest": "~26.0.21",
-    "@types/jsonwebtoken": "~8.5.0",
+    "@types/jsonwebtoken": "~8.5.1",
     "@types/nconf": "~0.10.0",
     "@types/node": "~14.14.35",
     "@types/pg": "~7.14.11",
