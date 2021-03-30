@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/boom", "npm:7.3.0"],
             ["@types/dotenv", "npm:8.2.0"],
             ["@types/express", "npm:4.17.11"],
-            ["@types/jest", "npm:26.0.21"],
+            ["@types/jest", "npm:26.0.22"],
             ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/nconf", "npm:0.10.0"],
             ["@types/node", "npm:14.14.37"],
@@ -1581,10 +1581,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/jest", [
-        ["npm:26.0.21", {
-          "packageLocation": "./.yarn/cache/@types-jest-npm-26.0.21-7bb11f0108-c219599d66.zip/node_modules/@types/jest/",
+        ["npm:26.0.22", {
+          "packageLocation": "./.yarn/cache/@types-jest-npm-26.0.22-1621c2cb77-4c98ed0585.zip/node_modules/@types/jest/",
           "packageDependencies": [
-            ["@types/jest", "npm:26.0.21"],
+            ["@types/jest", "npm:26.0.22"],
             ["jest-diff", "npm:26.6.2"],
             ["pretty-format", "npm:26.6.2"]
           ],
@@ -8783,7 +8783,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/boom", "npm:7.3.0"],
             ["@types/dotenv", "npm:8.2.0"],
             ["@types/express", "npm:4.17.11"],
-            ["@types/jest", "npm:26.0.21"],
+            ["@types/jest", "npm:26.0.22"],
             ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/nconf", "npm:0.10.0"],
             ["@types/node", "npm:14.14.37"],
@@ -11955,7 +11955,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/ts-jest-virtual-9c2cfb09f8/0/cache/ts-jest-npm-26.5.4-d44a800654-8e5856b7cb.zip/node_modules/ts-jest/",
           "packageDependencies": [
             ["ts-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.5.4"],
-            ["@types/jest", "npm:26.0.21"],
+            ["@types/jest", "npm:26.0.22"],
             ["@types/typescript", null],
             ["bs-logger", "npm:0.2.6"],
             ["buffer-from", "npm:1.1.1"],
