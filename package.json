@@ -32,6 +32,7 @@
     "lint": "eslint --parser-options \"{ tsconfigRootDir: $(pwd), project: '$(pwd)/tsconfig.json' }\" --cache-file $(pwd)/.eslintcache $(pwd)/src",
     "ncu": "ncu",
     "ncu:u": "ncu -u",
+    "postinstall": "husky install",
     "start": "node $(pwd)/src/index.js",
     "start:debug": "nodemon --inspect=5858 $(pwd)/dist/src/index.js",
     "start:dev": "run db:start && nodemon -w $(pwd)/src -x ts-node-dev -r tsconfig-paths/register --transpile-only $(pwd)/src/index.ts",
