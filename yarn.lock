@@ -1023,10 +1023,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sqltools/formatter@npm:1.2.2":
-  version: 1.2.2
-  resolution: "@sqltools/formatter@npm:1.2.2"
-  checksum: 67b5b8050c742e9430824ee20664b20b042cd5b6cce4af50f199c41e2a01d41066bf51c70c8e4af0981a6a68173566402d11fe291557d741f9f18afa14e2fb2b
+"@sqltools/formatter@npm:^1.2.2":
+  version: 1.2.3
+  resolution: "@sqltools/formatter@npm:1.2.3"
+  checksum: 67762c7fbd943c9ccebf2175d6c8e6e209ec811767a17a140dc36533f1e547f3e6bb341c3b0e2e05ad3659dc9c1c029349301e9084bb8ecd258e96f73bc385c2
   languageName: node
   linkType: hard
 
@@ -1458,6 +1458,13 @@ __metadata:
   dependencies:
     "@types/yargs-parser": "*"
   checksum: fa1a5b0a07dbbff1657a27d1191d586632412d170321000f6f417f279547a8c191d7058dbf4d4187c188a5a1aeb2473ddb25fe316b206fccdfe1de6fad976619
+  languageName: node
+  linkType: hard
+
+"@types/zen-observable@npm:^0.8.2":
+  version: 0.8.2
+  resolution: "@types/zen-observable@npm:0.8.2"
+  checksum: f48643c09a5fb00503d5b5c156779870bc5c96c4cc7f3d0f643619752a04eed784de6a37c9121e284d2cdd8ec70e3e00a73613797f009f37dbe6795ffb9607c5
   languageName: node
   linkType: hard
 
@@ -2539,6 +2546,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"buffer@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "buffer@npm:6.0.3"
+  dependencies:
+    base64-js: ^1.3.1
+    ieee754: ^1.2.1
+  checksum: a8cf6a58571dc7c43b24ab821ad4c72222d9040775f49fd143a30fad45f33ec0a8e0d572ca80d589ad4f8b4715aa012c029dc2b925dc95467f135c2d13d7abfb
+  languageName: node
+  linkType: hard
+
 "builtins@npm:^1.0.3":
   version: 1.0.3
   resolution: "builtins@npm:1.0.3"
@@ -3379,7 +3396,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1":
+"debug@npm:4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1":
   version: 4.3.2
   resolution: "debug@npm:4.3.2"
   dependencies:
@@ -5180,7 +5197,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ieee754@npm:^1.1.13":
+"ieee754@npm:^1.1.13, ieee754@npm:^1.2.1":
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
   checksum: 6c1cfab995ecab3b0dbb6cfb7e192686eb02f0f8e788f2d962e1fc02e2d5ab38a85e06d417221f136bd029663a77cdb920d99605d68d3730a05597dd7910426a
@@ -6332,7 +6349,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^3.10.0, js-yaml@npm:^3.13.1, js-yaml@npm:^3.14.0":
+"js-yaml@npm:^3.10.0, js-yaml@npm:^3.13.1":
   version: 3.14.1
   resolution: "js-yaml@npm:3.14.1"
   dependencies:
@@ -7566,7 +7583,7 @@ __metadata:
     ts-node: ~9.1.1
     ts-node-dev: ~1.1.6
     tsconfig-paths: ~3.9.0
-    typeorm: ~0.2.31
+    typeorm: ~0.2.32
     typescript: ~4.2.3
     winston: ~3.3.3
   languageName: unknown
@@ -10454,6 +10471,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "tslib@npm:2.1.0"
+  checksum: d8f5bdd067611651c6b846c2388f4dc8ba1f5af124e66105f5263d1ad56da17f4b8c6566887ca2f205c5a9758451871ceca87d5d06087af2dca1699c5e33db69
+  languageName: node
+  linkType: hard
+
 "tsutils@npm:^3.17.1":
   version: 3.20.0
   resolution: "tsutils@npm:3.20.0"
@@ -10567,29 +10591,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typeorm@npm:~0.2.31":
-  version: 0.2.31
-  resolution: "typeorm@npm:0.2.31"
+"typeorm@npm:~0.2.32":
+  version: 0.2.32
+  resolution: "typeorm@npm:0.2.32"
   dependencies:
-    "@sqltools/formatter": 1.2.2
+    "@sqltools/formatter": ^1.2.2
     app-root-path: ^3.0.0
-    buffer: ^5.5.0
+    buffer: ^6.0.3
     chalk: ^4.1.0
     cli-highlight: ^2.1.10
-    debug: ^4.1.1
+    debug: ^4.3.1
     dotenv: ^8.2.0
     glob: ^7.1.6
-    js-yaml: ^3.14.0
+    js-yaml: ^4.0.0
     mkdirp: ^1.0.4
     reflect-metadata: ^0.1.13
     sha.js: ^2.4.11
-    tslib: ^1.13.0
+    tslib: ^2.1.0
     xml2js: ^0.4.23
-    yargonaut: ^1.1.2
-    yargs: ^16.0.3
+    yargonaut: ^1.1.4
+    yargs: ^16.2.0
+    zen-observable-ts: ^1.0.0
   bin:
     typeorm: cli.js
-  checksum: 0aeaaebd8e324f29def987f53dba8aca7e286d645a2ea9c3b7fa6a5be70a250b73baec83c60081c6b2b273de07954623ce9f372af98f3426a0e33b9713a7c1a4
+  checksum: f2f40db8d55b8bebaef6d2b8d39667303399086096c79ec625bf35932bdde3312c6f330331d1452eda2bcb578fd97edc9e0a080f437c1fed7952b86a60a9fc0f
   languageName: node
   linkType: hard
 
@@ -11157,7 +11182,7 @@ typescript@~4.2.3:
   languageName: node
   linkType: hard
 
-"yargonaut@npm:^1.1.2":
+"yargonaut@npm:^1.1.4":
   version: 1.1.4
   resolution: "yargonaut@npm:1.1.4"
   dependencies:
@@ -11204,7 +11229,7 @@ typescript@~4.2.3:
   languageName: node
   linkType: hard
 
-"yargs@npm:^16.0.0, yargs@npm:^16.0.3, yargs@npm:^16.1.1, yargs@npm:^16.2.0":
+"yargs@npm:^16.0.0, yargs@npm:^16.1.1, yargs@npm:^16.2.0":
   version: 16.2.0
   resolution: "yargs@npm:16.2.0"
   dependencies:
@@ -11230,5 +11255,22 @@ typescript@~4.2.3:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 096c3b40beb2804659539be1605a35c58eb0c85285f94b77b3e924f42ee265c1a40bf9f4153770039517146b469a964d51742395f35ca8135fc9f7e4982b785d
+  languageName: node
+  linkType: hard
+
+"zen-observable-ts@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "zen-observable-ts@npm:1.0.0"
+  dependencies:
+    "@types/zen-observable": ^0.8.2
+    zen-observable: ^0.8.15
+  checksum: 285d473b5aefeabdeb434fedbcf4698f286d807bb1aece10a6e6372f30f996fb169fd8a8ee729b24a0ea0f723fde967dd2459f0396bdd377d3d101f846ccf45e
+  languageName: node
+  linkType: hard
+
+"zen-observable@npm:^0.8.15":
+  version: 0.8.15
+  resolution: "zen-observable@npm:0.8.15"
+  checksum: 7d155f8a75b9314f9f31e70a31edcd897b0e8a1313737502ab84a573e49d2c333b738e415c156334a6e910c363ce546b59fa7921eff61440285caa99c843df74
   languageName: node
   linkType: hard
