@@ -47,7 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.37"],
             ["@types/pg", "npm:7.14.11"],
             ["@types/prettier", "npm:2.2.2"],
-            ["@types/supertest", "npm:2.0.10"],
+            ["@types/supertest", "npm:2.0.11"],
             ["@typescript-eslint/eslint-plugin", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:4.20.0"],
             ["@typescript-eslint/parser", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:4.20.0"],
             ["@yarnpkg/pnpify", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:2.4.0"],
@@ -1814,10 +1814,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/supertest", [
-        ["npm:2.0.10", {
-          "packageLocation": "./.yarn/cache/@types-supertest-npm-2.0.10-112745dbce-9ceae7e743.zip/node_modules/@types/supertest/",
+        ["npm:2.0.11", {
+          "packageLocation": "./.yarn/cache/@types-supertest-npm-2.0.11-a547f689c9-a4b001038d.zip/node_modules/@types/supertest/",
           "packageDependencies": [
-            ["@types/supertest", "npm:2.0.10"],
+            ["@types/supertest", "npm:2.0.11"],
             ["@types/superagent", "npm:4.1.10"]
           ],
           "linkType": "HARD",
@@ -8789,7 +8789,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.37"],
             ["@types/pg", "npm:7.14.11"],
             ["@types/prettier", "npm:2.2.2"],
-            ["@types/supertest", "npm:2.0.10"],
+            ["@types/supertest", "npm:2.0.11"],
             ["@typescript-eslint/eslint-plugin", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:4.20.0"],
             ["@typescript-eslint/parser", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:4.20.0"],
             ["@yarnpkg/pnpify", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:2.4.0"],
@@ -8849,7 +8849,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["nodemon", [
         ["npm:2.0.7", {
-          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.7-7b95e46511/node_modules/nodemon/",
+          "packageLocation": "./.yarn/cache/nodemon-npm-2.0.7-7b95e46511-e1e8acb584.zip/node_modules/nodemon/",
           "packageDependencies": [
             ["nodemon", "npm:2.0.7"],
             ["chokidar", "npm:3.5.1"],
