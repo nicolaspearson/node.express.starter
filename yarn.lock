@@ -1096,10 +1096,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/bcrypt@npm:~3.0.0":
-  version: 3.0.0
-  resolution: "@types/bcrypt@npm:3.0.0"
-  checksum: d33ea3bcef63750afb35ea18a586559be9876f7143c6b2ba770474f7b2d34e8d47e47dd9f267b1afc1c84615f7338e47abaae8ed913d5a447139562cb4bb44d7
+"@types/bcrypt@npm:~3.0.1":
+  version: 3.0.1
+  resolution: "@types/bcrypt@npm:3.0.1"
+  checksum: 95e8b2cf190d37d3ceaa4e44b5e6d734b08915dbad50cebd2a59e9fedbfc8b14c09d41505658056a1903f6e8a90b3e58bdad66bb359bc16243cfc4d92894f116
   languageName: node
   linkType: hard
 
@@ -3935,9 +3935,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:~24.3.4":
-  version: 24.3.4
-  resolution: "eslint-plugin-jest@npm:24.3.4"
+"eslint-plugin-jest@npm:~24.3.5":
+  version: 24.3.5
+  resolution: "eslint-plugin-jest@npm:24.3.5"
   dependencies:
     "@typescript-eslint/experimental-utils": ^4.0.1
   peerDependencies:
@@ -3946,7 +3946,7 @@ __metadata:
   peerDependenciesMeta:
     "@typescript-eslint/eslint-plugin":
       optional: true
-  checksum: 22a5b2a02720849d3dab12ffc49491e739d332258d628c7990d181a48d1b2c03d1dd5406cdc3acc9e4b978910896b38b9abfd2bc1381910a49cc23e593c2f7e3
+  checksum: 6352966b16a2a65cd5637f6d02ffcd59f52e8cb6cb8434d35520fe5b30cbf475e3a55a088fcf0d41d6f7c0dbd93e9b5c637707075fbb3d960b318c305c3ac7aa
   languageName: node
   linkType: hard
 
@@ -4007,9 +4007,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:~7.23.0":
-  version: 7.23.0
-  resolution: "eslint@npm:7.23.0"
+"eslint@npm:~7.24.0":
+  version: 7.24.0
+  resolution: "eslint@npm:7.24.0"
   dependencies:
     "@babel/code-frame": 7.12.11
     "@eslint/eslintrc": ^0.4.0
@@ -4050,7 +4050,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: f444869506eb0b53fdc6f6f6508b9f5daed51034af0289e6b201f996e7f2d06134f765ef598568269d2a0575dc9da5d3308bd2716f795b789d92e7febb654aab
+  checksum: 8130aacc3698a730ba8fa10ac9e1436151181c34cad265c21c97708e62dba714b6f3cc4cb7a1d343918da3d35a5913505ccf53cfbdc1fa8d62d326b7e35b7aae
   languageName: node
   linkType: hard
 
@@ -7547,7 +7547,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "node.express.starter@workspace:."
   dependencies:
-    "@types/bcrypt": ~3.0.0
+    "@types/bcrypt": ~3.0.1
     "@types/boom": ~7.3.0
     "@types/dotenv": ~8.2.0
     "@types/express": ~4.17.11
@@ -7570,10 +7570,10 @@ __metadata:
     commitlint: ~12.1.1
     concurrently: ~6.0.1
     dotenv: ~8.2.0
-    eslint: ~7.23.0
+    eslint: ~7.24.0
     eslint-config-prettier: ~8.1.0
     eslint-plugin-import: ~2.22.1
-    eslint-plugin-jest: ~24.3.4
+    eslint-plugin-jest: ~24.3.5
     eslint-plugin-ordered-imports: ~0.4.1
     eslint-plugin-prettier: ~3.3.1
     express: ~4.17.1

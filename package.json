@@ -67,7 +67,7 @@
     "winston": "~3.3.3"
   },
   "devDependencies": {
-    "@types/bcrypt": "~3.0.0",
+    "@types/bcrypt": "~3.0.1",
     "@types/boom": "~7.3.0",
     "@types/dotenv": "~8.2.0",
     "@types/express": "~4.17.11",
@@ -83,10 +83,10 @@
     "@yarnpkg/pnpify": "~2.4.0",
     "commitlint": "~12.1.1",
     "concurrently": "~6.0.1",
-    "eslint": "~7.23.0",
+    "eslint": "~7.24.0",
     "eslint-config-prettier": "~8.1.0",
     "eslint-plugin-import": "~2.22.1",
-    "eslint-plugin-jest": "~24.3.4",
+    "eslint-plugin-jest": "~24.3.5",
     "eslint-plugin-ordered-imports": "~0.4.1",
     "eslint-plugin-prettier": "~3.3.1",
     "husky": "~6.0.0",
