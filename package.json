@@ -82,7 +82,7 @@
     "@typescript-eslint/parser": "~4.21.0",
     "@yarnpkg/pnpify": "~2.4.0",
     "commitlint": "~12.1.1",
-    "concurrently": "~6.0.1",
+    "concurrently": "~6.0.2",
     "eslint": "~7.24.0",
     "eslint-config-prettier": "~8.1.0",
     "eslint-plugin-import": "~2.22.1",
