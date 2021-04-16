@@ -1,9 +1,6 @@
 // @ts-ignore
 module.exports = {
   root: true,
-  env: {
-    node: true,
-  },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -16,6 +13,7 @@ module.exports = {
     browser: true,
     es6: true,
     jest: true,
+    node: true,
   },
   globals: {
     Atomics: 'readonly',
@@ -24,7 +22,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: false,
     },
     ecmaVersion: 2018,
     sourceType: 'module',
