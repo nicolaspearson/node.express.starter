@@ -2,7 +2,7 @@ import { User } from '@/db/entities/user.entity';
 import { createCookie } from '@/utils/cookie.utils';
 import { generateJwtTokens } from '@/utils/jwt.utils';
 
-export class CookieUser {
+export class CookieUserResDto {
   readonly cookie: Cookie;
   readonly user: User;
 

@@ -1,8 +1,12 @@
 import Boom from 'boom';
 import { getCustomRepository } from 'typeorm';
 
-import { FindUserByIdReqDto, LoginReqDto, RegisterUserReqDto } from '@/common/dto';
-import { CookieUser } from '@/common/models/cookie-user.model';
+import {
+  CookieUserResDto,
+  FindUserByIdReqDto,
+  LoginReqDto,
+  RegisterUserReqDto,
+} from '@/common/dto';
 import { User } from '@/db/entities/user.entity';
 import { UserRepository } from '@/db/repositories/user.repository';
 import { encryptPassword, validatePassword } from '@/utils/password.utils';
@@ -12,7 +16,7 @@ export async function findUserById(findUserByIdReqDto: FindUserByIdReqDto): Prom
   return userRepository.findByIdOrFail(Number(findUserByIdReqDto.id));
 }
 
-export async function login(loginReqDto: LoginReqDto): Promise<CookieUser> {
+export async function login(loginReqDto: LoginReqDto): Promise<CookieUserResDto> {
   const userRepository = getCustomRepository(UserRepository);
   const user: User = await userRepository.findByEmailOrFail(loginReqDto.email);
   if (!user.enabled) {
@@ -23,10 +27,10 @@ export async function login(loginReqDto: LoginReqDto): Promise<CookieUser> {
   if (!valid) {
     throw Boom.unauthorized('Invalid email address or password');
   }
-  return new CookieUser(user);
+  return new CookieUserResDto(user);
 }
 
-export async function register(registerUserReqDto: RegisterUserReqDto): Promise<CookieUser> {
+export async function register(registerUserReqDto: RegisterUserReqDto): Promise<CookieUserResDto> {
   const userRepository = getCustomRepository(UserRepository);
   if (await userRepository.findByEmail(registerUserReqDto.email)) {
     throw Boom.conflict('The provided email address is already in use');
@@ -38,5 +42,5 @@ export async function register(registerUserReqDto: RegisterUserReqDto): Promise<
       password: hashedPassword,
     },
   });
-  return new CookieUser(user);
+  return new CookieUserResDto(user);
 }
