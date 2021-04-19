@@ -6,6 +6,7 @@ import userController from '@/user/user.controller';
 import { logger } from '@/logger';
 import { errorMiddleware } from '@/middleware/error.middleware';
 import { loggerMiddleware } from '@/middleware/logger.middleware';
+import { notFoundMiddleware } from '@/middleware/not-found.middleware';
 
 export default class App {
   private app: express.Application;
@@ -13,9 +14,9 @@ export default class App {
 
   constructor() {
     this.app = express();
-    this.initializeMiddleware();
+    this.initializePreControllerMiddleware();
     this.initializeControllers();
-    this.initializeErrorHandling();
+    this.initializePostControllerMiddleware();
   }
 
   public getExpressApp(): express.Application {
@@ -36,17 +37,18 @@ export default class App {
     );
   }
 
-  private initializeMiddleware() {
+  private initializePreControllerMiddleware() {
     this.app.use(loggerMiddleware);
     this.app.use(bodyParser.json());
-  }
-
-  private initializeErrorHandling() {
-    this.app.use(errorMiddleware);
   }
 
   private initializeControllers() {
     const routes = Router().use('/user', userController);
     this.app.use('/', routes);
+  }
+
+  private initializePostControllerMiddleware() {
+    this.app.use(errorMiddleware);
+    this.app.use(notFoundMiddleware);
   }
 }
