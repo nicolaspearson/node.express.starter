@@ -77,7 +77,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["nconf", "npm:0.11.2"],
             ["nodemon", "npm:2.0.7"],
-            ["npm-check-updates", "npm:11.4.1"],
+            ["npm-check-updates", "npm:11.5.0"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0"],
             ["prettier", "npm:2.2.1"],
             ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0"],
@@ -8850,7 +8850,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["nconf", "npm:0.11.2"],
             ["nodemon", "npm:2.0.7"],
-            ["npm-check-updates", "npm:11.4.1"],
+            ["npm-check-updates", "npm:11.5.0"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0"],
             ["prettier", "npm:2.2.1"],
             ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0"],
@@ -8880,7 +8880,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["nodemon", [
         ["npm:2.0.7", {
-          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.7-7b95e46511/node_modules/nodemon/",
+          "packageLocation": "./.yarn/cache/nodemon-npm-2.0.7-7b95e46511-e1e8acb584.zip/node_modules/nodemon/",
           "packageDependencies": [
             ["nodemon", "npm:2.0.7"],
             ["chokidar", "npm:3.5.1"],
@@ -8976,10 +8976,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["npm-check-updates", [
-        ["npm:11.4.1", {
-          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.4.1-9349f0d4d8-d6b344d451.zip/node_modules/npm-check-updates/",
+        ["npm:11.5.0", {
+          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.5.0-419cc5ca6c-6db7f8d0c6.zip/node_modules/npm-check-updates/",
           "packageDependencies": [
-            ["npm-check-updates", "npm:11.4.1"],
+            ["npm-check-updates", "npm:11.5.0"],
             ["chalk", "npm:4.1.0"],
             ["cint", "npm:8.2.1"],
             ["cli-table", "npm:0.3.6"],
