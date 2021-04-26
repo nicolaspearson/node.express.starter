@@ -77,7 +77,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["nconf", "npm:0.11.2"],
             ["nodemon", "npm:2.0.7"],
-            ["npm-check-updates", "npm:11.5.0"],
+            ["npm-check-updates", "npm:11.5.3"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0"],
             ["prettier", "npm:2.2.1"],
             ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0"],
@@ -1195,15 +1195,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nodelib/fs.walk", "npm:1.2.6"],
             ["@nodelib/fs.scandir", "npm:2.1.4"],
             ["fastq", "npm:1.11.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@npmcli/ci-detect", [
-        ["npm:1.3.0", {
-          "packageLocation": "./.yarn/cache/@npmcli-ci-detect-npm-1.3.0-ad562ca529-e7517cc2c9.zip/node_modules/@npmcli/ci-detect/",
-          "packageDependencies": [
-            ["@npmcli/ci-detect", "npm:1.3.0"]
           ],
           "linkType": "HARD",
         }]
@@ -3422,6 +3413,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/chalk-npm-4.1.0-c746e252ba-f860285b41.zip/node_modules/chalk/",
           "packageDependencies": [
             ["chalk", "npm:4.1.0"],
+            ["ansi-styles", "npm:4.3.0"],
+            ["supports-color", "npm:7.2.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.1.1", {
+          "packageLocation": "./.yarn/cache/chalk-npm-4.1.1-f1ce6bae57-445c12db7a.zip/node_modules/chalk/",
+          "packageDependencies": [
+            ["chalk", "npm:4.1.1"],
             ["ansi-styles", "npm:4.3.0"],
             ["supports-color", "npm:7.2.0"]
           ],
@@ -8229,10 +8229,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mem", [
-        ["npm:8.1.0", {
-          "packageLocation": "./.yarn/cache/mem-npm-8.1.0-06203a8154-4c3e2c61db.zip/node_modules/mem/",
+        ["npm:8.1.1", {
+          "packageLocation": "./.yarn/cache/mem-npm-8.1.1-4270f09409-059b1a9d66.zip/node_modules/mem/",
           "packageDependencies": [
-            ["mem", "npm:8.1.0"],
+            ["mem", "npm:8.1.1"],
             ["map-age-cleaner", "npm:0.1.3"],
             ["mimic-fn", "npm:3.1.0"]
           ],
@@ -8850,7 +8850,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["module-alias", "npm:2.2.2"],
             ["nconf", "npm:0.11.2"],
             ["nodemon", "npm:2.0.7"],
-            ["npm-check-updates", "npm:11.5.0"],
+            ["npm-check-updates", "npm:11.5.3"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0"],
             ["prettier", "npm:2.2.1"],
             ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0"],
@@ -8976,11 +8976,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["npm-check-updates", [
-        ["npm:11.5.0", {
-          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.5.0-419cc5ca6c-6db7f8d0c6.zip/node_modules/npm-check-updates/",
+        ["npm:11.5.3", {
+          "packageLocation": "./.yarn/cache/npm-check-updates-npm-11.5.3-e268656d81-7500e3061e.zip/node_modules/npm-check-updates/",
           "packageDependencies": [
-            ["npm-check-updates", "npm:11.5.0"],
-            ["chalk", "npm:4.1.0"],
+            ["npm-check-updates", "npm:11.5.3"],
+            ["chalk", "npm:4.1.1"],
             ["cint", "npm:8.2.1"],
             ["cli-table", "npm:0.3.6"],
             ["commander", "npm:6.2.1"],
@@ -8993,10 +8993,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsonlines", "npm:0.1.1"],
             ["libnpmconfig", "npm:1.2.1"],
             ["lodash", "npm:4.17.21"],
-            ["mem", "npm:8.1.0"],
+            ["mem", "npm:8.1.1"],
             ["minimatch", "npm:3.0.4"],
             ["p-map", "npm:4.0.0"],
-            ["pacote", "npm:11.3.1"],
+            ["pacote", "npm:11.3.3"],
             ["parse-github-url", "npm:1.0.2"],
             ["progress", "npm:2.0.3"],
             ["prompts", "npm:2.4.1"],
@@ -9068,11 +9068,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["npm-registry-fetch", [
-        ["npm:9.0.0", {
-          "packageLocation": "./.yarn/cache/npm-registry-fetch-npm-9.0.0-3a14ee1925-91017b73d3.zip/node_modules/npm-registry-fetch/",
+        ["npm:10.1.1", {
+          "packageLocation": "./.yarn/cache/npm-registry-fetch-npm-10.1.1-163563ba29-485ee8cffc.zip/node_modules/npm-registry-fetch/",
           "packageDependencies": [
-            ["npm-registry-fetch", "npm:9.0.0"],
-            ["@npmcli/ci-detect", "npm:1.3.0"],
+            ["npm-registry-fetch", "npm:10.1.1"],
             ["lru-cache", "npm:6.0.0"],
             ["make-fetch-happen", "npm:8.0.14"],
             ["minipass", "npm:3.1.3"],
@@ -9455,10 +9454,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["pacote", [
-        ["npm:11.3.1", {
-          "packageLocation": "./.yarn/cache/pacote-npm-11.3.1-5eed843027-b244ec1ad7.zip/node_modules/pacote/",
+        ["npm:11.3.3", {
+          "packageLocation": "./.yarn/cache/pacote-npm-11.3.3-3db6456620-0dc1afb33f.zip/node_modules/pacote/",
           "packageDependencies": [
-            ["pacote", "npm:11.3.1"],
+            ["pacote", "npm:11.3.3"],
             ["@npmcli/git", "npm:2.0.6"],
             ["@npmcli/installed-package-contents", "npm:1.0.7"],
             ["@npmcli/promise-spawn", "npm:1.3.2"],
@@ -9472,7 +9471,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["npm-package-arg", "npm:8.1.1"],
             ["npm-packlist", "npm:2.1.4"],
             ["npm-pick-manifest", "npm:6.1.0"],
-            ["npm-registry-fetch", "npm:9.0.0"],
+            ["npm-registry-fetch", "npm:10.1.1"],
             ["promise-retry", "npm:2.0.1"],
             ["read-package-json-fast", "npm:2.0.2"],
             ["rimraf", "npm:3.0.2"],
