@@ -44,7 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:26.0.23"],
             ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/nconf", "npm:0.10.0"],
-            ["@types/node", "npm:14.14.41"],
+            ["@types/node", "npm:14.14.43"],
             ["@types/pg", "npm:7.14.11"],
             ["@types/prettier", "npm:2.2.2"],
             ["@types/supertest", "npm:2.0.11"],
@@ -1596,10 +1596,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:14.14.41", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-14.14.41-86b32c9f0d-37dfb63964.zip/node_modules/@types/node/",
+        ["npm:14.14.43", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-14.14.43-cddd452ab7-b7a9e6df7c.zip/node_modules/@types/node/",
           "packageDependencies": [
-            ["@types/node", "npm:14.14.41"]
+            ["@types/node", "npm:14.14.43"]
           ],
           "linkType": "HARD",
         }]
@@ -8295,7 +8295,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:26.0.23"],
             ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/nconf", "npm:0.10.0"],
-            ["@types/node", "npm:14.14.41"],
+            ["@types/node", "npm:14.14.43"],
             ["@types/pg", "npm:7.14.11"],
             ["@types/prettier", "npm:2.2.2"],
             ["@types/supertest", "npm:2.0.11"],
@@ -8357,7 +8357,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["nodemon", [
         ["npm:2.0.7", {
-          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.7-7b95e46511/node_modules/nodemon/",
+          "packageLocation": "./.yarn/cache/nodemon-npm-2.0.7-7b95e46511-e1e8acb584.zip/node_modules/nodemon/",
           "packageDependencies": [
             ["nodemon", "npm:2.0.7"],
             ["chokidar", "npm:3.5.1"],
