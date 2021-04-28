@@ -1,5 +1,5 @@
 @baseUrl = http://localhost:3000
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE1MjM5NTY4LCJleHAiOjE2MTUyNDMxNjh9.Go5JxobKVh7RK1VnqENZLrwS8odIRURrMOzlRqO39JI
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE5NjI1NTk2LCJleHAiOjE2MTk3MTE5OTZ9.PhImK7gn87y0h3eup4lKCt0ig5IWKhebZ2Yot4ped98
 
 ########################################################################
 ###########                       USER                       ###########
