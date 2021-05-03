@@ -1,5 +1,4 @@
 import Boom from 'boom';
-import { getCustomRepository } from 'typeorm';
 
 import {
   CookieUserResDto,
@@ -7,18 +6,39 @@ import {
   LoginReqDto,
   RegisterUserReqDto,
 } from '@/common/dto';
-import { User } from '@/db/entities/user.entity';
-import { UserRepository } from '@/db/repositories/user.repository';
+import { User, UserInstance } from '@/db/models/user.model';
 import { encryptPassword, validatePassword } from '@/utils/password.utils';
 
-export async function findUserById(findUserByIdReqDto: FindUserByIdReqDto): Promise<User> {
-  const userRepository = getCustomRepository(UserRepository);
-  return userRepository.findByIdOrFail(Number(findUserByIdReqDto.id));
+async function findByIdOrFail(id: string | number): Promise<UserInstance> {
+  const user = await User.findByPk(Number(id));
+  if (!user) {
+    throw Boom.notFound(`User with id: ${id} does not exist!`);
+  }
+  return user;
+}
+
+async function findByEmail(email: Email): Promise<UserInstance | null> {
+  return User.findOne({
+    where: {
+      email,
+    },
+  });
+}
+
+async function findByEmailOrFail(email: Email): Promise<UserInstance> {
+  const user = await findByEmail(email);
+  if (!user) {
+    throw Boom.notFound(`User with email: ${email} does not exist!`);
+  }
+  return user;
+}
+
+export async function findUserById(findUserByIdReqDto: FindUserByIdReqDto): Promise<UserInstance> {
+  return findByIdOrFail(findUserByIdReqDto.id);
 }
 
 export async function login(loginReqDto: LoginReqDto): Promise<CookieUserResDto> {
-  const userRepository = getCustomRepository(UserRepository);
-  const user: User = await userRepository.findByEmailOrFail(loginReqDto.email);
+  const user = await findByEmailOrFail(loginReqDto.email);
   if (!user.enabled) {
     throw Boom.unauthorized('User account has been disabled');
   }
@@ -31,16 +51,14 @@ export async function login(loginReqDto: LoginReqDto): Promise<CookieUserResDto>
 }
 
 export async function register(registerUserReqDto: RegisterUserReqDto): Promise<CookieUserResDto> {
-  const userRepository = getCustomRepository(UserRepository);
-  if (await userRepository.findByEmail(registerUserReqDto.email)) {
+  if (await findByEmail(registerUserReqDto.email)) {
     throw Boom.conflict('The provided email address is already in use');
   }
   const hashedPassword = await encryptPassword(registerUserReqDto.password);
-  const user = await userRepository.create({
-    attributes: {
-      ...registerUserReqDto,
-      password: hashedPassword,
-    },
+  const user = await User.create({
+    ...registerUserReqDto,
+    enabled: true,
+    password: hashedPassword,
   });
   return new CookieUserResDto(user);
 }

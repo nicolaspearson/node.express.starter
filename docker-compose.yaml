@@ -13,7 +13,7 @@ services:
     depends_on:
       - postgres
     environment:
-      - TYPEORM_HOST=postgres
+      - DB_HOST=postgres
       - REDIS_HOST=redis
       - REDIS_PORT=6379
     env_file:

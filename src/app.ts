@@ -32,7 +32,7 @@ export default class App {
     this.server = this.app.listen(
       port,
       /* istanbul ignore next: ignore callback */ () => {
-        logger.debug(`App: Listening on port ${port}!`);
+        logger.info(`App: Listening on port ${port}!`);
       }
     );
   }

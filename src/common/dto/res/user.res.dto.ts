@@ -1,4 +1,4 @@
-import { User } from '@/db/entities/user.entity';
+import { UserInstance } from '@/db/models/user.model';
 
 export class UserResDto {
   readonly id: number;
@@ -7,7 +7,7 @@ export class UserResDto {
   readonly firstName: string;
   readonly lastName: string;
 
-  constructor(user: User) {
+  constructor(user: UserInstance) {
     this.id = user.id;
     this.email = user.email as Email;
     this.enabled = user.enabled;

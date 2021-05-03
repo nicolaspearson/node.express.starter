@@ -13,17 +13,17 @@ export async function closeConnections(connection?: Connection): Promise<void> {
 
 export async function setupDatabase(database: string): Promise<Connection> {
   const client = new Client({
-    user: process.env.TYPEORM_USERNAME,
-    password: process.env.TYPEORM_PASSWORD,
-    host: process.env.TYPEORM_HOST,
-    database: process.env.TYPEORM_DATABASE,
-    port: Number(process.env.TYPEORM_PORT),
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    host: process.env.DB_HOST,
+    database: process.env.DB_DATABASE,
+    port: Number(process.env.DB_PORT),
   });
   await client.connect();
   // Create database if it does not exist (ignoring errors if it does)
   try {
     // Force creation of required extensions
-    await client.query(`CREATE DATABASE ${database} WITH OWNER ${process.env.TYPEORM_USERNAME!}`);
+    await client.query(`CREATE DATABASE ${database} WITH OWNER ${process.env.DB_USERNAME!}`);
   } catch (err) {
     // empty
   }

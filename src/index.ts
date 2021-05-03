@@ -5,7 +5,7 @@ import { resolve } from 'path';
 
 import App from '@/app';
 import * as config from '@/common/config';
-import * as db from '@/db';
+import * as db from '@/db/models';
 import * as logger from '@/logger';
 
 // We use dotenv and joi to set the
@@ -18,7 +18,8 @@ logger.init();
 
 (async () => {
   try {
-    await db.init();
+    await db.sequelize.authenticate();
+    logger.logger.info('Database: Connection has been successfully established!');
   } catch (error) {
     logger.logger.error(`Database: Error connecting!`, error);
     return error;
