@@ -892,6 +892,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rushstack/ts-command-line@npm:^4.7.7":
+  version: 4.7.10
+  resolution: "@rushstack/ts-command-line@npm:4.7.10"
+  dependencies:
+    "@types/argparse": 1.0.38
+    argparse: ~1.0.9
+    colors: ~1.2.1
+    string-argv: ~0.3.1
+  checksum: 40d37428ffbe9c55e5feac47049374cc51a191b9a98aba82ffa89aace7bbfedcc555fe1f2c5573d7718809c2d885af4fa13321e2cbd33037b9fe24fb05347475
+  languageName: node
+  linkType: hard
+
 "@sideway/address@npm:^4.1.0":
   version: 4.1.1
   resolution: "@sideway/address@npm:4.1.1"
@@ -972,6 +984,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/argparse@npm:1.0.38":
+  version: 1.0.38
+  resolution: "@types/argparse@npm:1.0.38"
+  checksum: 4b80a5e5c6c23fd48c88d7aab0b49e5b90285d570f2856bbaadf62538f261faaab0ee9246f25d98cb9c85a5a712d6619cad662644fe704b6a720cf1b85bbffce
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.0.0, @types/babel__core@npm:^7.1.7":
   version: 7.1.12
   resolution: "@types/babel__core@npm:7.1.12"
@@ -1020,10 +1039,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/bluebird@npm:^3.5.33":
-  version: 3.5.33
-  resolution: "@types/bluebird@npm:3.5.33"
-  checksum: 45f7adeec6e656501f5b2127d5cc1538d3ae497d06bfa00d8d7f51eb2aa482267b3b4868ac1c75fc84acfad86d2c0d4de8af535cf725156f222d679df9694aff
+"@types/bluebird@npm:~3.5.33":
+  version: 3.5.34
+  resolution: "@types/bluebird@npm:3.5.34"
+  checksum: 1aa99b94cd373c9eb547476148343faab414b99a2a391b2b368b76e17a327752074ca80b01d5b83e39e5e7a268a49bb4339711c0d347005f7d78764c2892c832
   languageName: node
   linkType: hard
 
@@ -1215,6 +1234,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/module-alias@npm:~2.0.0":
+  version: 2.0.0
+  resolution: "@types/module-alias@npm:2.0.0"
+  checksum: d25152dbe86a70c32844bfa3ef882b4c6e2456c016486596c0ffa8e541b095791c95042e3e06b44a91e6306c5d75232c317d12a71771e4767d69f2e5f8c1df80
+  languageName: node
+  linkType: hard
+
 "@types/nconf@npm:~0.10.0":
   version: 0.10.0
   resolution: "@types/nconf@npm:0.10.0"
@@ -1362,10 +1388,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/validator@npm:^13.1.3":
+"@types/validator@npm:^13.1.3, @types/validator@npm:~13.1.3":
   version: 13.1.3
   resolution: "@types/validator@npm:13.1.3"
   checksum: 47e1de4aebd3efbf97deea2d0f72b2308c924f95833c7a18d4f5d7cbd500f875fed9afd85038022ca352e3effb82241de149e5f1cbb32957b99fd7b0484641f3
+  languageName: node
+  linkType: hard
+
+"@types/verror@npm:^1.10.4":
+  version: 1.10.4
+  resolution: "@types/verror@npm:1.10.4"
+  checksum: e74d6e9598974f7a051a4a9029a932387b603a30d341c33159bb5b7c9fb4e2b23359a54ac126b39699ecd9c819ee07bcd75123a3801cbc8abacf82bbd80f2f12
   languageName: node
   linkType: hard
 
@@ -1906,7 +1939,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"argparse@npm:^1.0.7":
+"argparse@npm:^1.0.7, argparse@npm:~1.0.9":
   version: 1.0.10
   resolution: "argparse@npm:1.0.10"
   dependencies:
@@ -2840,6 +2873,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"colors@npm:~1.2.1":
+  version: 1.2.5
+  resolution: "colors@npm:1.2.5"
+  checksum: c396fe2a268fd95f37de874a4eb0f542698a6fd775bcecffdb8aa01fe6c67b4aab81bd7a93ee2f7a248f29a161446c1719d4590aff5e26e7315c7b9d473a513d
+  languageName: node
+  linkType: hard
+
 "colorspace@npm:1.1.x":
   version: 1.1.2
   resolution: "colorspace@npm:1.1.2"
@@ -3533,6 +3573,13 @@ __metadata:
   version: 0.7.2
   resolution: "emittery@npm:0.7.2"
   checksum: 34acfef51922a1b73d75cb658bf43ecb279633b263ffa831fb87697abbbd3aa4241ef15d204eeaa6a3c62656bd7563de7145c416a2bb18c4805e54ce6d7cdac6
+  languageName: node
+  linkType: hard
+
+"emittery@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "emittery@npm:0.8.1"
+  checksum: 1c9cd9a1045ce8e50e41b4433a6d3adf109cbb7585fe5d504399f2a035f423adb9b9bc6735aad672368575532007948d4483645e188fe99759c302a39542479d
   languageName: node
   linkType: hard
 
@@ -4455,6 +4502,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-jetpack@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "fs-jetpack@npm:4.1.0"
+  dependencies:
+    minimatch: ^3.0.2
+    rimraf: ^2.6.3
+  checksum: 36131cf1ce899b49871d819c1318e26ce46514a4a30b709a4bb145e7a4e77c5b39e2218aaa4451c7e9d1ebd24214e309fe4cc9316e48238f5f372c49fcd3b11a
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^2.0.0":
   version: 2.1.0
   resolution: "fs-minipass@npm:2.1.0"
@@ -4623,7 +4680,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.1.1, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4":
+"glob@npm:^7.1.1, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.6":
   version: 7.1.6
   resolution: "glob@npm:7.1.6"
   dependencies:
@@ -6914,7 +6971,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^3.0.4":
+"minimatch@npm:^3.0.2, minimatch@npm:^3.0.4":
   version: 3.0.4
   resolution: "minimatch@npm:3.0.4"
   dependencies:
@@ -7235,18 +7292,19 @@ __metadata:
   resolution: "node.express.starter@workspace:."
   dependencies:
     "@types/bcrypt": ~3.0.1
-    "@types/bluebird": ^3.5.33
+    "@types/bluebird": ~3.5.33
     "@types/boom": ~7.3.0
     "@types/dotenv": ~8.2.0
     "@types/express": ~4.17.11
     "@types/jest": ~26.0.23
     "@types/jsonwebtoken": ~8.5.1
+    "@types/module-alias": ~2.0.0
     "@types/nconf": ~0.10.0
     "@types/node": ~14.14.41
     "@types/pg": ~7.14.11
     "@types/prettier": ~2
     "@types/supertest": ~2.0.11
-    "@types/validator": ^13.1.3
+    "@types/validator": ~13.1.3
     "@typescript-eslint/eslint-plugin": ~4.22.0
     "@typescript-eslint/parser": ~4.22.0
     "@yarnpkg/pnpify": ~2.4.0
@@ -7280,14 +7338,15 @@ __metadata:
     prettier: ~2.2.1
     pretty-quick: ~3.1.0
     reflect-metadata: ~0.1.13
-    sequelize: ^6.6.2
-    sequelize-cli: ^6.2.0
+    sequelize: ~6.6.2
+    sequelize-cli: ~6.2.0
     supertest: ~6.1.3
     ts-jest: ~26.5.5
     ts-node: ~9.1.1
     ts-node-dev: ~1.1.6
     tsconfig-paths: ~3.9.0
     typescript: ~4.2.4
+    umzug: beta
     winston: ~3.3.3
   languageName: unknown
   linkType: soft
@@ -8689,7 +8748,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rimraf@npm:^2.6.1":
+"rimraf@npm:^2.6.1, rimraf@npm:^2.6.3":
   version: 2.7.1
   resolution: "rimraf@npm:2.7.1"
   dependencies:
@@ -8871,7 +8930,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sequelize-cli@npm:^6.2.0":
+"sequelize-cli@npm:~6.2.0":
   version: 6.2.0
   resolution: "sequelize-cli@npm:6.2.0"
   dependencies:
@@ -8896,7 +8955,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sequelize@npm:^6.6.2":
+"sequelize@npm:~6.6.2":
   version: 6.6.2
   resolution: "sequelize@npm:6.6.2"
   dependencies:
@@ -9293,6 +9352,13 @@ __metadata:
     end-of-stream: ~1.1.0
     stream-to-array: ~2.3.0
   checksum: 1f26f85d571d94a308f9332c79f2652697f9893733e3a2aebca1aaaf4d2a0d0655150b8b0a88105256a50510d9e9b8a0b1e5d9139b464ee1f9285be3647c3b83
+  languageName: node
+  linkType: hard
+
+"string-argv@npm:~0.3.1":
+  version: 0.3.1
+  resolution: "string-argv@npm:0.3.1"
+  checksum: 002a6902698eff6bd463ddd2b03864bf9be08a1359879243d94d3906ebbe984ff355d73224064be7504d20262eadb06897b3d40b5d7cefccacc69c9dc45c8d0e
   languageName: node
   linkType: hard
 
@@ -10024,7 +10090,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^0.20.2":
+"type-fest@npm:^0.20.0, type-fest@npm:^0.20.2":
   version: 0.20.2
   resolution: "type-fest@npm:0.20.2"
   checksum: 1f887bc6150e632fb772fd28e33c22a4ab036c6f484fa9ac2e2115f6cae9d62bba7ca0368e3332b539d85bd2c8391c7bff22ad410abcbc9ab3774d61e250b210
@@ -10104,6 +10170,21 @@ typescript@~4.2.4:
   dependencies:
     bluebird: ^3.7.2
   checksum: bab1ef758df57f0e3bcfa6108ea84c79d2fa7d30c08a2c8a2bf38025d944f3801d35c5c81ab510e5a27bf0ae475283fcd07bd9f6e77eb502982765e8fc6be778
+  languageName: node
+  linkType: hard
+
+"umzug@npm:beta":
+  version: 3.0.0-beta.15
+  resolution: "umzug@npm:3.0.0-beta.15"
+  dependencies:
+    "@rushstack/ts-command-line": ^4.7.7
+    "@types/verror": ^1.10.4
+    emittery: ^0.8.1
+    fs-jetpack: ^4.1.0
+    glob: ^7.1.6
+    type-fest: ^0.20.0
+    verror: ^1.10.0
+  checksum: 5f6085c5b9090e1cfd0fbeeba06f582c0297fa1e47ab264fb5174c957f1eb89398c2ac5d9f79fc2f1b5a130c438d9551cb4daf1a954b35fc620c8bdbf51e884a
   languageName: node
   linkType: hard
 
@@ -10314,7 +10395,7 @@ typescript@~4.2.4:
   languageName: node
   linkType: hard
 
-"verror@npm:1.10.0":
+"verror@npm:1.10.0, verror@npm:^1.10.0":
   version: 1.10.0
   resolution: "verror@npm:1.10.0"
   dependencies:

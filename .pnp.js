@@ -38,12 +38,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@types/bcrypt", "npm:3.0.1"],
-            ["@types/bluebird", "npm:3.5.33"],
+            ["@types/bluebird", "npm:3.5.34"],
             ["@types/boom", "npm:7.3.0"],
             ["@types/dotenv", "npm:8.2.0"],
             ["@types/express", "npm:4.17.11"],
             ["@types/jest", "npm:26.0.23"],
             ["@types/jsonwebtoken", "npm:8.5.1"],
+            ["@types/module-alias", "npm:2.0.0"],
             ["@types/nconf", "npm:0.10.0"],
             ["@types/node", "npm:14.14.41"],
             ["@types/pg", "npm:7.14.11"],
@@ -91,6 +92,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node-dev", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:1.1.6"],
             ["tsconfig-paths", "npm:3.9.0"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],
+            ["umzug", "npm:3.0.0-beta.15"],
             ["winston", "npm:3.3.3"]
           ],
           "linkType": "SOFT",
@@ -1201,6 +1203,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@rushstack/ts-command-line", [
+        ["npm:4.7.10", {
+          "packageLocation": "./.yarn/cache/@rushstack-ts-command-line-npm-4.7.10-4891de9f21-40d37428ff.zip/node_modules/@rushstack/ts-command-line/",
+          "packageDependencies": [
+            ["@rushstack/ts-command-line", "npm:4.7.10"],
+            ["@types/argparse", "npm:1.0.38"],
+            ["argparse", "npm:1.0.10"],
+            ["colors", "npm:1.2.5"],
+            ["string-argv", "npm:0.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@sideway/address", [
         ["npm:4.1.1", {
           "packageLocation": "./.yarn/cache/@sideway-address-npm-4.1.1-2c7d8b653f-ba8678372e.zip/node_modules/@sideway/address/",
@@ -1292,6 +1307,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/argparse", [
+        ["npm:1.0.38", {
+          "packageLocation": "./.yarn/cache/@types-argparse-npm-1.0.38-657c15204c-4b80a5e5c6.zip/node_modules/@types/argparse/",
+          "packageDependencies": [
+            ["@types/argparse", "npm:1.0.38"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/babel__core", [
         ["npm:7.1.12", {
           "packageLocation": "./.yarn/cache/@types-babel__core-npm-7.1.12-0093691d63-e2642b77b8.zip/node_modules/@types/babel__core/",
@@ -1347,10 +1371,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/bluebird", [
-        ["npm:3.5.33", {
-          "packageLocation": "./.yarn/cache/@types-bluebird-npm-3.5.33-c479c59631-45f7adeec6.zip/node_modules/@types/bluebird/",
+        ["npm:3.5.34", {
+          "packageLocation": "./.yarn/cache/@types-bluebird-npm-3.5.34-78d6295b85-1aa99b94cd.zip/node_modules/@types/bluebird/",
           "packageDependencies": [
-            ["@types/bluebird", "npm:3.5.33"]
+            ["@types/bluebird", "npm:3.5.34"]
           ],
           "linkType": "HARD",
         }]
@@ -1575,6 +1599,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/module-alias", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/@types-module-alias-npm-2.0.0-f0915be707-d25152dbe8.zip/node_modules/@types/module-alias/",
+          "packageDependencies": [
+            ["@types/module-alias", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/nconf", [
         ["npm:0.10.0", {
           "packageLocation": "./.yarn/cache/@types-nconf-npm-0.10.0-765824f95a-fb7e8c9060.zip/node_modules/@types/nconf/",
@@ -1756,6 +1789,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-validator-npm-13.1.3-4191eefe06-47e1de4aeb.zip/node_modules/@types/validator/",
           "packageDependencies": [
             ["@types/validator", "npm:13.1.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/verror", [
+        ["npm:1.10.4", {
+          "packageLocation": "./.yarn/cache/@types-verror-npm-1.10.4-5145b877ba-e74d6e9598.zip/node_modules/@types/verror/",
+          "packageDependencies": [
+            ["@types/verror", "npm:1.10.4"]
           ],
           "linkType": "HARD",
         }]
@@ -3522,6 +3564,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["colors", [
+        ["npm:1.2.5", {
+          "packageLocation": "./.yarn/cache/colors-npm-1.2.5-891bb7682f-c396fe2a26.zip/node_modules/colors/",
+          "packageDependencies": [
+            ["colors", "npm:1.2.5"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:1.4.0", {
           "packageLocation": "./.yarn/cache/colors-npm-1.4.0-7e2cf12234-a0f266ac04.zip/node_modules/colors/",
           "packageDependencies": [
@@ -4334,6 +4383,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/emittery-npm-0.7.2-4a6f20265e-34acfef519.zip/node_modules/emittery/",
           "packageDependencies": [
             ["emittery", "npm:0.7.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:0.8.1", {
+          "packageLocation": "./.yarn/cache/emittery-npm-0.8.1-9771f0f260-1c9cd9a104.zip/node_modules/emittery/",
+          "packageDependencies": [
+            ["emittery", "npm:0.8.1"]
           ],
           "linkType": "HARD",
         }]
@@ -5393,6 +5449,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["graceful-fs", "npm:4.2.6"],
             ["jsonfile", "npm:6.1.0"],
             ["universalify", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["fs-jetpack", [
+        ["npm:4.1.0", {
+          "packageLocation": "./.yarn/cache/fs-jetpack-npm-4.1.0-0941fd3986-36131cf1ce.zip/node_modules/fs-jetpack/",
+          "packageDependencies": [
+            ["fs-jetpack", "npm:4.1.0"],
+            ["minimatch", "npm:3.0.4"],
+            ["rimraf", "npm:2.7.1"]
           ],
           "linkType": "HARD",
         }]
@@ -8470,12 +8537,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["node.express.starter", "workspace:."],
             ["@types/bcrypt", "npm:3.0.1"],
-            ["@types/bluebird", "npm:3.5.33"],
+            ["@types/bluebird", "npm:3.5.34"],
             ["@types/boom", "npm:7.3.0"],
             ["@types/dotenv", "npm:8.2.0"],
             ["@types/express", "npm:4.17.11"],
             ["@types/jest", "npm:26.0.23"],
             ["@types/jsonwebtoken", "npm:8.5.1"],
+            ["@types/module-alias", "npm:2.0.0"],
             ["@types/nconf", "npm:0.10.0"],
             ["@types/node", "npm:14.14.41"],
             ["@types/pg", "npm:7.14.11"],
@@ -8523,6 +8591,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node-dev", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:1.1.6"],
             ["tsconfig-paths", "npm:3.9.0"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],
+            ["umzug", "npm:3.0.0-beta.15"],
             ["winston", "npm:3.3.3"]
           ],
           "linkType": "SOFT",
@@ -10786,6 +10855,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["string-argv", [
+        ["npm:0.3.1", {
+          "packageLocation": "./.yarn/cache/string-argv-npm-0.3.1-b4f6cd3d7b-002a690269.zip/node_modules/string-argv/",
+          "packageDependencies": [
+            ["string-argv", "npm:0.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["string-length", [
         ["npm:4.0.1", {
           "packageLocation": "./.yarn/cache/string-length-npm-4.0.1-f4a493417a-afc4338247.zip/node_modules/string-length/",
@@ -11701,6 +11779,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["umzug", "npm:2.3.0"],
             ["bluebird", "npm:3.7.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:3.0.0-beta.15", {
+          "packageLocation": "./.yarn/cache/umzug-npm-3.0.0-beta.15-489d68f44b-5f6085c5b9.zip/node_modules/umzug/",
+          "packageDependencies": [
+            ["umzug", "npm:3.0.0-beta.15"],
+            ["@rushstack/ts-command-line", "npm:4.7.10"],
+            ["@types/verror", "npm:1.10.4"],
+            ["emittery", "npm:0.8.1"],
+            ["fs-jetpack", "npm:4.1.0"],
+            ["glob", "npm:7.1.6"],
+            ["type-fest", "npm:0.20.2"],
+            ["verror", "npm:1.10.0"]
           ],
           "linkType": "HARD",
         }]

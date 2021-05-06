@@ -1,6 +1,6 @@
 import * as Sequelize from 'sequelize';
 
-import { sequelize } from '@/db/models';
+import { sequelize } from '@/db';
 import { Comment, CommentAttributes, CommentInstance } from '@/db/models/comment.model';
 import { UserAttributes, UserInstance } from '@/db/models/user.model';
 

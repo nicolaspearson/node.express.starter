@@ -49,10 +49,10 @@ The app will start running at <http://localhost:3000>
 
 ## Migrations
 
-To generate missing migrations:
+To create an empty migration file:
 
 ```bash
-yarn sequelize:migration:generate:missing InitialSchema
+yarn sequelize:migration:create --name InitialSchema.ts
 ```
 
 ## Contribution Guidelines

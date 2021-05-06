@@ -4,10 +4,9 @@ import moduleAlias from 'module-alias';
 import { resolve } from 'path';
 
 moduleAlias.addAliases({
-  '@': `${__dirname}`,
+  '@': `${__dirname}/..`,
 });
 
-import App from '@/app';
 import * as config from '@/common/config';
 import * as db from '@/db';
 import * as logger from '@/logger';
@@ -28,7 +27,6 @@ logger.init();
     logger.logger.error(`Database: Error connecting!`, error);
     return error;
   }
-  // Finally, initialize the app.
-  const app = new App();
-  app.listen();
+  // Finally, run the cli
+  db.migrator.runAsCLI();
 })();
