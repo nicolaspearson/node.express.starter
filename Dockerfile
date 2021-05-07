@@ -1,5 +1,5 @@
 # Builder image
-FROM node:15-alpine AS builder
+FROM node:16-alpine AS builder
 
 WORKDIR /usr/src/app
 
@@ -11,7 +11,7 @@ RUN yarn install
 RUN yarn build
 
 # Runner image
-FROM node:15-alpine
+FROM node:16-alpine
 
 WORKDIR /usr/src/app
 
