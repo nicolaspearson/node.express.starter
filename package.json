@@ -53,7 +53,7 @@
     "class-transformer": "~0.4.0",
     "class-transformer-validator": "~0.9.1",
     "class-validator": "~0.13.1",
-    "dotenv": "~8.2.0",
+    "dotenv": "~9.0.0",
     "express": "~4.17.1",
     "joi": "~17.4.0",
     "jsonwebtoken": "~8.5.1",
