@@ -3759,12 +3759,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-ordered-imports@npm:~0.4.1":
-  version: 0.4.1
-  resolution: "eslint-plugin-ordered-imports@npm:0.4.1"
+"eslint-plugin-ordered-imports@npm:~0.5.0":
+  version: 0.5.0
+  resolution: "eslint-plugin-ordered-imports@npm:0.5.0"
   peerDependencies:
     eslint: ^7.0.0
-  checksum: 238765354ed48ecf9e04f1fd77536eb967f5cc37ed41d12cdab9737595b08d928b072bfc347c99b24ddf072ae6a1afdbc37bca36ab6ff49847f925498fbbec2f
+  checksum: f2449c5064ccfce67b88035cc666e097046ac4f8fb277d7d19a3f0395eb3241288da3480d0c1be6715207018c18408285938d4bdeae00f1efffc345b39be75a5
   languageName: node
   linkType: hard
 
@@ -7099,7 +7099,7 @@ __metadata:
     eslint-config-prettier: ~8.3.0
     eslint-plugin-import: ~2.22.1
     eslint-plugin-jest: ~24.3.6
-    eslint-plugin-ordered-imports: ~0.4.1
+    eslint-plugin-ordered-imports: ~0.5.0
     eslint-plugin-prettier: ~3.4.0
     express: ~4.17.1
     husky: ~6.0.0
