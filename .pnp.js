@@ -59,7 +59,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-validator", "npm:0.13.1"],
             ["commitlint", "npm:12.1.1"],
             ["concurrently", "npm:6.0.2"],
-            ["dotenv", "npm:9.0.0"],
+            ["dotenv", "npm:9.0.1"],
             ["eslint", "npm:7.25.0"],
             ["eslint-config-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.3.0"],
             ["eslint-plugin-import", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:2.22.1"],
@@ -4248,10 +4248,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:9.0.0", {
-          "packageLocation": "./.yarn/cache/dotenv-npm-9.0.0-94b3d52fa9-8111fb99a1.zip/node_modules/dotenv/",
+        ["npm:9.0.1", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-9.0.1-c34ea48d95-d269ad03ed.zip/node_modules/dotenv/",
           "packageDependencies": [
-            ["dotenv", "npm:9.0.0"]
+            ["dotenv", "npm:9.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -8317,7 +8317,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-validator", "npm:0.13.1"],
             ["commitlint", "npm:12.1.1"],
             ["concurrently", "npm:6.0.2"],
-            ["dotenv", "npm:9.0.0"],
+            ["dotenv", "npm:9.0.1"],
             ["eslint", "npm:7.25.0"],
             ["eslint-config-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.3.0"],
             ["eslint-plugin-import", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:2.22.1"],
@@ -8364,7 +8364,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["nodemon", [
         ["npm:2.0.7", {
-          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.7-7b95e46511/node_modules/nodemon/",
+          "packageLocation": "./.yarn/cache/nodemon-npm-2.0.7-7b95e46511-e1e8acb584.zip/node_modules/nodemon/",
           "packageDependencies": [
             ["nodemon", "npm:2.0.7"],
             ["chokidar", "npm:3.5.1"],
