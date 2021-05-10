@@ -58,7 +58,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-transformer-validator", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.9.1"],
             ["class-validator", "npm:0.13.1"],
             ["commitlint", "npm:12.1.1"],
-            ["concurrently", "npm:6.0.2"],
+            ["concurrently", "npm:6.1.0"],
             ["dotenv", "npm:9.0.1"],
             ["eslint", "npm:7.26.0"],
             ["eslint-config-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.3.0"],
@@ -3637,10 +3637,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["concurrently", [
-        ["npm:6.0.2", {
-          "packageLocation": "./.yarn/cache/concurrently-npm-6.0.2-f267b33683-2bb8892c89.zip/node_modules/concurrently/",
+        ["npm:6.1.0", {
+          "packageLocation": "./.yarn/cache/concurrently-npm-6.1.0-0954720a66-daa788a222.zip/node_modules/concurrently/",
           "packageDependencies": [
-            ["concurrently", "npm:6.0.2"],
+            ["concurrently", "npm:6.1.0"],
             ["chalk", "npm:4.1.0"],
             ["date-fns", "npm:2.19.0"],
             ["lodash", "npm:4.17.21"],
@@ -8317,7 +8317,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-transformer-validator", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.9.1"],
             ["class-validator", "npm:0.13.1"],
             ["commitlint", "npm:12.1.1"],
-            ["concurrently", "npm:6.0.2"],
+            ["concurrently", "npm:6.1.0"],
             ["dotenv", "npm:9.0.1"],
             ["eslint", "npm:7.26.0"],
             ["eslint-config-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.3.0"],

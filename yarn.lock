@@ -2944,9 +2944,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"concurrently@npm:~6.0.2":
-  version: 6.0.2
-  resolution: "concurrently@npm:6.0.2"
+"concurrently@npm:~6.1.0":
+  version: 6.1.0
+  resolution: "concurrently@npm:6.1.0"
   dependencies:
     chalk: ^4.1.0
     date-fns: ^2.16.1
@@ -2959,7 +2959,7 @@ __metadata:
     yargs: ^16.2.0
   bin:
     concurrently: bin/concurrently.js
-  checksum: 2bb8892c8948bcfd8bd4079d720507acb3e49fdb5a4ad4e315f4ffdc768fb8cc7f3b25a1e98fbd7734efe6a8c86a5bd0f77001a212bd2db4ce67f05d0868f326
+  checksum: daa788a222c1c78604f01b39318a003260fb1c47bdaf0336587437414e7727b8de899bd66e58e922572c66a24308874d035caecbd9b1eead3ea451a52d1a8fec
   languageName: node
   linkType: hard
 
@@ -7095,7 +7095,7 @@ __metadata:
     class-transformer-validator: ~0.9.1
     class-validator: ~0.13.1
     commitlint: ~12.1.1
-    concurrently: ~6.0.2
+    concurrently: ~6.1.0
     dotenv: ~9.0.1
     eslint: ~7.26.0
     eslint-config-prettier: ~8.3.0
