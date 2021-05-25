@@ -40,7 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/bcrypt", "npm:5.0.0"],
             ["@types/boom", "npm:7.3.0"],
             ["@types/dotenv", "npm:8.2.0"],
-            ["@types/express", "npm:4.17.11"],
+            ["@types/express", "npm:4.17.12"],
             ["@types/jest", "npm:26.0.23"],
             ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/nconf", "npm:0.10.0"],
@@ -1425,10 +1425,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/express", [
-        ["npm:4.17.11", {
-          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.11-1b3f17f056-2818120a0f.zip/node_modules/@types/express/",
+        ["npm:4.17.12", {
+          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.12-d30bfc5b29-b1ab50e037.zip/node_modules/@types/express/",
           "packageDependencies": [
-            ["@types/express", "npm:4.17.11"],
+            ["@types/express", "npm:4.17.12"],
             ["@types/body-parser", "npm:1.19.0"],
             ["@types/express-serve-static-core", "npm:4.17.18"],
             ["@types/qs", "npm:6.9.6"],
@@ -8299,7 +8299,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/bcrypt", "npm:5.0.0"],
             ["@types/boom", "npm:7.3.0"],
             ["@types/dotenv", "npm:8.2.0"],
-            ["@types/express", "npm:4.17.11"],
+            ["@types/express", "npm:4.17.12"],
             ["@types/jest", "npm:26.0.23"],
             ["@types/jsonwebtoken", "npm:8.5.1"],
             ["@types/nconf", "npm:0.10.0"],
@@ -8365,7 +8365,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["nodemon", [
         ["npm:2.0.7", {
-          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.7-7b95e46511/node_modules/nodemon/",
+          "packageLocation": "./.yarn/cache/nodemon-npm-2.0.7-7b95e46511-e1e8acb584.zip/node_modules/nodemon/",
           "packageDependencies": [
             ["nodemon", "npm:2.0.7"],
             ["chokidar", "npm:3.5.1"],
