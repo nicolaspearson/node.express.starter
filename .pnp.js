@@ -86,7 +86,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:9.1.1"],
             ["ts-node-dev", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:1.1.6"],
             ["tsconfig-paths", "npm:3.9.0"],
-            ["typeorm", "npm:0.2.32"],
+            ["typeorm", "npm:0.2.34"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],
             ["winston", "npm:3.3.3"]
           ],
@@ -8345,7 +8345,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:9.1.1"],
             ["ts-node-dev", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:1.1.6"],
             ["tsconfig-paths", "npm:3.9.0"],
-            ["typeorm", "npm:0.2.32"],
+            ["typeorm", "npm:0.2.34"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],
             ["winston", "npm:3.3.3"]
           ],
@@ -8365,7 +8365,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["nodemon", [
         ["npm:2.0.7", {
-          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.7-7b95e46511/node_modules/nodemon/",
+          "packageLocation": "./.yarn/cache/nodemon-npm-2.0.7-7b95e46511-e1e8acb584.zip/node_modules/nodemon/",
           "packageDependencies": [
             ["nodemon", "npm:2.0.7"],
             ["chokidar", "npm:3.5.1"],
@@ -11442,10 +11442,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["typeorm", [
-        ["npm:0.2.32", {
-          "packageLocation": "./.yarn/cache/typeorm-npm-0.2.32-2518659d55-f2f40db8d5.zip/node_modules/typeorm/",
+        ["npm:0.2.34", {
+          "packageLocation": "./.yarn/cache/typeorm-npm-0.2.34-590a97efd6-1bf2488a19.zip/node_modules/typeorm/",
           "packageDependencies": [
-            ["typeorm", "npm:0.2.32"],
+            ["typeorm", "npm:0.2.34"],
             ["@sqltools/formatter", "npm:1.2.3"],
             ["app-root-path", "npm:3.0.0"],
             ["buffer", "npm:6.0.3"],
