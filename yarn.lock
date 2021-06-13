@@ -7123,7 +7123,7 @@ __metadata:
     ts-node: ~9.1.1
     ts-node-dev: ~1.1.6
     tsconfig-paths: ~3.9.0
-    typeorm: ~0.2.32
+    typeorm: ~0.2.34
     typescript: ~4.2.4
     winston: ~3.3.3
   languageName: unknown
@@ -9860,9 +9860,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typeorm@npm:~0.2.32":
-  version: 0.2.32
-  resolution: "typeorm@npm:0.2.32"
+"typeorm@npm:~0.2.34":
+  version: 0.2.34
+  resolution: "typeorm@npm:0.2.34"
   dependencies:
     "@sqltools/formatter": ^1.2.2
     app-root-path: ^3.0.0
@@ -9883,7 +9883,7 @@ __metadata:
     zen-observable-ts: ^1.0.0
   bin:
     typeorm: cli.js
-  checksum: f2f40db8d55b8bebaef6d2b8d39667303399086096c79ec625bf35932bdde3312c6f330331d1452eda2bcb578fd97edc9e0a080f437c1fed7952b86a60a9fc0f
+  checksum: 1bf2488a19fcea08d3f53ecf2ae3877837e83814388cab053ab0e18b58d92e81977d8b0eef6afab155a22911f28aba074ecac7a91c672be3b93f935c4d60d81a
   languageName: node
   linkType: hard
 
