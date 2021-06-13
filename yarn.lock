@@ -1237,10 +1237,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:~14.14.44":
-  version: 14.14.44
-  resolution: "@types/node@npm:14.14.44"
-  checksum: 5c4db716325fc8a25b5b76b800acf0ff00c8fa1e7cfcb764fc79d79594939488cb9d2a756e188eb8e8a36da51e8e2be1ffe859be901b338779cb0aa12ad73b3a
+"@types/node@npm:~14.17.3":
+  version: 14.17.3
+  resolution: "@types/node@npm:14.17.3"
+  checksum: 0d3e3c3dbb8250166d7c8c7c6221bde20a366d2c34b27c0072c3962a32c8a74c4ae4a168bfe53d6193e7b0bba8d8bc87608a6fd2af7918cd444a9aa699b4ce18
   languageName: node
   linkType: hard
 
@@ -7098,7 +7098,7 @@ __metadata:
     "@types/jest": ~26.0.23
     "@types/jsonwebtoken": ~8.5.1
     "@types/nconf": ~0.10.0
-    "@types/node": ~14.14.44
+    "@types/node": ~14.17.3
     "@types/pg": ~7.14.11
     "@types/prettier": ~2
     "@types/supertest": ~2.0.11
