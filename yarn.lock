@@ -6175,7 +6175,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-util@npm:^26.1.0, jest-util@npm:^26.6.2":
+"jest-util@npm:^26.6.2":
   version: 26.6.2
   resolution: "jest-util@npm:26.6.2"
   dependencies:
@@ -6189,7 +6189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-util@npm:^27.0.2":
+"jest-util@npm:^27.0.0, jest-util@npm:^27.0.2":
   version: 27.0.2
   resolution: "jest-util@npm:27.0.2"
   dependencies:
@@ -7397,7 +7397,7 @@ __metadata:
     pretty-quick: ~3.1.0
     reflect-metadata: ~0.1.13
     supertest: ~6.1.3
-    ts-jest: ~26.5.6
+    ts-jest: ~27.0.3
     ts-node: ~10.0.0
     ts-node-dev: ~1.1.6
     tsconfig-paths: ~3.9.0
@@ -9959,14 +9959,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:~26.5.6":
-  version: 26.5.6
-  resolution: "ts-jest@npm:26.5.6"
+"ts-jest@npm:~27.0.3":
+  version: 27.0.3
+  resolution: "ts-jest@npm:27.0.3"
   dependencies:
     bs-logger: 0.x
     buffer-from: 1.x
     fast-json-stable-stringify: 2.x
-    jest-util: ^26.1.0
+    jest-util: ^27.0.0
     json5: 2.x
     lodash: 4.x
     make-error: 1.x
@@ -9974,11 +9974,11 @@ __metadata:
     semver: 7.x
     yargs-parser: 20.x
   peerDependencies:
-    jest: ">=26 <27"
+    jest: ^27.0.0
     typescript: ">=3.8 <5.0"
   bin:
     ts-jest: cli.js
-  checksum: 6f65ad4fe67ab3f0fd4c7f9954acbee863af05b2b3f88dd0f490bbcdc58002960fac908b2cb9f009ec14da6fe13cb00a39e291260d6e555abe72448d1c0a017f
+  checksum: 197f6722e3182de40223d6c7a87fbee06dec5e20748365497f081179bf00e4d95ed5e479d1d9b006752701f0353cb0cc1e16b8b54ffdf83335e5010f642d28b5
   languageName: node
   linkType: hard
 
