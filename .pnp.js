@@ -59,7 +59,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-validator", "npm:0.13.1"],
             ["commitlint", "npm:12.1.4"],
             ["concurrently", "npm:6.1.0"],
-            ["dotenv", "npm:9.0.2"],
+            ["dotenv", "npm:10.0.0"],
             ["eslint", "npm:7.26.0"],
             ["eslint-config-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.3.0"],
             ["eslint-plugin-import", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:2.23.4"],
@@ -4240,17 +4240,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["dotenv", [
+        ["npm:10.0.0", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-10.0.0-36b272df25-9c45712e21.zip/node_modules/dotenv/",
+          "packageDependencies": [
+            ["dotenv", "npm:10.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:8.2.0", {
           "packageLocation": "./.yarn/cache/dotenv-npm-8.2.0-6b21df4d37-16cb89cbd7.zip/node_modules/dotenv/",
           "packageDependencies": [
             ["dotenv", "npm:8.2.0"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["npm:9.0.2", {
-          "packageLocation": "./.yarn/cache/dotenv-npm-9.0.2-fd127dfe81-062a31a2fd.zip/node_modules/dotenv/",
-          "packageDependencies": [
-            ["dotenv", "npm:9.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -8401,7 +8401,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-validator", "npm:0.13.1"],
             ["commitlint", "npm:12.1.4"],
             ["concurrently", "npm:6.1.0"],
-            ["dotenv", "npm:9.0.2"],
+            ["dotenv", "npm:10.0.0"],
             ["eslint", "npm:7.26.0"],
             ["eslint-config-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.3.0"],
             ["eslint-plugin-import", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:2.23.4"],
