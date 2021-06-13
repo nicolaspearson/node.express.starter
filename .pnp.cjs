@@ -56,7 +56,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ['@types/jsonwebtoken', 'npm:8.5.1'],
                   ['@types/nconf', 'npm:0.10.0'],
                   ['@types/node', 'npm:15.12.2'],
-                  ['@types/pg', 'npm:7.14.11'],
                   ['@types/prettier', 'npm:2.3.0'],
                   ['@types/supertest', 'npm:2.0.11'],
                   [
@@ -115,10 +114,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ['module-alias', 'npm:2.2.2'],
                   ['nconf', 'npm:0.11.2'],
                   ['nodemon', 'npm:2.0.7'],
-                  [
-                    'pg',
-                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0',
-                  ],
                   ['prettier', 'npm:2.3.1'],
                   [
                     'pretty-quick',
@@ -2685,25 +2680,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
         ],
         [
-          '@types/pg',
-          [
-            [
-              'npm:7.14.11',
-              {
-                packageLocation:
-                  './.yarn/cache/@types-pg-npm-7.14.11-ece1b5ae53-f398cad6a3.zip/node_modules/@types/pg/',
-                packageDependencies: [
-                  ['@types/pg', 'npm:7.14.11'],
-                  ['@types/node', 'npm:14.14.32'],
-                  ['pg-protocol', 'npm:1.4.0'],
-                  ['pg-types', 'npm:2.2.0'],
-                ],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
           '@types/prettier',
           [
             [
@@ -4840,20 +4816,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                 packageLocation:
                   './.yarn/cache/buffer-from-npm-1.1.1-22917b8ed8-ccc53b6973.zip/node_modules/buffer-from/',
                 packageDependencies: [['buffer-from', 'npm:1.1.1']],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
-          'buffer-writer',
-          [
-            [
-              'npm:2.0.0',
-              {
-                packageLocation:
-                  './.yarn/cache/buffer-writer-npm-2.0.0-5cd2ef55bc-11736b48bb.zip/node_modules/buffer-writer/',
-                packageDependencies: [['buffer-writer', 'npm:2.0.0']],
                 linkType: 'HARD',
               },
             ],
@@ -13022,7 +12984,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ['@types/jsonwebtoken', 'npm:8.5.1'],
                   ['@types/nconf', 'npm:0.10.0'],
                   ['@types/node', 'npm:15.12.2'],
-                  ['@types/pg', 'npm:7.14.11'],
                   ['@types/prettier', 'npm:2.3.0'],
                   ['@types/supertest', 'npm:2.0.11'],
                   [
@@ -13081,10 +13042,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ['module-alias', 'npm:2.2.2'],
                   ['nconf', 'npm:0.11.2'],
                   ['nodemon', 'npm:2.0.7'],
-                  [
-                    'pg',
-                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0',
-                  ],
                   ['prettier', 'npm:2.3.1'],
                   [
                     'pretty-quick',
@@ -13839,20 +13796,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
         ],
         [
-          'packet-reader',
-          [
-            [
-              'npm:1.0.0',
-              {
-                packageLocation:
-                  './.yarn/cache/packet-reader-npm-1.0.0-e93c92246b-0b7516f0cb.zip/node_modules/packet-reader/',
-                packageDependencies: [['packet-reader', 'npm:1.0.0']],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
           'parent-module',
           [
             [
@@ -14111,170 +14054,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
         ],
         [
-          'pg',
-          [
-            [
-              'npm:8.6.0',
-              {
-                packageLocation:
-                  './.yarn/cache/pg-npm-8.6.0-5a6707a5ba-37d5d656bf.zip/node_modules/pg/',
-                packageDependencies: [['pg', 'npm:8.6.0']],
-                linkType: 'SOFT',
-              },
-            ],
-            [
-              'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0',
-              {
-                packageLocation:
-                  './.yarn/__virtual__/pg-virtual-1b8832c4cb/0/cache/pg-npm-8.6.0-5a6707a5ba-37d5d656bf.zip/node_modules/pg/',
-                packageDependencies: [
-                  [
-                    'pg',
-                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0',
-                  ],
-                  ['@types/pg-native', null],
-                  ['buffer-writer', 'npm:2.0.0'],
-                  ['packet-reader', 'npm:1.0.0'],
-                  ['pg-connection-string', 'npm:2.5.0'],
-                  ['pg-native', null],
-                  [
-                    'pg-pool',
-                    'virtual:1b8832c4cbab98209eb63091835f806eec55c0de3b096593f5043fb3d689e8577312dd38178b735ff9ac16ca2095687875bffed2fff7f2049ccd6e295a9078dc#npm:3.3.0',
-                  ],
-                  ['pg-protocol', 'npm:1.5.0'],
-                  ['pg-types', 'npm:2.2.0'],
-                  ['pgpass', 'npm:1.0.4'],
-                ],
-                packagePeers: ['@types/pg-native', 'pg-native'],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
-          'pg-connection-string',
-          [
-            [
-              'npm:2.5.0',
-              {
-                packageLocation:
-                  './.yarn/cache/pg-connection-string-npm-2.5.0-1ee5de9ab9-a6f3a068f7.zip/node_modules/pg-connection-string/',
-                packageDependencies: [['pg-connection-string', 'npm:2.5.0']],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
-          'pg-int8',
-          [
-            [
-              'npm:1.0.1',
-              {
-                packageLocation:
-                  './.yarn/cache/pg-int8-npm-1.0.1-5cd67f3e22-a1e3a05a69.zip/node_modules/pg-int8/',
-                packageDependencies: [['pg-int8', 'npm:1.0.1']],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
-          'pg-pool',
-          [
-            [
-              'npm:3.3.0',
-              {
-                packageLocation:
-                  './.yarn/cache/pg-pool-npm-3.3.0-ad591c0006-f85cef5b3f.zip/node_modules/pg-pool/',
-                packageDependencies: [['pg-pool', 'npm:3.3.0']],
-                linkType: 'SOFT',
-              },
-            ],
-            [
-              'virtual:1b8832c4cbab98209eb63091835f806eec55c0de3b096593f5043fb3d689e8577312dd38178b735ff9ac16ca2095687875bffed2fff7f2049ccd6e295a9078dc#npm:3.3.0',
-              {
-                packageLocation:
-                  './.yarn/__virtual__/pg-pool-virtual-6f85c59db4/0/cache/pg-pool-npm-3.3.0-ad591c0006-f85cef5b3f.zip/node_modules/pg-pool/',
-                packageDependencies: [
-                  [
-                    'pg-pool',
-                    'virtual:1b8832c4cbab98209eb63091835f806eec55c0de3b096593f5043fb3d689e8577312dd38178b735ff9ac16ca2095687875bffed2fff7f2049ccd6e295a9078dc#npm:3.3.0',
-                  ],
-                  ['@types/pg', null],
-                  [
-                    'pg',
-                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0',
-                  ],
-                ],
-                packagePeers: ['@types/pg', 'pg'],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
-          'pg-protocol',
-          [
-            [
-              'npm:1.4.0',
-              {
-                packageLocation:
-                  './.yarn/cache/pg-protocol-npm-1.4.0-196559396d-96d39f7a73.zip/node_modules/pg-protocol/',
-                packageDependencies: [['pg-protocol', 'npm:1.4.0']],
-                linkType: 'HARD',
-              },
-            ],
-            [
-              'npm:1.5.0',
-              {
-                packageLocation:
-                  './.yarn/cache/pg-protocol-npm-1.5.0-390f8d9ed8-b839d12caf.zip/node_modules/pg-protocol/',
-                packageDependencies: [['pg-protocol', 'npm:1.5.0']],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
-          'pg-types',
-          [
-            [
-              'npm:2.2.0',
-              {
-                packageLocation:
-                  './.yarn/cache/pg-types-npm-2.2.0-a3360226c4-bf4ec3f594.zip/node_modules/pg-types/',
-                packageDependencies: [
-                  ['pg-types', 'npm:2.2.0'],
-                  ['pg-int8', 'npm:1.0.1'],
-                  ['postgres-array', 'npm:2.0.0'],
-                  ['postgres-bytea', 'npm:1.0.0'],
-                  ['postgres-date', 'npm:1.0.7'],
-                  ['postgres-interval', 'npm:1.2.0'],
-                ],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
-          'pgpass',
-          [
-            [
-              'npm:1.0.4',
-              {
-                packageLocation:
-                  './.yarn/cache/pgpass-npm-1.0.4-c96230be37-ea4751e9ec.zip/node_modules/pgpass/',
-                packageDependencies: [
-                  ['pgpass', 'npm:1.0.4'],
-                  ['split2', 'npm:3.2.2'],
-                ],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
           'picomatch',
           [
             [
@@ -14437,65 +14216,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                 packageLocation:
                   './.yarn/cache/posix-character-classes-npm-0.1.1-3e228a6e15-dedb99913c.zip/node_modules/posix-character-classes/',
                 packageDependencies: [['posix-character-classes', 'npm:0.1.1']],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
-          'postgres-array',
-          [
-            [
-              'npm:2.0.0',
-              {
-                packageLocation:
-                  './.yarn/cache/postgres-array-npm-2.0.0-4f49dc1389-0e1e659888.zip/node_modules/postgres-array/',
-                packageDependencies: [['postgres-array', 'npm:2.0.0']],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
-          'postgres-bytea',
-          [
-            [
-              'npm:1.0.0',
-              {
-                packageLocation:
-                  './.yarn/cache/postgres-bytea-npm-1.0.0-8c2b81fa73-d844ae4ca7.zip/node_modules/postgres-bytea/',
-                packageDependencies: [['postgres-bytea', 'npm:1.0.0']],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
-          'postgres-date',
-          [
-            [
-              'npm:1.0.7',
-              {
-                packageLocation:
-                  './.yarn/cache/postgres-date-npm-1.0.7-aadfe5531e-5745001d47.zip/node_modules/postgres-date/',
-                packageDependencies: [['postgres-date', 'npm:1.0.7']],
-                linkType: 'HARD',
-              },
-            ],
-          ],
-        ],
-        [
-          'postgres-interval',
-          [
-            [
-              'npm:1.2.0',
-              {
-                packageLocation:
-                  './.yarn/cache/postgres-interval-npm-1.2.0-ca6414744d-746b71f938.zip/node_modules/postgres-interval/',
-                packageDependencies: [
-                  ['postgres-interval', 'npm:1.2.0'],
-                  ['xtend', 'npm:4.0.2'],
-                ],
                 linkType: 'HARD',
               },
             ],

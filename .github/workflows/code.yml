@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [15]
+        node-version: [16]
     steps:
       - uses: actions/checkout@v2
       - name: using node.js ${{ matrix.node-version }}
@@ -27,7 +27,7 @@ jobs:
       - build
     strategy:
       matrix:
-        node-version: [15]
+        node-version: [16]
     steps:
       - uses: actions/checkout@v2
       - name: using node.js ${{ matrix.node-version }}
@@ -41,12 +41,12 @@ jobs:
   test_integration:
     name: test integration
     runs-on: ubuntu-latest
-    container: minddocdev/node-alpine-ci:latest
+    container: node:16-alpine
     needs:
       - build
     strategy:
       matrix:
-        node-version: [15]
+        node-version: [16]
     steps:
       - uses: actions/checkout@v2
       - name: using node.js ${{ matrix.node-version }}

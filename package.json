@@ -58,7 +58,6 @@
     "jsonwebtoken": "~8.5.1",
     "module-alias": "~2.2.2",
     "nconf": "~0.11.2",
-    "pg": "~8.6.0",
     "prisma": "~2.24.1",
     "reflect-metadata": "~0.1.13",
     "winston": "~3.3.3"
@@ -72,7 +71,6 @@
     "@types/jsonwebtoken": "~8.5.1",
     "@types/nconf": "~0.10.0",
     "@types/node": "~15.12.2",
-    "@types/pg": "~7.14.11",
     "@types/prettier": "~2.3.0",
     "@types/supertest": "~2.0.11",
     "@typescript-eslint/eslint-plugin": "~4.26.1",
