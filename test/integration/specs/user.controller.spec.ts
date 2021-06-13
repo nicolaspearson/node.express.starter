@@ -1,14 +1,11 @@
-import { Connection } from 'typeorm';
-
 import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
+import { Db } from '@/db';
 
-import { closeConnections, setupDatabase } from '../db';
 import { testApp } from '../factories';
 import { getTokenStringFromCookieResponse } from '../utils';
 
 describe('User Controller', () => {
   const baseUrl = '/user';
-  let connection: Connection;
   let tokenString: string;
 
   const registerUserReqDto: RegisterUserReqDto = {
@@ -24,11 +21,11 @@ describe('User Controller', () => {
   };
 
   beforeAll(async () => {
-    connection = await setupDatabase('int_user');
+    new Db();
   });
 
   afterAll(async () => {
-    await closeConnections(connection);
+    await Db.prisma.$disconnect();
     jest.resetAllMocks();
   });
 
@@ -48,12 +45,12 @@ describe('User Controller', () => {
           lastName: registerUserReqDto.lastName,
         });
       });
+    });
 
-      describe('if the user exists', () => {
-        test('response should be a 409', async () => {
-          const response = await testApp.post(`${baseUrl}/register`).send(registerUserReqDto);
-          expect(response.status).toEqual(409);
-        });
+    describe('if the user exists', () => {
+      test('response should be a 409', async () => {
+        const response = await testApp.post(`${baseUrl}/register`).send(registerUserReqDto);
+        expect(response.status).toEqual(409);
       });
     });
   });

@@ -13,7 +13,7 @@ services:
     depends_on:
       - postgres
     environment:
-      - TYPEORM_HOST=postgres
+      - DATABASE_URL=postgresql://master:masterkey@postgres:5432/express?schema=public
       - REDIS_HOST=redis
       - REDIS_PORT=6379
     env_file:

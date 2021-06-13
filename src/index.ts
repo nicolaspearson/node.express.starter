@@ -5,8 +5,8 @@ import { resolve } from 'path';
 
 import App from '@/app';
 import * as config from '@/common/config';
-import * as db from '@/db';
 import * as logger from '@/logger';
+import { Db } from '@/db';
 
 // We use dotenv and joi to set the
 // environment variables in the app.
@@ -18,7 +18,7 @@ logger.init();
 
 (async () => {
   try {
-    await db.init();
+    new Db();
   } catch (error) {
     logger.logger.error(`Database: Error connecting!`, error);
     return error;

@@ -1,4 +1,5 @@
-import { User } from '@/db/entities/user.entity';
+import { User } from '@prisma/client';
+
 import { createCookie } from '@/utils/cookie.utils';
 import { generateJwtTokens } from '@/utils/jwt.utils';
 

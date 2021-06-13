@@ -8,7 +8,7 @@ The starter project includes the following out of the box:
 - Error handling middleware
 - Logger middleware
 - Validation middleware
-- Database integration (TypeORM + PostgreSQL)
+- Database integration (Prisma + PostgreSQL)
 - Containerization via Docker
 - Unit tests (100% coverage)
 - Integration tests (100% coverage)

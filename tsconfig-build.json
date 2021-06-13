@@ -4,6 +4,6 @@
     "noEmit": false,
     "outDir": "dist"
   },
-  "include": ["src/**/*.ts", "types/**/*.d.ts"],
+  "include": ["prisma/**/*.ts", "src/**/*.ts", "types/**/*.d.ts"],
   "exclude": ["test"]
 }

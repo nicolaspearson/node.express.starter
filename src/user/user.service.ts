@@ -1,5 +1,5 @@
 import Boom from 'boom';
-import { getCustomRepository } from 'typeorm';
+import { User } from '@prisma/client';
 
 import {
   CookieUserResDto,
@@ -7,23 +7,20 @@ import {
   LoginReqDto,
   RegisterUserReqDto,
 } from '@/common/dto';
-import { User } from '@/db/entities/user.entity';
-import { UserRepository } from '@/db/repositories/user.repository';
+import { Db } from '@/db';
 import { encryptPassword, validatePassword } from '@/utils/password.utils';
 
 export async function findUserById(findUserByIdReqDto: FindUserByIdReqDto): Promise<User> {
-  const userRepository = getCustomRepository(UserRepository);
-  return userRepository.findByIdOrFail(Number(findUserByIdReqDto.id));
+  return Db.userRepository.findByIdOrFail(Number(findUserByIdReqDto.id));
 }
 
 export async function login(loginReqDto: LoginReqDto): Promise<CookieUserResDto> {
-  const userRepository = getCustomRepository(UserRepository);
-  const user: User = await userRepository.findByEmailOrFail(loginReqDto.email);
+  const user: User = await Db.userRepository.findByEmailOrFail(loginReqDto.email);
   if (!user.enabled) {
     throw Boom.unauthorized('User account has been disabled');
   }
   // Validate the provided password
-  const valid = await validatePassword(loginReqDto.password, user.password);
+  const valid = await validatePassword(loginReqDto.password, user.password!);
   if (!valid) {
     throw Boom.unauthorized('Invalid email address or password');
   }
@@ -31,12 +28,11 @@ export async function login(loginReqDto: LoginReqDto): Promise<CookieUserResDto>
 }
 
 export async function register(registerUserReqDto: RegisterUserReqDto): Promise<CookieUserResDto> {
-  const userRepository = getCustomRepository(UserRepository);
-  if (await userRepository.findByEmail(registerUserReqDto.email)) {
+  if (await Db.userRepository.findByEmail(registerUserReqDto.email)) {
     throw Boom.conflict('The provided email address is already in use');
   }
   const hashedPassword = await encryptPassword(registerUserReqDto.password);
-  const user = await userRepository.create({
+  const user = await Db.userRepository.create({
     attributes: {
       ...registerUserReqDto,
       password: hashedPassword,

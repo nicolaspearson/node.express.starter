@@ -1,34 +1,19 @@
 import Boom from 'boom';
-import {
-  AbstractRepository,
-  DeepPartial,
-  EntityManager,
-  EntityRepository,
-  SelectQueryBuilder,
-} from 'typeorm';
-import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
+import { Prisma, User } from '@prisma/client';
 
-import { User } from '@/db/entities/user.entity';
+import { Db } from '@/db';
 
-@EntityRepository(User)
-export class UserRepository extends AbstractRepository<User> {
-  constructor(protected readonly manager: EntityManager) {
-    super();
+export class UserRepository {
+  create(data: { attributes: Prisma.UserCreateInput }): Promise<User> {
+    return Db.prisma.user.create({ data: data.attributes });
   }
 
-  private userQuery(): SelectQueryBuilder<User> {
-    return this.manager.createQueryBuilder(User, 'user');
-  }
-
-  create(data: { attributes: DeepPartial<User> }): Promise<User> {
-    const payload: QueryDeepPartialEntity<User> = {
-      ...data.attributes,
-    };
-    return this.manager.save(User, payload as User);
-  }
-
-  findByEmail(email: Email): Promise<User | undefined> {
-    return this.userQuery().clone().where('"user"."email" = :email', { email }).getOne();
+  findByEmail(email: Email): Promise<User | null> {
+    return Db.prisma.user.findFirst({
+      where: {
+        email,
+      },
+    });
   }
 
   async findByEmailOrFail(email: Email): Promise<User> {
@@ -39,8 +24,12 @@ export class UserRepository extends AbstractRepository<User> {
     return user;
   }
 
-  findById(id: number): Promise<User | undefined> {
-    return this.userQuery().clone().where('"user"."id" = :id', { id }).getOne();
+  findById(id: number): Promise<User | null> {
+    return Db.prisma.user.findFirst({
+      where: {
+        id,
+      },
+    });
   }
 
   async findByIdOrFail(id: number): Promise<User> {
@@ -49,10 +38,5 @@ export class UserRepository extends AbstractRepository<User> {
       throw Boom.notFound(`User with id ${id} does not exist`);
     }
     return user;
-  }
-
-  /* istanbul ignore next: currently unused */
-  getManager(): EntityManager {
-    return this.manager;
   }
 }

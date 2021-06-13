@@ -1,21 +1,23 @@
 import Boom from 'boom';
 
 import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
+import { Db } from '@/db';
 import { findUserById, login, register } from '@/user/user.service';
 import { encryptPassword } from '@/utils/password.utils';
 
 import { mockUser } from '../../utils/fixtures';
 import { userMockRepo } from '../../utils/repo.mocks';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const typeorm = require('typeorm');
-typeorm.getCustomRepository = () => userMockRepo;
-
 describe('User Service', () => {
+  beforeAll(() => {
+    jest.clearAllMocks();
+    Db.userRepository = userMockRepo;
+  });
+
   describe('findUserById', () => {
     const dto = new LoginReqDto();
     dto.email = mockUser.email as Email;
-    dto.password = mockUser.password;
+    dto.password = mockUser.password!;
 
     test('should find the user by id correctly', async () => {
       userMockRepo.findByIdOrFail!.mockResolvedValueOnce(mockUser);
@@ -26,7 +28,7 @@ describe('User Service', () => {
   describe('login', () => {
     const dto = new LoginReqDto();
     dto.email = mockUser.email as Email;
-    dto.password = mockUser.password;
+    dto.password = mockUser.password!;
 
     test("should throw if the user's account is not enabled", async () => {
       userMockRepo.findByEmailOrFail!.mockResolvedValueOnce({ ...mockUser, enabled: false });
@@ -48,7 +50,7 @@ describe('User Service', () => {
     test('should create a token, and set the cookie correctly', async () => {
       const loginUser = {
         ...mockUser,
-        password: await encryptPassword(mockUser.password),
+        password: await encryptPassword(mockUser.password!),
       };
       userMockRepo.findByEmailOrFail!.mockResolvedValueOnce(loginUser);
       expect(await login(dto)).toMatchObject({
@@ -60,10 +62,10 @@ describe('User Service', () => {
 
   describe('register', () => {
     const dto = new RegisterUserReqDto();
-    dto.firstName = mockUser.firstName;
-    dto.lastName = mockUser.lastName;
+    dto.firstName = mockUser.firstName!;
+    dto.lastName = mockUser.lastName!;
     dto.email = mockUser.email as Email;
-    dto.password = mockUser.password;
+    dto.password = mockUser.password!;
 
     test("should throw if the user's account is already registered", async () => {
       userMockRepo.findByEmail!.mockResolvedValueOnce(mockUser);
@@ -75,7 +77,7 @@ describe('User Service', () => {
     test('should register a user, return a token, and set the cookie correctly', async () => {
       const registeredUser = {
         ...mockUser,
-        password: await encryptPassword(mockUser.password),
+        password: await encryptPassword(mockUser.password!),
       };
       userMockRepo.findByEmail!.mockResolvedValueOnce(undefined);
       userMockRepo.create!.mockResolvedValueOnce(registeredUser);

@@ -12,11 +12,14 @@ dist/
 # Log files
 logs/*.log
 
-# OS Files
+# OS files
 .DS_Store
 
 # Database files
 /docker/db/data
+
+# NPM files
+node_modules/
 
 # Yarn files
 .yarn/*

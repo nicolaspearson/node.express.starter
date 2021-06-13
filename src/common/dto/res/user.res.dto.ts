@@ -1,11 +1,11 @@
-import { User } from '@/db/entities/user.entity';
+import { User } from '@prisma/client';
 
 export class UserResDto {
   readonly id: number;
   readonly email: Email;
   readonly enabled: boolean;
-  readonly firstName: string;
-  readonly lastName: string;
+  readonly firstName: string | null;
+  readonly lastName: string | null;
 
   constructor(user: User) {
     this.id = user.id;
