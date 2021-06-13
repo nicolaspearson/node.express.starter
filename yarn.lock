@@ -1347,14 +1347,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/pg@npm:~7.14.11":
-  version: 7.14.11
-  resolution: "@types/pg@npm:7.14.11"
+"@types/pg@npm:~8.6.0":
+  version: 8.6.0
+  resolution: "@types/pg@npm:8.6.0"
   dependencies:
     "@types/node": "*"
-    pg-protocol: ^1.2.0
+    pg-protocol: "*"
     pg-types: ^2.2.0
-  checksum: f398cad6a3a965eda71fa273a58013c4d5db6fda210e154e084206c3bf17c9b27c894e58af231f8b08fc606ecb71f1f58a17df218753530f51bbebf239efbfb3
+  checksum: eef962bbb1838f355efc8789ac6ee5219adb25e49ecd95cf32e374eb9a3caab1f10760d539b400a0c40e21f1a2720e82929a2264b58194fc68cd220627c3b1fc
   languageName: node
   linkType: hard
 
@@ -7360,7 +7360,7 @@ __metadata:
     "@types/jsonwebtoken": ~8.5.1
     "@types/nconf": ~0.10.0
     "@types/node": ~15.12.2
-    "@types/pg": ~7.14.11
+    "@types/pg": ~8.6.0
     "@types/prettier": ~2.3.0
     "@types/supertest": ~2.0.11
     "@typescript-eslint/eslint-plugin": ~4.26.1
@@ -8043,14 +8043,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pg-protocol@npm:^1.2.0":
-  version: 1.4.0
-  resolution: "pg-protocol@npm:1.4.0"
-  checksum: 96d39f7a7358e9dfbbc3641da4d04f96744b307f182bc6d495153c70ea9f635ba4684ba9e94233746608bf02706060aed8f6688540659cde790c58e31c45ac65
-  languageName: node
-  linkType: hard
-
-"pg-protocol@npm:^1.5.0":
+"pg-protocol@npm:*, pg-protocol@npm:^1.5.0":
   version: 1.5.0
   resolution: "pg-protocol@npm:1.5.0"
   checksum: b839d12cafe942ef9cbc5b13c174eb2356804fb4fe8ead8279f46a36be90722d19a91409955beb8a3d5301639c44854e49749de4aef02dc361fee3e2a61fb1e4
