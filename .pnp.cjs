@@ -108,6 +108,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ['jest', 'npm:26.6.3'],
                   ['jest-coverage-badges', 'npm:1.1.2'],
                   ['jest-environment-node', 'npm:27.0.3'],
+                  [
+                    'jest-mock-extended',
+                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:1.0.16',
+                  ],
                   ['joi', 'npm:17.4.0'],
                   ['jsonwebtoken', 'npm:8.5.1'],
                   ['logform', 'npm:2.2.0'],
@@ -10839,6 +10843,46 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
         ],
         [
+          'jest-mock-extended',
+          [
+            [
+              'npm:1.0.16',
+              {
+                packageLocation:
+                  './.yarn/cache/jest-mock-extended-npm-1.0.16-59471154e4-291f1214e7.zip/node_modules/jest-mock-extended/',
+                packageDependencies: [['jest-mock-extended', 'npm:1.0.16']],
+                linkType: 'SOFT',
+              },
+            ],
+            [
+              'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:1.0.16',
+              {
+                packageLocation:
+                  './.yarn/__virtual__/jest-mock-extended-virtual-e98dc4962c/0/cache/jest-mock-extended-npm-1.0.16-59471154e4-291f1214e7.zip/node_modules/jest-mock-extended/',
+                packageDependencies: [
+                  [
+                    'jest-mock-extended',
+                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:1.0.16',
+                  ],
+                  ['@types/jest', 'npm:26.0.23'],
+                  ['@types/typescript', null],
+                  ['jest', 'npm:26.6.3'],
+                  [
+                    'ts-essentials',
+                    'virtual:e98dc4962c3278e83a8f393b5d8c3c6f9cf711c66b1c4010a3966650e25dce389672d2d1e0b5976c108cdf39c809addb9317e30110755e5b1a2a9faa393adf66#npm:4.0.0',
+                  ],
+                  [
+                    'typescript',
+                    'patch:typescript@npm%3A4.2.4#~builtin<compat/typescript>::version=4.2.4&hash=34ad7d',
+                  ],
+                ],
+                packagePeers: ['@types/jest', '@types/typescript', 'jest', 'typescript'],
+                linkType: 'HARD',
+              },
+            ],
+          ],
+        ],
+        [
           'jest-pnp-resolver',
           [
             [
@@ -13036,6 +13080,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ['jest', 'npm:26.6.3'],
                   ['jest-coverage-badges', 'npm:1.1.2'],
                   ['jest-environment-node', 'npm:27.0.3'],
+                  [
+                    'jest-mock-extended',
+                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:1.0.16',
+                  ],
                   ['joi', 'npm:17.4.0'],
                   ['jsonwebtoken', 'npm:8.5.1'],
                   ['logform', 'npm:2.2.0'],
@@ -17104,6 +17152,40 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                 packageLocation:
                   './.yarn/cache/triple-beam-npm-1.3.0-eda4e2a46c-7d7b77d862.zip/node_modules/triple-beam/',
                 packageDependencies: [['triple-beam', 'npm:1.3.0']],
+                linkType: 'HARD',
+              },
+            ],
+          ],
+        ],
+        [
+          'ts-essentials',
+          [
+            [
+              'npm:4.0.0',
+              {
+                packageLocation:
+                  './.yarn/cache/ts-essentials-npm-4.0.0-5d6252a194-6212c23c41.zip/node_modules/ts-essentials/',
+                packageDependencies: [['ts-essentials', 'npm:4.0.0']],
+                linkType: 'SOFT',
+              },
+            ],
+            [
+              'virtual:e98dc4962c3278e83a8f393b5d8c3c6f9cf711c66b1c4010a3966650e25dce389672d2d1e0b5976c108cdf39c809addb9317e30110755e5b1a2a9faa393adf66#npm:4.0.0',
+              {
+                packageLocation:
+                  './.yarn/__virtual__/ts-essentials-virtual-d00fdd989e/0/cache/ts-essentials-npm-4.0.0-5d6252a194-6212c23c41.zip/node_modules/ts-essentials/',
+                packageDependencies: [
+                  [
+                    'ts-essentials',
+                    'virtual:e98dc4962c3278e83a8f393b5d8c3c6f9cf711c66b1c4010a3966650e25dce389672d2d1e0b5976c108cdf39c809addb9317e30110755e5b1a2a9faa393adf66#npm:4.0.0',
+                  ],
+                  ['@types/typescript', null],
+                  [
+                    'typescript',
+                    'patch:typescript@npm%3A4.2.4#~builtin<compat/typescript>::version=4.2.4&hash=34ad7d',
+                  ],
+                ],
+                packagePeers: ['@types/typescript', 'typescript'],
                 linkType: 'HARD',
               },
             ],

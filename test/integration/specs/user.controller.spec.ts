@@ -1,5 +1,5 @@
 import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
-import { Db } from '@/db';
+import { DbClient } from '@/db/client';
 
 import { testApp } from '../factories';
 import { getTokenStringFromCookieResponse } from '../utils';
@@ -21,11 +21,11 @@ describe('User Controller', () => {
   };
 
   beforeAll(async () => {
-    new Db();
+    await DbClient.getInstance().$connect();
   });
 
   afterAll(async () => {
-    await Db.prisma.$disconnect();
+    await DbClient.getInstance().$disconnect();
     jest.resetAllMocks();
   });
 

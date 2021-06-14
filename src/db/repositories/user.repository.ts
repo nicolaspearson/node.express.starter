@@ -1,15 +1,24 @@
 import Boom from 'boom';
 import { Prisma, User } from '@prisma/client';
 
-import { Db } from '@/db';
+import { DbClient } from '@/db/client';
 
 export class UserRepository {
+  private static instance: UserRepository;
+
+  static getInstance(): UserRepository {
+    if (!UserRepository.instance) {
+      UserRepository.instance = new UserRepository();
+    }
+    return UserRepository.instance;
+  }
+
   create(data: { attributes: Prisma.UserCreateInput }): Promise<User> {
-    return Db.prisma.user.create({ data: data.attributes });
+    return DbClient.getInstance().user.create({ data: data.attributes });
   }
 
   findByEmail(email: Email): Promise<User | null> {
-    return Db.prisma.user.findFirst({
+    return DbClient.getInstance().user.findFirst({
       where: {
         email,
       },
@@ -25,7 +34,7 @@ export class UserRepository {
   }
 
   findById(id: number): Promise<User | null> {
-    return Db.prisma.user.findFirst({
+    return DbClient.getInstance().user.findFirst({
       where: {
         id,
       },

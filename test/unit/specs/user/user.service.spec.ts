@@ -1,7 +1,7 @@
 import Boom from 'boom';
 
 import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
-import { Db } from '@/db';
+import { UserRepository } from '@/db/repositories/user.repository';
 import { findUserById, login, register } from '@/user/user.service';
 import { encryptPassword } from '@/utils/password.utils';
 
@@ -11,7 +11,7 @@ import { userMockRepo } from '../../utils/repo.mocks';
 describe('User Service', () => {
   beforeAll(() => {
     jest.clearAllMocks();
-    Db.userRepository = userMockRepo;
+    UserRepository.getInstance = jest.fn().mockReturnValue(userMockRepo);
   });
 
   describe('findUserById', () => {
@@ -20,7 +20,7 @@ describe('User Service', () => {
     dto.password = mockUser.password!;
 
     test('should find the user by id correctly', async () => {
-      userMockRepo.findByIdOrFail!.mockResolvedValueOnce(mockUser);
+      userMockRepo.findByIdOrFail.mockResolvedValueOnce(mockUser);
       expect(await findUserById({ id: mockUser.id })).toMatchObject(mockUser);
     });
   });

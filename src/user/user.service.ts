@@ -7,15 +7,15 @@ import {
   LoginReqDto,
   RegisterUserReqDto,
 } from '@/common/dto';
-import { Db } from '@/db';
+import { UserRepository } from '@/db/repositories/user.repository';
 import { encryptPassword, validatePassword } from '@/utils/password.utils';
 
 export async function findUserById(findUserByIdReqDto: FindUserByIdReqDto): Promise<User> {
-  return Db.userRepository.findByIdOrFail(Number(findUserByIdReqDto.id));
+  return UserRepository.getInstance().findByIdOrFail(Number(findUserByIdReqDto.id));
 }
 
 export async function login(loginReqDto: LoginReqDto): Promise<CookieUserResDto> {
-  const user: User = await Db.userRepository.findByEmailOrFail(loginReqDto.email);
+  const user: User = await UserRepository.getInstance().findByEmailOrFail(loginReqDto.email);
   if (!user.enabled) {
     throw Boom.unauthorized('User account has been disabled');
   }
@@ -28,11 +28,11 @@ export async function login(loginReqDto: LoginReqDto): Promise<CookieUserResDto>
 }
 
 export async function register(registerUserReqDto: RegisterUserReqDto): Promise<CookieUserResDto> {
-  if (await Db.userRepository.findByEmail(registerUserReqDto.email)) {
+  if (await UserRepository.getInstance().findByEmail(registerUserReqDto.email)) {
     throw Boom.conflict('The provided email address is already in use');
   }
   const hashedPassword = await encryptPassword(registerUserReqDto.password);
-  const user = await Db.userRepository.create({
+  const user = await UserRepository.getInstance().create({
     attributes: {
       ...registerUserReqDto,
       password: hashedPassword,
