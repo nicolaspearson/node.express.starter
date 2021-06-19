@@ -1266,12 +1266,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsonwebtoken@npm:~8.5.1":
-  version: 8.5.1
-  resolution: "@types/jsonwebtoken@npm:8.5.1"
+"@types/jsonwebtoken@npm:~8.5.2":
+  version: 8.5.2
+  resolution: "@types/jsonwebtoken@npm:8.5.2"
   dependencies:
     "@types/node": "*"
-  checksum: 740581b0d1e18f31ce9332e26702ae2704af86f0cb0bb914ee3554517e514e97392610525f9349ea8fe3742d0f816eb86d7ab864ddbd19cef55b2db4a43883a1
+  checksum: 86d103916fe31ac5f6b00aa3aeadaed979a9e8e3df242f35f481ac05fd260f4290ff652a6eda8a46bde9a8110453aa3a0a5f566b38c41127f66e7028cae2f017
   languageName: node
   linkType: hard
 
@@ -7357,7 +7357,7 @@ __metadata:
     "@types/dotenv": ~8.2.0
     "@types/express": ~4.17.12
     "@types/jest": ~26.0.23
-    "@types/jsonwebtoken": ~8.5.1
+    "@types/jsonwebtoken": ~8.5.2
     "@types/nconf": ~0.10.0
     "@types/node": ~15.12.2
     "@types/pg": ~8.6.0
