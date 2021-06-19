@@ -77,7 +77,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nodemon", "npm:2.0.7"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0"],
             ["prettier", "npm:2.3.1"],
-            ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0"],
+            ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.1"],
             ["reflect-metadata", "npm:0.1.13"],
             ["supertest", "npm:6.1.3"],
             ["ts-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.5.6"],
@@ -8632,7 +8632,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nodemon", "npm:2.0.7"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0"],
             ["prettier", "npm:2.3.1"],
-            ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0"],
+            ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.1"],
             ["reflect-metadata", "npm:0.1.13"],
             ["supertest", "npm:6.1.3"],
             ["ts-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.5.6"],
@@ -9634,17 +9634,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["pretty-quick", [
-        ["npm:3.1.0", {
-          "packageLocation": "./.yarn/cache/pretty-quick-npm-3.1.0-a3349e077f-a0f6823ff3.zip/node_modules/pretty-quick/",
+        ["npm:3.1.1", {
+          "packageLocation": "./.yarn/cache/pretty-quick-npm-3.1.1-3b4db7dc65-d535500aca.zip/node_modules/pretty-quick/",
           "packageDependencies": [
-            ["pretty-quick", "npm:3.1.0"]
+            ["pretty-quick", "npm:3.1.1"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0", {
-          "packageLocation": "./.yarn/__virtual__/pretty-quick-virtual-0de8475ba1/0/cache/pretty-quick-npm-3.1.0-a3349e077f-a0f6823ff3.zip/node_modules/pretty-quick/",
+        ["virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.1", {
+          "packageLocation": "./.yarn/__virtual__/pretty-quick-virtual-492936e6d7/0/cache/pretty-quick-npm-3.1.1-3b4db7dc65-d535500aca.zip/node_modules/pretty-quick/",
           "packageDependencies": [
-            ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.0"],
+            ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.1"],
             ["@types/prettier", "npm:2.3.0"],
             ["chalk", "npm:3.0.0"],
             ["execa", "npm:4.1.0"],
