@@ -65,7 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-ordered-imports", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.5.0"],
             ["eslint-plugin-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.4.0"],
             ["express", "npm:4.17.1"],
-            ["husky", "npm:6.0.0"],
+            ["husky", "npm:7.0.1"],
             ["jest", "npm:26.6.3"],
             ["jest-coverage-badges", "npm:1.1.2"],
             ["jest-environment-node", "npm:27.0.3"],
@@ -6083,10 +6083,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["husky", [
-        ["npm:6.0.0", {
-          "packageLocation": "./.yarn/cache/husky-npm-6.0.0-384872ea98-db6da76a67.zip/node_modules/husky/",
+        ["npm:7.0.1", {
+          "packageLocation": "./.yarn/cache/husky-npm-7.0.1-b59747cd86-b2ea1460f1.zip/node_modules/husky/",
           "packageDependencies": [
-            ["husky", "npm:6.0.0"]
+            ["husky", "npm:7.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -8620,7 +8620,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-ordered-imports", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.5.0"],
             ["eslint-plugin-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.4.0"],
             ["express", "npm:4.17.1"],
-            ["husky", "npm:6.0.0"],
+            ["husky", "npm:7.0.1"],
             ["jest", "npm:26.6.3"],
             ["jest-coverage-badges", "npm:1.1.2"],
             ["jest-environment-node", "npm:27.0.3"],
