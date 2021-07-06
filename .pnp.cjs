@@ -36,7 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@types/bcrypt", "npm:5.0.0"],
-            ["@types/boom", "npm:7.3.0"],
+            ["@types/boom", "npm:7.3.1"],
             ["@types/dotenv", "npm:8.2.0"],
             ["@types/express", "npm:4.17.12"],
             ["@types/jest", "npm:26.0.23"],
@@ -1454,10 +1454,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/boom", [
-        ["npm:7.3.0", {
-          "packageLocation": "./.yarn/cache/@types-boom-npm-7.3.0-f15726d20f-ba1763cf3c.zip/node_modules/@types/boom/",
+        ["npm:7.3.1", {
+          "packageLocation": "./.yarn/cache/@types-boom-npm-7.3.1-e2ec439e03-fc483602fb.zip/node_modules/@types/boom/",
           "packageDependencies": [
-            ["@types/boom", "npm:7.3.0"]
+            ["@types/boom", "npm:7.3.1"]
           ],
           "linkType": "HARD",
         }]
@@ -8591,7 +8591,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["node.express.starter", "workspace:."],
             ["@types/bcrypt", "npm:5.0.0"],
-            ["@types/boom", "npm:7.3.0"],
+            ["@types/boom", "npm:7.3.1"],
             ["@types/dotenv", "npm:8.2.0"],
             ["@types/express", "npm:4.17.12"],
             ["@types/jest", "npm:26.0.23"],

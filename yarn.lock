@@ -1127,10 +1127,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/boom@npm:~7.3.0":
-  version: 7.3.0
-  resolution: "@types/boom@npm:7.3.0"
-  checksum: ba1763cf3c0865e02a55abb89ffb31896fbd1518c7cf52bb1311e73536e7c270b9ca5ad05ef4d5fe41d0c4ac1c2470edd605eed90f0d522f774b523a569c22b9
+"@types/boom@npm:~7.3.1":
+  version: 7.3.1
+  resolution: "@types/boom@npm:7.3.1"
+  checksum: fc483602fb667d8858cef0a7685b9f25ce805d2e15ba033abf6e33da4ca1f103d69ec77e2d28d116d88a17a18f57c909358d99f9fbe3a9dd00c781190e877b7f
   languageName: node
   linkType: hard
 
@@ -7353,7 +7353,7 @@ __metadata:
   resolution: "node.express.starter@workspace:."
   dependencies:
     "@types/bcrypt": ~5.0.0
-    "@types/boom": ~7.3.0
+    "@types/boom": ~7.3.1
     "@types/dotenv": ~8.2.0
     "@types/express": ~4.17.12
     "@types/jest": ~26.0.23
