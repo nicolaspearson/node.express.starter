@@ -6431,7 +6431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:2.x, json5@npm:^2.1.2":
+"json5@npm:2.x, json5@npm:^2.1.2, json5@npm:^2.2.0":
   version: 2.2.0
   resolution: "json5@npm:2.2.0"
   dependencies:
@@ -7400,7 +7400,7 @@ __metadata:
     ts-jest: ~26.5.6
     ts-node: ~10.0.0
     ts-node-dev: ~1.1.6
-    tsconfig-paths: ~3.9.0
+    tsconfig-paths: ~3.10.1
     typeorm: ~0.2.34
     typescript: ~4.2.4
     winston: ~3.3.3
@@ -10058,7 +10058,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig-paths@npm:^3.9.0, tsconfig-paths@npm:~3.9.0":
+"tsconfig-paths@npm:^3.9.0":
   version: 3.9.0
   resolution: "tsconfig-paths@npm:3.9.0"
   dependencies:
@@ -10067,6 +10067,17 @@ __metadata:
     minimist: ^1.2.0
     strip-bom: ^3.0.0
   checksum: 243b3b098c76a4ca90ea0431683f3755a4ff175c6123bcba5f7b4bd80fe2ef8fa9bdc8f4d525148a1e71ade7f3e037e7c0313ae177fd12398ab68f05c2c7f25d
+  languageName: node
+  linkType: hard
+
+"tsconfig-paths@npm:~3.10.1":
+  version: 3.10.1
+  resolution: "tsconfig-paths@npm:3.10.1"
+  dependencies:
+    json5: ^2.2.0
+    minimist: ^1.2.0
+    strip-bom: ^3.0.0
+  checksum: 014ec869276114031d3bd6d2d9ce07c32c96ca6912f32285f46eeb4ca5270bd4c5e4de1353b838c66282157f089dedc8c3377c4e72e2f3d910e706c7b9ac5e6d
   languageName: node
   linkType: hard
 
