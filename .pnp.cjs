@@ -38,7 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/bcrypt", "npm:5.0.0"],
             ["@types/boom", "npm:7.3.0"],
             ["@types/dotenv", "npm:8.2.0"],
-            ["@types/express", "npm:4.17.12"],
+            ["@types/express", "npm:4.17.13"],
             ["@types/jest", "npm:26.0.23"],
             ["@types/jsonwebtoken", "npm:8.5.2"],
             ["@types/nconf", "npm:0.10.0"],
@@ -1514,10 +1514,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/express", [
-        ["npm:4.17.12", {
-          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.12-d30bfc5b29-5869f575f6.zip/node_modules/@types/express/",
+        ["npm:4.17.13", {
+          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.13-0e12fe9c24-12a2a0e6c4.zip/node_modules/@types/express/",
           "packageDependencies": [
-            ["@types/express", "npm:4.17.12"],
+            ["@types/express", "npm:4.17.13"],
             ["@types/body-parser", "npm:1.19.0"],
             ["@types/express-serve-static-core", "npm:4.17.18"],
             ["@types/qs", "npm:6.9.6"],
@@ -8593,7 +8593,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/bcrypt", "npm:5.0.0"],
             ["@types/boom", "npm:7.3.0"],
             ["@types/dotenv", "npm:8.2.0"],
-            ["@types/express", "npm:4.17.12"],
+            ["@types/express", "npm:4.17.13"],
             ["@types/jest", "npm:26.0.23"],
             ["@types/jsonwebtoken", "npm:8.5.2"],
             ["@types/nconf", "npm:0.10.0"],
