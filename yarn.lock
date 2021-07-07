@@ -1305,10 +1305,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/nconf@npm:~0.10.0":
-  version: 0.10.0
-  resolution: "@types/nconf@npm:0.10.0"
-  checksum: 7991c53ee1e76770722a9dd40262e035835a801ece6c093577d7a6577a83453d0db2eec8344eb03bfaeb814b19b0c95cccc0896af04f771ff1e241530eb4b0b5
+"@types/nconf@npm:~0.10.1":
+  version: 0.10.1
+  resolution: "@types/nconf@npm:0.10.1"
+  checksum: fd3581a4ca0683abfdf05170a29eaccb8354c162d6d82b823b203a3208cf3897aa7af7b475b0721c17993bdff87b266d153dcd322ca0194fceb8cf55b1fb3b0c
   languageName: node
   linkType: hard
 
@@ -7237,15 +7237,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nconf@npm:~0.11.2":
-  version: 0.11.2
-  resolution: "nconf@npm:0.11.2"
+"nconf@npm:~0.11.3":
+  version: 0.11.3
+  resolution: "nconf@npm:0.11.3"
   dependencies:
     async: ^1.4.0
     ini: ^2.0.0
     secure-keys: ^1.0.0
     yargs: ^16.1.1
-  checksum: d72d19cfc3f72fd1c08a28816835ed228f4acf6a0fab23d863b5264a047173c4c75a8e83ce83e5b7871cbf451171f395daa8fa3f5e49b97c037499c88e051125
+  checksum: 708369c9526618936872fc7db4d257dda59cb55fb9e07949afcfac7cf60cdc840027a6bdf5bf3c5703129bea23090de1aa6f6f41aec004086963706c04bf81f5
   languageName: node
   linkType: hard
 
@@ -7358,7 +7358,7 @@ __metadata:
     "@types/express": ~4.17.12
     "@types/jest": ~26.0.23
     "@types/jsonwebtoken": ~8.5.2
-    "@types/nconf": ~0.10.0
+    "@types/nconf": ~0.10.1
     "@types/node": ~15.12.2
     "@types/pg": ~8.6.0
     "@types/prettier": ~2.3.0
@@ -7390,7 +7390,7 @@ __metadata:
     jsonwebtoken: ~8.5.1
     logform: ~2.2.0
     module-alias: ~2.2.2
-    nconf: ~0.11.2
+    nconf: ~0.11.3
     nodemon: ~2.0.7
     pg: ~8.6.0
     prettier: ~2.3.1

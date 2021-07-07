@@ -41,7 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.12"],
             ["@types/jest", "npm:26.0.23"],
             ["@types/jsonwebtoken", "npm:8.5.2"],
-            ["@types/nconf", "npm:0.10.0"],
+            ["@types/nconf", "npm:0.10.1"],
             ["@types/node", "npm:15.12.2"],
             ["@types/pg", "npm:8.6.0"],
             ["@types/prettier", "npm:2.3.0"],
@@ -73,7 +73,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsonwebtoken", "npm:8.5.1"],
             ["logform", "npm:2.2.0"],
             ["module-alias", "npm:2.2.2"],
-            ["nconf", "npm:0.11.2"],
+            ["nconf", "npm:0.11.3"],
             ["nodemon", "npm:2.0.7"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0"],
             ["prettier", "npm:2.3.1"],
@@ -1663,10 +1663,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/nconf", [
-        ["npm:0.10.0", {
-          "packageLocation": "./.yarn/cache/@types-nconf-npm-0.10.0-765824f95a-7991c53ee1.zip/node_modules/@types/nconf/",
+        ["npm:0.10.1", {
+          "packageLocation": "./.yarn/cache/@types-nconf-npm-0.10.1-9dfb98b765-fd3581a4ca.zip/node_modules/@types/nconf/",
           "packageDependencies": [
-            ["@types/nconf", "npm:0.10.0"]
+            ["@types/nconf", "npm:0.10.1"]
           ],
           "linkType": "HARD",
         }]
@@ -8462,10 +8462,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["nconf", [
-        ["npm:0.11.2", {
-          "packageLocation": "./.yarn/cache/nconf-npm-0.11.2-97ae6988f0-d72d19cfc3.zip/node_modules/nconf/",
+        ["npm:0.11.3", {
+          "packageLocation": "./.yarn/cache/nconf-npm-0.11.3-e517d8c882-708369c952.zip/node_modules/nconf/",
           "packageDependencies": [
-            ["nconf", "npm:0.11.2"],
+            ["nconf", "npm:0.11.3"],
             ["async", "npm:1.5.2"],
             ["ini", "npm:2.0.0"],
             ["secure-keys", "npm:1.0.0"],
@@ -8596,7 +8596,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.12"],
             ["@types/jest", "npm:26.0.23"],
             ["@types/jsonwebtoken", "npm:8.5.2"],
-            ["@types/nconf", "npm:0.10.0"],
+            ["@types/nconf", "npm:0.10.1"],
             ["@types/node", "npm:15.12.2"],
             ["@types/pg", "npm:8.6.0"],
             ["@types/prettier", "npm:2.3.0"],
@@ -8628,7 +8628,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsonwebtoken", "npm:8.5.1"],
             ["logform", "npm:2.2.0"],
             ["module-alias", "npm:2.2.2"],
-            ["nconf", "npm:0.11.2"],
+            ["nconf", "npm:0.11.3"],
             ["nodemon", "npm:2.0.7"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0"],
             ["prettier", "npm:2.3.1"],
