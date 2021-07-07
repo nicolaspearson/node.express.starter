@@ -43,7 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jsonwebtoken", "npm:8.5.2"],
             ["@types/nconf", "npm:0.10.0"],
             ["@types/node", "npm:15.12.2"],
-            ["@types/pg", "npm:8.6.0"],
+            ["@types/pg", "npm:8.6.1"],
             ["@types/prettier", "npm:2.3.0"],
             ["@types/supertest", "npm:2.0.11"],
             ["@typescript-eslint/eslint-plugin", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:4.27.0"],
@@ -1713,10 +1713,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/pg", [
-        ["npm:8.6.0", {
-          "packageLocation": "./.yarn/cache/@types-pg-npm-8.6.0-8a44e030dd-eef962bbb1.zip/node_modules/@types/pg/",
+        ["npm:8.6.1", {
+          "packageLocation": "./.yarn/cache/@types-pg-npm-8.6.1-6de7239b4b-a44710ff06.zip/node_modules/@types/pg/",
           "packageDependencies": [
-            ["@types/pg", "npm:8.6.0"],
+            ["@types/pg", "npm:8.6.1"],
             ["@types/node", "npm:14.14.32"],
             ["pg-protocol", "npm:1.5.0"],
             ["pg-types", "npm:2.2.0"]
@@ -8598,7 +8598,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jsonwebtoken", "npm:8.5.2"],
             ["@types/nconf", "npm:0.10.0"],
             ["@types/node", "npm:15.12.2"],
-            ["@types/pg", "npm:8.6.0"],
+            ["@types/pg", "npm:8.6.1"],
             ["@types/prettier", "npm:2.3.0"],
             ["@types/supertest", "npm:2.0.11"],
             ["@typescript-eslint/eslint-plugin", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:4.27.0"],
