@@ -74,7 +74,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["logform", "npm:2.2.0"],
             ["module-alias", "npm:2.2.2"],
             ["nconf", "npm:0.11.2"],
-            ["nodemon", "npm:2.0.7"],
+            ["nodemon", "npm:2.0.12"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0"],
             ["prettier", "npm:2.3.1"],
             ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.1"],
@@ -4056,24 +4056,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
+        ["virtual:54917d1b63b8e91b52019e7dd3d737c3f7412f36112a684d3753e9f738a196d9ee6f3a0f35c37d2201cec30862274da8e022c2e789fda5159949392b58a393af#npm:3.2.7", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-c4fb8d9213/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "virtual:54917d1b63b8e91b52019e7dd3d737c3f7412f36112a684d3753e9f738a196d9ee6f3a0f35c37d2201cec30862274da8e022c2e789fda5159949392b58a393af#npm:3.2.7"],
+            ["ms", "npm:2.1.3"],
+            ["supports-color", "npm:5.5.0"]
+          ],
+          "packagePeers": [
+            "supports-color"
+          ],
+          "linkType": "HARD",
+        }],
         ["virtual:6e177cabfad012f413f9c41366539c04d8701f0567119998690ab02224012faa99ec3a16b9f74f4d7920ab472c12b3e70f47f8f143239c06d0e2569e60ed9f62#npm:2.6.9", {
           "packageLocation": "./.yarn/__virtual__/debug-virtual-53242bdd6a/0/cache/debug-npm-2.6.9-7d4cb597dc-d2f51589ca.zip/node_modules/debug/",
           "packageDependencies": [
             ["debug", "virtual:6e177cabfad012f413f9c41366539c04d8701f0567119998690ab02224012faa99ec3a16b9f74f4d7920ab472c12b3e70f47f8f143239c06d0e2569e60ed9f62#npm:2.6.9"],
             ["ms", "npm:2.0.0"],
             ["supports-color", "npm:8.1.1"]
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:7b95e4651161f58fae67ad0e500093fe3efc1260126f9dd9f0cf96334b9e5c43c30afa86faf5d3c609740562b9985718bf9d1cf396b473e9cda8d4a60334e6e1#npm:3.2.7", {
-          "packageLocation": "./.yarn/__virtual__/debug-virtual-ac94571114/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",
-          "packageDependencies": [
-            ["debug", "virtual:7b95e4651161f58fae67ad0e500093fe3efc1260126f9dd9f0cf96334b9e5c43c30afa86faf5d3c609740562b9985718bf9d1cf396b473e9cda8d4a60334e6e1#npm:3.2.7"],
-            ["ms", "npm:2.1.3"],
-            ["supports-color", "npm:5.5.0"]
-          ],
-          "packagePeers": [
-            "supports-color"
           ],
           "linkType": "HARD",
         }],
@@ -8629,7 +8629,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["logform", "npm:2.2.0"],
             ["module-alias", "npm:2.2.2"],
             ["nconf", "npm:0.11.2"],
-            ["nodemon", "npm:2.0.7"],
+            ["nodemon", "npm:2.0.12"],
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.6.0"],
             ["prettier", "npm:2.3.1"],
             ["pretty-quick", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:3.1.1"],
@@ -8658,12 +8658,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["nodemon", [
-        ["npm:2.0.7", {
-          "packageLocation": "./.yarn/cache/nodemon-npm-2.0.7-7b95e46511-d1af0b92e7.zip/node_modules/nodemon/",
+        ["npm:2.0.12", {
+          "packageLocation": "./.yarn/unplugged/nodemon-npm-2.0.12-54917d1b63/node_modules/nodemon/",
           "packageDependencies": [
-            ["nodemon", "npm:2.0.7"],
+            ["nodemon", "npm:2.0.12"],
             ["chokidar", "npm:3.5.1"],
-            ["debug", "virtual:7b95e4651161f58fae67ad0e500093fe3efc1260126f9dd9f0cf96334b9e5c43c30afa86faf5d3c609740562b9985718bf9d1cf396b473e9cda8d4a60334e6e1#npm:3.2.7"],
+            ["debug", "virtual:54917d1b63b8e91b52019e7dd3d737c3f7412f36112a684d3753e9f738a196d9ee6f3a0f35c37d2201cec30862274da8e022c2e789fda5159949392b58a393af#npm:3.2.7"],
             ["ignore-by-default", "npm:1.0.1"],
             ["minimatch", "npm:3.0.4"],
             ["pstree.remy", "npm:1.1.8"],
