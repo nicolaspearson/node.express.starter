@@ -6256,16 +6256,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"joi@npm:~17.4.0":
-  version: 17.4.0
-  resolution: "joi@npm:17.4.0"
+"joi@npm:~17.4.2":
+  version: 17.4.2
+  resolution: "joi@npm:17.4.2"
   dependencies:
     "@hapi/hoek": ^9.0.0
     "@hapi/topo": ^5.0.0
     "@sideway/address": ^4.1.0
     "@sideway/formula": ^3.0.0
     "@sideway/pinpoint": ^2.0.0
-  checksum: c293bb7f1218b446cbed96a2cd7fbcb0c6d0ab98b9896e1ae683b1b66603718af52b100d8b5032647127bace29f50fabeaa7e0bc16c7167f2df7491d5c4827d0
+  checksum: 977ada1f9d38c2762689b61cec1272176968ccea731a16b71713ebaa067f140460e0b6f7eccff6fc12206fddce22e7f4ed74724651bc1b24b1e26d43280633d0
   languageName: node
   linkType: hard
 
@@ -7386,7 +7386,7 @@ __metadata:
     jest: ~26.6.3
     jest-coverage-badges: ~1.1.2
     jest-environment-node: ~27.0.3
-    joi: ~17.4.0
+    joi: ~17.4.2
     jsonwebtoken: ~8.5.1
     logform: ~2.2.0
     module-alias: ~2.2.2

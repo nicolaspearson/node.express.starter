@@ -69,7 +69,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "npm:26.6.3"],
             ["jest-coverage-badges", "npm:1.1.2"],
             ["jest-environment-node", "npm:27.0.3"],
-            ["joi", "npm:17.4.0"],
+            ["joi", "npm:17.4.2"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["logform", "npm:2.2.0"],
             ["module-alias", "npm:2.2.2"],
@@ -7380,10 +7380,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["joi", [
-        ["npm:17.4.0", {
-          "packageLocation": "./.yarn/cache/joi-npm-17.4.0-cfd6f2d54c-c293bb7f12.zip/node_modules/joi/",
+        ["npm:17.4.2", {
+          "packageLocation": "./.yarn/cache/joi-npm-17.4.2-93548ecd23-977ada1f9d.zip/node_modules/joi/",
           "packageDependencies": [
-            ["joi", "npm:17.4.0"],
+            ["joi", "npm:17.4.2"],
             ["@hapi/hoek", "npm:9.1.1"],
             ["@hapi/topo", "npm:5.0.0"],
             ["@sideway/address", "npm:4.1.1"],
@@ -8624,7 +8624,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "npm:26.6.3"],
             ["jest-coverage-badges", "npm:1.1.2"],
             ["jest-environment-node", "npm:27.0.3"],
-            ["joi", "npm:17.4.0"],
+            ["joi", "npm:17.4.2"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["logform", "npm:2.2.0"],
             ["module-alias", "npm:2.2.2"],
