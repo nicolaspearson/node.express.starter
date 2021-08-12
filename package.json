@@ -78,7 +78,7 @@
     "@types/supertest": "~2.0.11",
     "@typescript-eslint/eslint-plugin": "~4.27.0",
     "@typescript-eslint/parser": "~4.27.0",
-    "@yarnpkg/pnpify": "~3.0.0-rc.6",
+    "@yarnpkg/pnpify": "~3.0.1",
     "commitlint": "~12.1.4",
     "concurrently": "~6.2.0",
     "eslint": "~7.29.0",
