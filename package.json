@@ -92,7 +92,7 @@
     "jest-coverage-badges": "~1.1.2",
     "jest-environment-node": "~27.0.3",
     "logform": "~2.2.0",
-    "nodemon": "~2.0.7",
+    "nodemon": "~2.0.13",
     "prettier": "~2.3.1",
     "pretty-quick": "~3.1.1",
     "supertest": "~6.1.3",
