@@ -1,5 +1,4 @@
-import express, { Router } from 'express';
-import * as bodyParser from 'body-parser';
+import express from 'express';
 import { Server } from 'http';
 
 import userController from '@/user/user.controller';
@@ -39,11 +38,11 @@ export default class App {
 
   private initializePreControllerMiddleware() {
     this.app.use(loggerMiddleware);
-    this.app.use(bodyParser.json());
+    this.app.use(express.json());
   }
 
   private initializeControllers() {
-    const routes = Router().use('/user', userController);
+    const routes = express.Router().use('/user', userController);
     this.app.use('/', routes);
   }
 

@@ -24,7 +24,7 @@ export function getJwtFromRequest(jwtString: JwtString): Api.Jwt {
     }
     return verifyJwt(jwtString) as Api.Jwt;
   } catch (error) {
-    logger.debug(`Request is missing a valid jwt: ${error.message}`);
+    logger.debug(`Request is missing a valid jwt: ${(error as Error).message}`);
     throw Boom.unauthorized('Invalid jwt provided.');
   }
 }

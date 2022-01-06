@@ -15,9 +15,9 @@ export function safe(
     // Using async/await and try/catch supports also handlers that are synchronous
     try {
       await handler(req, res, next);
-    } catch (err) {
-      logger.error(err.message);
-      next(err);
+    } catch (error) {
+      logger.error((error as Error).message);
+      next(error);
     }
   };
 }
