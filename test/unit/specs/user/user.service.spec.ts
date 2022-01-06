@@ -1,5 +1,4 @@
 import Boom from 'boom';
-import * as typeorm from 'typeorm';
 
 import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
 import { findUserById, login, register } from '@/user/user.service';
@@ -8,11 +7,11 @@ import { encryptPassword } from '@/utils/password.utils';
 import { mockUser } from '../../utils/fixtures';
 import { userMockRepo } from '../../utils/repo.mocks';
 
-describe('User Service', () => {
-  beforeAll(() => {
-    jest.mock('typeorm', () => ({ ...typeorm, getCustomRepository: userMockRepo }));
-  });
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const typeorm = require('typeorm');
+typeorm['getCustomRepository'] = () => userMockRepo;
 
+describe('User Service', () => {
   describe('findUserById', () => {
     const dto = new LoginReqDto();
     dto.email = mockUser.email as Email;
