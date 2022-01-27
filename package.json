@@ -51,7 +51,7 @@
     "class-validator": "^0.13.2",
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
-    "joi": "^17.5.0",
+    "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "module-alias": "^2.2.2",
     "nconf": "^0.11.3",
