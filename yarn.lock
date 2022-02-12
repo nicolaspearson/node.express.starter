@@ -391,6 +391,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@colors/colors@npm:1.5.0":
+  version: 1.5.0
+  resolution: "@colors/colors@npm:1.5.0"
+  checksum: d64d5260bed1d5012ae3fc617d38d1afc0329fec05342f4e6b838f46998855ba56e0a73833f4a80fa8378c84810da254f76a8a19c39d038260dc06dc4e007425
+  languageName: node
+  linkType: hard
+
 "@commitlint/cli@npm:^16.1.0":
   version: 16.1.0
   resolution: "@commitlint/cli@npm:16.1.0"
@@ -5554,6 +5561,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"logform@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "logform@npm:2.4.0"
+  dependencies:
+    "@colors/colors": 1.5.0
+    fecha: ^4.2.0
+    ms: ^2.1.1
+    safe-stable-stringify: ^2.3.1
+    triple-beam: ^1.3.0
+  checksum: e75ccccc1a2664612ade3c7f3d3185787198b4028e54ea2795df87901f28b3881eddd8d7e73ce03f4420dca638a1cbe6d42254179685ab2075e4ac38a71ffb6c
+  languageName: node
+  linkType: hard
+
 "lowercase-keys@npm:^1.0.0, lowercase-keys@npm:^1.0.1":
   version: 1.0.1
   resolution: "lowercase-keys@npm:1.0.1"
@@ -6055,7 +6075,7 @@ __metadata:
     tsconfig-paths: ^3.12.0
     typeorm: ^0.2.41
     typescript: ^4.5.5
-    winston: ^3.4.0
+    winston: ^3.6.0
   languageName: unknown
   linkType: soft
 
@@ -7080,6 +7100,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"safe-stable-stringify@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "safe-stable-stringify@npm:2.3.1"
+  checksum: a0a0bad0294c3e2a9d1bf3cf2b1096dfb83c162d09a5e4891e488cce082120bd69161d2a92aae7fc48255290f17700decae9c89a07fe139794e61b5c8b411377
+  languageName: node
+  linkType: hard
+
 "safer-buffer@npm:>= 2.1.2 < 3, safer-buffer@npm:>= 2.1.2 < 3.0.0":
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
@@ -7783,7 +7810,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"triple-beam@npm:^1.2.0, triple-beam@npm:^1.3.0":
+"triple-beam@npm:^1.3.0":
   version: 1.3.0
   resolution: "triple-beam@npm:1.3.0"
   checksum: 7d7b77d8625fb252c126c24984a68de462b538a8fcd1de2abd0a26421629cf3527d48e23b3c2264f08f4a6c3bc40a478a722176f4d7b6a1acc154cb70c359f2b
@@ -8422,31 +8449,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"winston-transport@npm:^4.4.2":
-  version: 4.4.2
-  resolution: "winston-transport@npm:4.4.2"
+"winston-transport@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "winston-transport@npm:4.5.0"
   dependencies:
     logform: ^2.3.2
-    readable-stream: ^3.4.0
-    triple-beam: ^1.2.0
-  checksum: 1f1732d12f4e28d7cd0be110482035b3a3647f8ed07d681e9b79b4b2e168aaa34d91a3bbe9c7374d8df2ef9d6fd38f4add70d66798930d4c7cebb555ff8496f9
+    readable-stream: ^3.6.0
+    triple-beam: ^1.3.0
+  checksum: a56e5678a80b88a73e77ed998fc6e19d0db19c989a356b137ec236782f2bf58ae4511b11c29163f99391fa4dc12102c7bc5738dcb6543f28877fa2819adc3ee9
   languageName: node
   linkType: hard
 
-"winston@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "winston@npm:3.4.0"
+"winston@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "winston@npm:3.6.0"
   dependencies:
     "@dabh/diagnostics": ^2.0.2
     async: ^3.2.3
     is-stream: ^2.0.0
-    logform: ^2.3.2
+    logform: ^2.4.0
     one-time: ^1.0.0
     readable-stream: ^3.4.0
+    safe-stable-stringify: ^2.3.1
     stack-trace: 0.0.x
     triple-beam: ^1.3.0
-    winston-transport: ^4.4.2
-  checksum: 9d06652788b611e1fa7891b0c0bad8a7fb4c08f12856a186058008292034f08ad638765f2b4345a1963116be0e3533dcbd0c7e626524aa4e4cb2018b82a6f6ec
+    winston-transport: ^4.5.0
+  checksum: 5641837781046a2f73111dfb2af500e88f4350521d01de184d33ac8ee60c28047a8897bd2ab7b438b3812fc31a88bbbee13fd9ed617d60bd16a56d0143e423dc
   languageName: node
   linkType: hard
 
