@@ -7,9 +7,13 @@ import { encryptPassword } from '@/utils/password.utils';
 import { mockUser } from '../../utils/fixtures';
 import { userMockRepo } from '../../utils/repo.mocks';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const typeorm = require('typeorm');
-typeorm['getCustomRepository'] = () => userMockRepo;
+jest.mock('typeorm', () => {
+  const actual = jest.requireActual('typeorm');
+  return {
+    ...actual,
+    getCustomRepository: () => userMockRepo,
+  };
+});
 
 describe('User Service', () => {
   describe('findUserById', () => {
