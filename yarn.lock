@@ -1431,7 +1431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.12.0":
+"@typescript-eslint/parser@npm:^5.11.1-alpha":
   version: 5.12.0
   resolution: "@typescript-eslint/parser@npm:5.12.0"
   dependencies:
@@ -6039,7 +6039,7 @@ __metadata:
     "@types/prettier": ^2.4.4
     "@types/supertest": ^2.0.11
     "@typescript-eslint/eslint-plugin": ^5.12.0
-    "@typescript-eslint/parser": ^5.12.0
+    "@typescript-eslint/parser": ^5.11.1-alpha
     bcryptjs: ^2.4.3
     boom: ^7.3.0
     class-transformer: ^0.5.1
