@@ -47,7 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ['@types/jest', 'npm:27.4.0'],
                   ['@types/jsonwebtoken', 'npm:8.5.8'],
                   ['@types/nconf', 'npm:0.10.1'],
-                  ['@types/node', 'npm:16.11.24'],
+                  ['@types/node', 'npm:16.11.25'],
                   ['@types/pg', 'npm:8.6.4'],
                   ['@types/prettier', 'npm:2.4.4'],
                   ['@types/supertest', 'npm:2.0.11'],
@@ -81,7 +81,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ],
                   [
                     'eslint-plugin-jest',
-                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.1.0',
+                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.1.1',
                   ],
                   [
                     'eslint-plugin-ordered-imports',
@@ -2762,11 +2762,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           '@types/node',
           [
             [
-              'npm:16.11.24',
+              'npm:16.11.25',
               {
                 packageLocation:
-                  './.yarn/cache/@types-node-npm-16.11.24-645e42a6ed-d4827d548c.zip/node_modules/@types/node/',
-                packageDependencies: [['@types/node', 'npm:16.11.24']],
+                  './.yarn/cache/@types-node-npm-16.11.25-78cf927571-0b6e25a813.zip/node_modules/@types/node/',
+                packageDependencies: [['@types/node', 'npm:16.11.25']],
                 linkType: 'HARD',
               },
             ],
@@ -6658,23 +6658,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           'eslint-plugin-jest',
           [
             [
-              'npm:26.1.0',
+              'npm:26.1.1',
               {
                 packageLocation:
-                  './.yarn/cache/eslint-plugin-jest-npm-26.1.0-5d0144d71e-5d79609264.zip/node_modules/eslint-plugin-jest/',
-                packageDependencies: [['eslint-plugin-jest', 'npm:26.1.0']],
+                  './.yarn/cache/eslint-plugin-jest-npm-26.1.1-c9913e9450-efed65bd6b.zip/node_modules/eslint-plugin-jest/',
+                packageDependencies: [['eslint-plugin-jest', 'npm:26.1.1']],
                 linkType: 'SOFT',
               },
             ],
             [
-              'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.1.0',
+              'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.1.1',
               {
                 packageLocation:
-                  './.yarn/__virtual__/eslint-plugin-jest-virtual-0cedfde8ed/0/cache/eslint-plugin-jest-npm-26.1.0-5d0144d71e-5d79609264.zip/node_modules/eslint-plugin-jest/',
+                  './.yarn/__virtual__/eslint-plugin-jest-virtual-de4f19c634/0/cache/eslint-plugin-jest-npm-26.1.1-c9913e9450-efed65bd6b.zip/node_modules/eslint-plugin-jest/',
                 packageDependencies: [
                   [
                     'eslint-plugin-jest',
-                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.1.0',
+                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.1.1',
                   ],
                   ['@types/eslint', null],
                   ['@types/jest', 'npm:27.4.0'],
@@ -11468,7 +11468,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ['@types/jest', 'npm:27.4.0'],
                   ['@types/jsonwebtoken', 'npm:8.5.8'],
                   ['@types/nconf', 'npm:0.10.1'],
-                  ['@types/node', 'npm:16.11.24'],
+                  ['@types/node', 'npm:16.11.25'],
                   ['@types/pg', 'npm:8.6.4'],
                   ['@types/prettier', 'npm:2.4.4'],
                   ['@types/supertest', 'npm:2.0.11'],
@@ -11502,7 +11502,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ],
                   [
                     'eslint-plugin-jest',
-                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.1.0',
+                    'virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.1.1',
                   ],
                   [
                     'eslint-plugin-ordered-imports',
@@ -14867,7 +14867,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                   ['@tsconfig/node12', 'npm:1.0.9'],
                   ['@tsconfig/node14', 'npm:1.0.1'],
                   ['@tsconfig/node16', 'npm:1.0.2'],
-                  ['@types/node', 'npm:16.11.24'],
+                  ['@types/node', 'npm:16.11.25'],
                   ['@types/swc__core', null],
                   ['@types/swc__wasm', null],
                   ['@types/typescript', null],
