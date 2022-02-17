@@ -6081,7 +6081,7 @@ __metadata:
     ts-node: ^10.5.0
     ts-node-dev: ^1.1.8
     tsconfig-paths: ^3.12.0
-    typeorm: ^0.2.41
+    typeorm: ^0.2.42
     typescript: ^4.5.5
     winston: ^3.6.0
   languageName: unknown
@@ -8119,9 +8119,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typeorm@npm:^0.2.41":
-  version: 0.2.41
-  resolution: "typeorm@npm:0.2.41"
+"typeorm@npm:^0.2.42":
+  version: 0.2.42
+  resolution: "typeorm@npm:0.2.42"
   dependencies:
     "@sqltools/formatter": ^1.2.2
     app-root-path: ^3.0.0
@@ -8136,25 +8136,26 @@ __metadata:
     reflect-metadata: ^0.1.13
     sha.js: ^2.4.11
     tslib: ^2.1.0
+    uuid: ^8.3.2
     xml2js: ^0.4.23
     yargs: ^17.0.1
     zen-observable-ts: ^1.0.0
   peerDependencies:
-    "@sap/hana-client": "*"
-    better-sqlite3: "*"
-    hdb-pool: "*"
-    ioredis: "*"
+    "@sap/hana-client": ^2.11.14
+    better-sqlite3: ^7.1.2
+    hdb-pool: ^0.1.6
+    ioredis: ^4.28.3
     mongodb: ^3.6.0
-    mssql: "*"
-    mysql2: "*"
-    oracledb: "*"
-    pg: "*"
-    pg-native: "*"
-    pg-query-stream: "*"
-    redis: "*"
-    sql.js: "*"
-    sqlite3: "*"
-    typeorm-aurora-data-api-driver: "*"
+    mssql: ^6.3.1
+    mysql2: ^2.2.5
+    oracledb: ^5.1.0
+    pg: ^8.5.1
+    pg-native: ^3.0.0
+    pg-query-stream: ^4.0.0
+    redis: ^3.1.1
+    sql.js: ^1.4.0
+    sqlite3: ^5.0.2
+    typeorm-aurora-data-api-driver: ^2.0.0
   peerDependenciesMeta:
     "@sap/hana-client":
       optional: true
@@ -8188,7 +8189,7 @@ __metadata:
       optional: true
   bin:
     typeorm: cli.js
-  checksum: edae24c359b54ca016363fa75566bd4797f6decfe1eda835f7d85957ff9db9f35a009243671e24dac89fe943874f4a807728ac3c4394d5a0b21be1dd5b8778ef
+  checksum: 6bec3a1c58658cd0d2bfa2fe89486f0b3d8d6b480a7a30bb26bd2faf0fc768d2fa454b87280b02ad9bb861ec848f94b7ea616a6f40e92073dae0abff2f248f8e
   languageName: node
   linkType: hard
 
@@ -8350,6 +8351,15 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: c81095493225ecfc28add49c106ca4f09cdf56bc66731aa8dabc2edbbccb1e1bfe2de6a115e5c6a380d3ea166d1636410b62ef216bb07b3feb1cfde1d95d5080
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^8.3.2":
+  version: 8.3.2
+  resolution: "uuid@npm:8.3.2"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 5575a8a75c13120e2f10e6ddc801b2c7ed7d8f3c8ac22c7ed0c7b2ba6383ec0abda88c905085d630e251719e0777045ae3236f04c812184b7c765f63a70e58df
   languageName: node
   linkType: hard
 

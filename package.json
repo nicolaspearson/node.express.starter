@@ -57,7 +57,7 @@
     "nconf": "^0.11.3",
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.2.41",
+    "typeorm": "^0.2.42",
     "winston": "^3.6.0"
   },
   "devDependencies": {
