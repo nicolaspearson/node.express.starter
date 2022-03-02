@@ -2,11 +2,11 @@
   "extends": ["config:base"],
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "branchPrefix": "chore/renovate/",
-  "commitBodyTable": false,
+  "commitBodyTable": true,
   "commitMessageAction": "Pin",
   "commitMessageExtra": "{{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{toVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
   "commitMessageTopic": "{{depName}}",
-  "enabledManagers": ["github-actions", "npm"],
+  "enabledManagers": ["dockerfile", "github-actions", "npm", "nvm"],
   "packageRules": [
     {
       "automerge": true,
