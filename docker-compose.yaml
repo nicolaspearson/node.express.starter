@@ -6,37 +6,49 @@ networks:
 
 services:
   api:
+    image: api:latest
     build:
+      args:
+        PACKAGE: api
       context: .
       dockerfile: Dockerfile
-    container_name: api
-    depends_on:
-      - postgres
-    environment:
-      - TYPEORM_HOST=postgres
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
     env_file:
       - .env
-    expose:
-      - 3000
-    image: nicpearson/node.express.starter:1.0.0
-    networks:
-      - development
+    environment:
+      - TYPEORM_DATABASE=express
+      - TYPEORM_HOST=db
+      - TYPEORM_PASSWORD=masterkey
+      - TYPEORM_PORT=5432
+      - TYPEORM_SCHEMA=public
+      - TYPEORM_USERNAME=master
     ports:
       - 3000:3000
-
-  postgres:
-    container_name: postgres
-    environment:
-      - POSTGRES_DB=express
-      - POSTGRES_USER=master
-      - POSTGRES_PASSWORD=masterkey
-    expose:
-      - 5432
-    hostname: postgres
-    image: postgres:14
+    depends_on:
+      db:
+        condition: service_healthy
     networks:
       - development
+    container_name: api
+
+  #########################
+  ##     Persistence     ##
+  #########################
+
+  db:
+    image: postgres:14-alpine
+    environment:
+      - POSTGRES_DB=express
+      - POSTGRES_PASSWORD=masterkey
+      - POSTGRES_USER=admin
     ports:
       - 5432:5432
+    networks:
+      - development
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./scripts/db:/docker-entrypoint-initdb.d
+    container_name: express-db

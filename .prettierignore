@@ -1,6 +1,6 @@
 .github/workflows
 *.spec.ts.snap
-.pnp.js
+.pnp.cjs
 .yarn
 build
 package.json

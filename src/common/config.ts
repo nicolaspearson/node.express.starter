@@ -96,7 +96,7 @@ function getValidationSchema(): Joi.ObjectSchema {
       .default(false),
     TYPEORM_USERNAME: Joi.string()
       .description('The database username to be used by TypeORM')
-      .example('master')
+      .example('admin')
       .required(),
   });
 }
