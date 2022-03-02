@@ -11,7 +11,7 @@
     {
       "commitMessageSuffix": "dev",
       "automerge": true,
-      "matchDepTypes": ["devDependencies"]
+      "depTypeList": ["devDependencies"]
     }
   ],
   "prConcurrentLimit": 5,
