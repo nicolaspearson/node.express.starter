@@ -10,9 +10,9 @@ jobs:
       matrix:
         node-version: [16]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: using node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - name: yarn install, lint, and build
@@ -29,9 +29,9 @@ jobs:
       matrix:
         node-version: [16]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: using node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - name: yarn install
@@ -48,9 +48,9 @@ jobs:
       matrix:
         node-version: [16]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: using node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - name: yarn install
@@ -80,7 +80,7 @@ jobs:
       - test_unit
       - test_integration
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: clean old release drafts
         run: hub release -f "%T (%S) %n" --include-drafts | grep " (draft)" | awk '{print $1}' | xargs --no-run-if-empty -t -n1 hub release delete
         env:
