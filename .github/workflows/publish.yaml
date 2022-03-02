@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: set release version
         id: vars
         run: echo ::set-output name=tag::$(echo ${{ github.event.release.tag_name }} | cut -d "v" -f 2)
