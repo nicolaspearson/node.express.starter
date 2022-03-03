@@ -1252,10 +1252,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/nconf@npm:^0.10.1":
-  version: 0.10.1
-  resolution: "@types/nconf@npm:0.10.1"
-  checksum: fd3581a4ca0683abfdf05170a29eaccb8354c162d6d82b823b203a3208cf3897aa7af7b475b0721c17993bdff87b266d153dcd322ca0194fceb8cf55b1fb3b0c
+"@types/nconf@npm:^0.10.2":
+  version: 0.10.2
+  resolution: "@types/nconf@npm:0.10.2"
+  checksum: 5b5f33d2dfebc6d07b6ae5b8d75afa7b02963a1cada19534fc0ba0aa09a077ebb14e602a68244acc2363bbae6c7d2cfa97571ef26ebce1e96c37aae2c184225e
   languageName: node
   linkType: hard
 
@@ -6075,7 +6075,7 @@ __metadata:
     "@types/express": ^4.17.13
     "@types/jest": ^27.4.1
     "@types/jsonwebtoken": ^8.5.8
-    "@types/nconf": ^0.10.1
+    "@types/nconf": ^0.10.2
     "@types/node": ^16.11.26
     "@types/pg": ^8.6.4
     "@types/prettier": ^2.4.4
