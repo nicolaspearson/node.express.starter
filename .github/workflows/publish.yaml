@@ -3,32 +3,45 @@ on:
   release:
     types: [published]
 
+env:
+  DOCKER_CONTEXT_PATH: .
+  DOCKERFILE: Dockerfile
+  PACKAGE: node.express.starter
+
 jobs:
   docker:
     name: docker build and publish
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Checkout git repository
         uses: actions/checkout@v3
       - name: set release version
         id: vars
         run: echo ::set-output name=tag::$(echo ${{ github.event.release.tag_name }} | cut -d "v" -f 2)
-      - name: yarn install, and build
+      - name: Install and build
         run: |
           yarn install
           yarn build
-      - name: set up docker buildx
+      - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
-      - name: login to dockerhub
+      - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: build and push
-        id: docker_build
-        uses: docker/build-push-action@v2
+          registry: ghcr.io
+          username: nicolaspearson
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push latest version
+        uses: docker/build-push-action@master
         with:
+          build-args: |
+            GITHUB_SHA=${{ github.sha }}
+            PACKAGE=${{ env.PACKAGE }}
+          cache-from: type=registry,ref=ghcr.io/nicolaspearson/${{ env.PACKAGE }}
+          cache-to: type=inline
+          context: ${{ env.DOCKER_CONTEXT_PATH }}
+          file: ${{ env.DOCKERFILE }}
+          platforms: linux/amd64
           push: true
-          tags: nicpearson/node.express.starter:${{ steps.vars.outputs.tag }}
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+          tags: |
+            ghcr.io/nicolaspearson/${{ env.PACKAGE }}:latest
+            ghcr.io/nicolaspearson/${{ env.PACKAGE }}:${{ steps.vars.outputs.tag }}

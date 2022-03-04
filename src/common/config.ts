@@ -1,7 +1,7 @@
 import Joi from 'joi';
+import path from 'path';
 import * as dotenv from 'dotenv';
 import * as fs from 'fs';
-import { resolve } from 'path';
 
 import { Environment } from '@/common/enums/environment.enum';
 
@@ -13,19 +13,22 @@ export const environments: Environment[] = [
 ];
 
 export function init(options: Api.ConfigOptions): void {
-  const config = loadEnvFile(options);
+  const config = {
+    ...loadEnvFile(options),
+    ...process.env,
+  };
   const validationOptions: Joi.ValidationOptions = {
     abortEarly: false,
-    allowUnknown: false,
+    allowUnknown: true,
   };
-  const { error, value: validatedConfig } = getValidationSchema().validate(
+  const validationResult: Joi.ValidationResult = getValidationSchema().validate(
     config,
     validationOptions
   );
-  if (error) {
-    throw new Error(`Config validation error: ${error.message}`);
+  if (validationResult.error) {
+    throw new Error(`Config validation error: ${validationResult.error.message}`);
   }
-  assignVariablesToProcess(validatedConfig);
+  assignVariablesToProcess(validationResult.value);
 }
 
 function assignVariablesToProcess(config: Record<string, string>) {
@@ -33,7 +36,7 @@ function assignVariablesToProcess(config: Record<string, string>) {
     return;
   }
   const keys = Object.keys(config).filter((key) => !(key in process.env));
-  keys.forEach((key) => (process.env[key] = config[key]));
+  for (const key of keys) process.env[key] = config[key];
 }
 
 function getValidationSchema(): Joi.ObjectSchema {
@@ -102,14 +105,14 @@ function getValidationSchema(): Joi.ObjectSchema {
 }
 
 function loadEnvFile(options: Api.ConfigOptions): dotenv.DotenvParseOutput {
-  const envFilePaths = Array.isArray(options.envFilePath)
+  const environmentFilePaths = Array.isArray(options.envFilePath)
     ? options.envFilePath
-    : [options.envFilePath || resolve(process.cwd(), '.env')];
+    : [options.envFilePath || path.resolve(process.cwd(), '.env')];
 
   let config: ReturnType<typeof dotenv.parse> = {};
-  for (const envFilePath of envFilePaths) {
-    if (fs.existsSync(envFilePath)) {
-      config = Object.assign(dotenv.parse(fs.readFileSync(envFilePath)), config);
+  for (const environmentFilePath of environmentFilePaths) {
+    if (fs.existsSync(environmentFilePath)) {
+      config = Object.assign(dotenv.parse(fs.readFileSync(environmentFilePath)), config);
     }
   }
   return config;

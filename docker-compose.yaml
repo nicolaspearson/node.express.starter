@@ -20,7 +20,7 @@ services:
       - TYPEORM_PASSWORD=masterkey
       - TYPEORM_PORT=5432
       - TYPEORM_SCHEMA=public
-      - TYPEORM_USERNAME=master
+      - TYPEORM_USERNAME=admin
     ports:
       - 3000:3000
     depends_on:
