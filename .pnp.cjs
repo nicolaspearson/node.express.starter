@@ -79,7 +79,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:27.1.3"],\
             ["ts-node", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:10.6.0"],\
             ["ts-node-dev", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:1.1.8"],\
-            ["tsconfig-paths", "npm:3.12.0"],\
+            ["tsconfig-paths", "npm:3.13.0"],\
             ["typeorm", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.2.44"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"],\
             ["winston", "npm:3.6.0"]\
@@ -7595,7 +7595,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:27.1.3"],\
             ["ts-node", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:10.6.0"],\
             ["ts-node-dev", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:1.1.8"],\
-            ["tsconfig-paths", "npm:3.12.0"],\
+            ["tsconfig-paths", "npm:3.13.0"],\
             ["typeorm", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.2.44"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"],\
             ["winston", "npm:3.6.0"]\
@@ -9805,6 +9805,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tsconfig-paths-npm-3.12.0-b78aadfb3f-4999ec6cd1.zip/node_modules/tsconfig-paths/",\
           "packageDependencies": [\
             ["tsconfig-paths", "npm:3.12.0"],\
+            ["@types/json5", "npm:0.0.29"],\
+            ["json5", "npm:1.0.1"],\
+            ["minimist", "npm:1.2.5"],\
+            ["strip-bom", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:3.13.0", {\
+          "packageLocation": "./.yarn/cache/tsconfig-paths-npm-3.13.0-bd5167829d-64f0de3c88.zip/node_modules/tsconfig-paths/",\
+          "packageDependencies": [\
+            ["tsconfig-paths", "npm:3.13.0"],\
             ["@types/json5", "npm:0.0.29"],\
             ["json5", "npm:1.0.1"],\
             ["minimist", "npm:1.2.5"],\
