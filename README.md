@@ -16,10 +16,10 @@ The starter project includes the following out of the box:
 
 ## Test Coverage
 
-![Coverage lines](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/unit/badge-lines.svg?sanitize=true)
-![Coverage functions](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/unit/badge-functions.svg?sanitize=true)
-![Coverage branches](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/unit/badge-branches.svg?sanitize=true)
-![Coverage statements](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/master/coverage/unit/badge-statements.svg?sanitize=true)
+![Coverage lines](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/main/coverage/unit/badge-lines.svg?sanitize=true)
+![Coverage functions](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/main/coverage/unit/badge-functions.svg?sanitize=true)
+![Coverage branches](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/main/coverage/unit/badge-branches.svg?sanitize=true)
+![Coverage statements](https://raw.githubusercontent.com/nicolaspearson/node.express.starter/main/coverage/unit/badge-statements.svg?sanitize=true)
 
 ## Getting Started
 
@@ -57,4 +57,4 @@ yarn db:migration:generate:missing InitialSchema
 
 ## Contribution Guidelines
 
-Never commit directly to master, create a feature branch and submit a pull request.
+Never commit directly to main, create a feature branch and submit a pull request.
