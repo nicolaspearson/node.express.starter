@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-transformer-validator", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.9.1"],\
             ["class-validator", "npm:0.13.2"],\
             ["commitlint", "npm:16.2.3"],\
-            ["concurrently", "npm:7.0.0"],\
+            ["concurrently", "npm:7.1.0"],\
             ["dotenv", "npm:16.0.0"],\
             ["eslint", "npm:8.12.0"],\
             ["eslint-config-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.5.0"],\
@@ -3455,10 +3455,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["concurrently", [\
-        ["npm:7.0.0", {\
-          "packageLocation": "./.yarn/cache/concurrently-npm-7.0.0-c402b003bc-1be78f24bf.zip/node_modules/concurrently/",\
+        ["npm:7.1.0", {\
+          "packageLocation": "./.yarn/cache/concurrently-npm-7.1.0-d3983cf1fe-723996afc7.zip/node_modules/concurrently/",\
           "packageDependencies": [\
-            ["concurrently", "npm:7.0.0"],\
+            ["concurrently", "npm:7.1.0"],\
             ["chalk", "npm:4.1.2"],\
             ["date-fns", "npm:2.28.0"],\
             ["lodash", "npm:4.17.21"],\
@@ -7568,7 +7568,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-transformer-validator", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.9.1"],\
             ["class-validator", "npm:0.13.2"],\
             ["commitlint", "npm:16.2.3"],\
-            ["concurrently", "npm:7.0.0"],\
+            ["concurrently", "npm:7.1.0"],\
             ["dotenv", "npm:16.0.0"],\
             ["eslint", "npm:8.12.0"],\
             ["eslint-config-prettier", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.5.0"],\
