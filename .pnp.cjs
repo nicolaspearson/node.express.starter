@@ -82,7 +82,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tsconfig-paths", "npm:3.14.1"],\
             ["typeorm", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.2.45"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"],\
-            ["winston", "npm:3.6.0"]\
+            ["winston", "npm:3.7.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -7606,7 +7606,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tsconfig-paths", "npm:3.14.1"],\
             ["typeorm", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:0.2.45"],\
             ["typescript", "patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"],\
-            ["winston", "npm:3.6.0"]\
+            ["winston", "npm:3.7.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -10408,10 +10408,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["winston", [\
-        ["npm:3.6.0", {\
-          "packageLocation": "./.yarn/cache/winston-npm-3.6.0-2b486d9bc3-5641837781.zip/node_modules/winston/",\
+        ["npm:3.7.2", {\
+          "packageLocation": "./.yarn/cache/winston-npm-3.7.2-5336ad5eff-f1f1a860d2.zip/node_modules/winston/",\
           "packageDependencies": [\
-            ["winston", "npm:3.6.0"],\
+            ["winston", "npm:3.7.2"],\
             ["@dabh/diagnostics", "npm:2.0.2"],\
             ["async", "npm:3.2.3"],\
             ["is-stream", "npm:2.0.1"],\
