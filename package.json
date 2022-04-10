@@ -74,7 +74,7 @@
     "@types/nconf": "^0.10.2",
     "@types/node": "^16.11.26",
     "@types/pg": "^8.6.5",
-    "@types/prettier": "^2.4.4",
+    "@types/prettier": "^2.6.0",
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
