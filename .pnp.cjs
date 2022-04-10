@@ -69,7 +69,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsonwebtoken", "npm:8.5.1"],\
             ["logform", "npm:2.4.0"],\
             ["module-alias", "npm:2.2.2"],\
-            ["nconf", "npm:0.11.3"],\
+            ["nconf", "npm:0.11.4"],\
             ["nodemon", "npm:2.0.15"],\
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.7.3"],\
             ["prettier", "npm:2.6.2"],\
@@ -7487,10 +7487,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["nconf", [\
-        ["npm:0.11.3", {\
-          "packageLocation": "./.yarn/cache/nconf-npm-0.11.3-e517d8c882-708369c952.zip/node_modules/nconf/",\
+        ["npm:0.11.4", {\
+          "packageLocation": "./.yarn/cache/nconf-npm-0.11.4-ddf30c8d7b-9fc53590a8.zip/node_modules/nconf/",\
           "packageDependencies": [\
-            ["nconf", "npm:0.11.3"],\
+            ["nconf", "npm:0.11.4"],\
             ["async", "npm:1.5.2"],\
             ["ini", "npm:2.0.0"],\
             ["secure-keys", "npm:1.0.0"],\
@@ -7593,7 +7593,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsonwebtoken", "npm:8.5.1"],\
             ["logform", "npm:2.4.0"],\
             ["module-alias", "npm:2.2.2"],\
-            ["nconf", "npm:0.11.3"],\
+            ["nconf", "npm:0.11.4"],\
             ["nodemon", "npm:2.0.15"],\
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.7.3"],\
             ["prettier", "npm:2.6.2"],\
