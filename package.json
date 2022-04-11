@@ -54,7 +54,7 @@
     "class-transformer-validator": "^0.9.1",
     "class-validator": "^0.13.2",
     "dotenv": "^16.0.0",
-    "ewl": "^0.1.5",
+    "ewl": "^0.2.2",
     "express": "^4.17.3",
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",

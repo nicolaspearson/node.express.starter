@@ -1,17 +1,19 @@
-import { Ewl, LogLevel, httpContextMiddleware, requestIdHandler } from 'ewl';
+import { Ewl, LogLevel } from 'ewl';
 import { Application } from 'express';
 
 export let ewl: Ewl;
 
 export function initEwl(app: Application): void {
   ewl = new Ewl({
-    attachRequestId: true,
     environment: process.env.ENVIRONMENT || 'development',
     label: 'app',
     logLevel: (process.env.LOG_LEVEL as LogLevel) || 'error',
     useLogstashFormat: false,
     version: process.env.VERSION || 'local',
   });
+
+  // Use the context middleware for request id injection
+  app.use(ewl.contextMiddleware);
 
   // Use express-winston for logging request information
   app.use(
@@ -37,8 +39,4 @@ export function initEwl(app: Application): void {
       statusLevels: true,
     })
   );
-
-  // Use express-http-context for context injection (request id)
-  app.use(httpContextMiddleware);
-  app.use(requestIdHandler);
 }
