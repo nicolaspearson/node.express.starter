@@ -1252,13 +1252,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/nconf@npm:^0.10.2":
-  version: 0.10.2
-  resolution: "@types/nconf@npm:0.10.2"
-  checksum: 5b5f33d2dfebc6d07b6ae5b8d75afa7b02963a1cada19534fc0ba0aa09a077ebb14e602a68244acc2363bbae6c7d2cfa97571ef26ebce1e96c37aae2c184225e
-  languageName: node
-  linkType: hard
-
 "@types/node@npm:*":
   version: 17.0.8
   resolution: "@types/node@npm:17.0.8"
@@ -1899,13 +1892,6 @@ __metadata:
   version: 2.0.6
   resolution: "asap@npm:2.0.6"
   checksum: b296c92c4b969e973260e47523207cd5769abd27c245a68c26dc7a0fe8053c55bb04360237cb51cab1df52be939da77150ace99ad331fb7fb13b3423ed73ff3d
-  languageName: node
-  linkType: hard
-
-"async@npm:^1.4.0":
-  version: 1.5.2
-  resolution: "async@npm:1.5.2"
-  checksum: fe5d6214d8f15bd51eee5ae8ec5079b228b86d2d595f47b16369dec2e11b3ff75a567bb5f70d12d79006665fbbb7ee0a7ec0e388524eefd454ecbe651c124ebd
   languageName: node
   linkType: hard
 
@@ -4329,7 +4315,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ini@npm:2.0.0, ini@npm:^2.0.0":
+"ini@npm:2.0.0":
   version: 2.0.0
   resolution: "ini@npm:2.0.0"
   checksum: e7aadc5fb2e4aefc666d74ee2160c073995a4061556b1b5b4241ecb19ad609243b9cceafe91bae49c219519394bbd31512516cb22a3b1ca6e66d869e0447e84e
@@ -6014,18 +6000,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nconf@npm:^0.11.4":
-  version: 0.11.4
-  resolution: "nconf@npm:0.11.4"
-  dependencies:
-    async: ^1.4.0
-    ini: ^2.0.0
-    secure-keys: ^1.0.0
-    yargs: ^16.1.1
-  checksum: 9fc53590a845b7e5526902a6f6778614e9d4a75f23511b5921c982bd6c8646e14a4ddb30d15b7ecf58d0e3124fde925cbc8112f1d40f62118a6f22a8e6e8b1b4
-  languageName: node
-  linkType: hard
-
 "negotiator@npm:0.6.3":
   version: 0.6.3
   resolution: "negotiator@npm:0.6.3"
@@ -6084,7 +6058,6 @@ __metadata:
     "@types/express": ^4.17.13
     "@types/jest": ^27.4.1
     "@types/jsonwebtoken": ^8.5.8
-    "@types/nconf": ^0.10.2
     "@types/node": ^16.11.26
     "@types/pg": ^8.6.5
     "@types/prettier": ^2.6.0
@@ -6114,7 +6087,6 @@ __metadata:
     jsonwebtoken: ^8.5.1
     logform: ^2.4.0
     module-alias: ^2.2.2
-    nconf: ^0.11.4
     nodemon: ^2.0.15
     pg: ^8.7.3
     prettier: ^2.6.2
@@ -7216,13 +7188,6 @@ __metadata:
   dependencies:
     xmlchars: ^2.2.0
   checksum: 5636b55cf15f7cf0baa73f2797bf992bdcf75d1b39d82c0aa4608555c774368f6ac321cb641fd5f3d3ceb87805122cd47540da6a7b5960fe0dbdb8f8c263f000
-  languageName: node
-  linkType: hard
-
-"secure-keys@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "secure-keys@npm:1.0.0"
-  checksum: 3dd4e64e6717fe6e2dc4c70e172982fcbad87b853e96566ab1cfaec540587f737bac106853ae469cb32d4a6413cfe80a28176cfe7dfcf7ddd35c9f92e58dffed
   languageName: node
   linkType: hard
 
@@ -8753,7 +8718,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^16.0.0, yargs@npm:^16.1.1, yargs@npm:^16.2.0":
+"yargs@npm:^16.0.0, yargs@npm:^16.2.0":
   version: 16.2.0
   resolution: "yargs@npm:16.2.0"
   dependencies:

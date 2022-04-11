@@ -39,7 +39,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.13"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/jsonwebtoken", "npm:8.5.8"],\
-            ["@types/nconf", "npm:0.10.2"],\
             ["@types/node", "npm:16.11.26"],\
             ["@types/pg", "npm:8.6.5"],\
             ["@types/prettier", "npm:2.6.0"],\
@@ -69,7 +68,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsonwebtoken", "npm:8.5.1"],\
             ["logform", "npm:2.4.0"],\
             ["module-alias", "npm:2.2.2"],\
-            ["nconf", "npm:0.11.4"],\
             ["nodemon", "npm:2.0.15"],\
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.7.3"],\
             ["prettier", "npm:2.6.2"],\
@@ -1819,15 +1817,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@types/nconf", [\
-        ["npm:0.10.2", {\
-          "packageLocation": "./.yarn/cache/@types-nconf-npm-0.10.2-3be266b15c-5b5f33d2df.zip/node_modules/@types/nconf/",\
-          "packageDependencies": [\
-            ["@types/nconf", "npm:0.10.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@types/node", [\
         ["npm:16.11.26", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-16.11.26-6163d95b7d-57757caaba.zip/node_modules/@types/node/",\
@@ -2655,13 +2644,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["async", [\
-        ["npm:1.5.2", {\
-          "packageLocation": "./.yarn/cache/async-npm-1.5.2-e971969e27-fe5d6214d8.zip/node_modules/async/",\
-          "packageDependencies": [\
-            ["async", "npm:1.5.2"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.2.3", {\
           "packageLocation": "./.yarn/cache/async-npm-3.2.3-e9d6b79c88-c4bee57ab2.zip/node_modules/async/",\
           "packageDependencies": [\
@@ -7486,19 +7468,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["nconf", [\
-        ["npm:0.11.4", {\
-          "packageLocation": "./.yarn/cache/nconf-npm-0.11.4-ddf30c8d7b-9fc53590a8.zip/node_modules/nconf/",\
-          "packageDependencies": [\
-            ["nconf", "npm:0.11.4"],\
-            ["async", "npm:1.5.2"],\
-            ["ini", "npm:2.0.0"],\
-            ["secure-keys", "npm:1.0.0"],\
-            ["yargs", "npm:16.2.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["negotiator", [\
         ["npm:0.6.2", {\
           "packageLocation": "./.yarn/cache/negotiator-npm-0.6.2-ba538e167a-dfddaff6c0.zip/node_modules/negotiator/",\
@@ -7563,7 +7532,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.13"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/jsonwebtoken", "npm:8.5.8"],\
-            ["@types/nconf", "npm:0.10.2"],\
             ["@types/node", "npm:16.11.26"],\
             ["@types/pg", "npm:8.6.5"],\
             ["@types/prettier", "npm:2.6.0"],\
@@ -7593,7 +7561,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsonwebtoken", "npm:8.5.1"],\
             ["logform", "npm:2.4.0"],\
             ["module-alias", "npm:2.2.2"],\
-            ["nconf", "npm:0.11.4"],\
             ["nodemon", "npm:2.0.15"],\
             ["pg", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:8.7.3"],\
             ["prettier", "npm:2.6.2"],\
@@ -8832,15 +8799,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["saxes", "npm:5.0.1"],\
             ["xmlchars", "npm:2.2.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["secure-keys", [\
-        ["npm:1.0.0", {\
-          "packageLocation": "./.yarn/cache/secure-keys-npm-1.0.0-11752bb49e-3dd4e64e67.zip/node_modules/secure-keys/",\
-          "packageDependencies": [\
-            ["secure-keys", "npm:1.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
