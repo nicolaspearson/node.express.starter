@@ -1,8 +1,8 @@
-import Boom from 'boom';
 import express from 'express';
+import * as Boom from '@hapi/boom';
 import * as jsonwebtoken from 'jsonwebtoken';
 
-import { logger } from '@/logger';
+import { ewl } from '@/logger';
 
 export function generateJwtTokens(jwtPayload: Api.JwtPayload): Api.JwtTokens {
   const accessTokenOptions: jsonwebtoken.SignOptions = {
@@ -24,7 +24,7 @@ export function getJwtFromRequest(jwtString: JwtString): Api.Jwt {
     }
     return verifyJwt(jwtString) as Api.Jwt;
   } catch (error) {
-    logger.debug(`Request is missing a valid jwt: ${(error as Error).message}`);
+    ewl.debug(`Request is missing a valid jwt: ${(error as Error).message}`);
     throw Boom.unauthorized('Invalid jwt provided.');
   }
 }

@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { logger } from '@/logger';
+import { ewl } from '@/logger';
 
 /**
  * Create a new function that passes any error to the next function.
@@ -16,7 +16,7 @@ export function safe(
     try {
       await handler(req, res, next);
     } catch (error) {
-      logger.error((error as Error).message);
+      ewl.error((error as Error).message);
       next(error);
     }
   };

@@ -6,24 +6,19 @@ import { resolve } from 'path';
 import App from '@/app';
 import * as config from '@/common/config';
 import * as db from '@/db';
-import * as logger from '@/logger';
+import { ewl } from '@/logger';
 
 // We use dotenv and joi to set the
 // environment variables in the app.
 config.init({ envFilePath: [resolve(process.cwd(), '.env')] });
 
-// Winston is used for logging, lets
-// prepare the logger implementation.
-logger.init();
-
 (async () => {
+  const app = new App();
   try {
     await db.init();
   } catch (error) {
-    logger.logger.error(`Database: Error connecting!`, error);
-    return error;
+    ewl.error('Database: Error connecting!');
+    throw error;
   }
-  // Finally, initialize the app.
-  const app = new App();
   app.listen();
 })();

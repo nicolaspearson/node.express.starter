@@ -2,7 +2,7 @@ import express from 'express';
 import { Server } from 'http';
 
 import userController from '@/user/user.controller';
-import { logger } from '@/logger';
+import { ewl, initEwl } from '@/logger';
 import { errorMiddleware } from '@/middleware/error.middleware';
 import { loggerMiddleware } from '@/middleware/logger.middleware';
 import { notFoundMiddleware } from '@/middleware/not-found.middleware';
@@ -13,6 +13,7 @@ export default class App {
 
   constructor() {
     this.app = express();
+    initEwl(this.app);
     this.initializePreControllerMiddleware();
     this.initializeControllers();
     this.initializePostControllerMiddleware();
@@ -31,7 +32,7 @@ export default class App {
     this.server = this.app.listen(
       port,
       /* istanbul ignore next: ignore callback */ () => {
-        logger.debug(`App: Listening on port ${port}!`);
+        ewl.debug(`App: Listening on port ${port}!`);
       }
     );
   }

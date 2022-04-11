@@ -43,6 +43,9 @@ function getValidationSchema(): Joi.ObjectSchema {
   return Joi.object({
     API_HOST: Joi.string().hostname().description('The API server host url').default('localhost'),
     API_PORT: Joi.number().port().description('The API server port').default(3000),
+    LOG_LEVEL: Joi.string()
+      .valid('debug', 'error', 'info', 'log', 'verbose', 'warn')
+      .default('log'),
     JWT_EXPIRATION: Joi.string()
       .regex(/^\d+[smhd]$/)
       .description('The validity period of the JWT token')

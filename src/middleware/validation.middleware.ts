@@ -1,4 +1,4 @@
-import Boom from 'boom';
+import * as Boom from '@hapi/boom';
 import { ClassType, transformAndValidate } from 'class-transformer-validator';
 import { NextFunction, Request, RequestHandler, Response } from 'express';
 

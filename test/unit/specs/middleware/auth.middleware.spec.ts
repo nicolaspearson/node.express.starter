@@ -1,4 +1,4 @@
-import Boom from 'boom';
+import * as Boom from '@hapi/boom';
 import { Request, Response } from 'express';
 
 import { authMiddleware } from '@/middleware/auth.middleware';
@@ -44,7 +44,8 @@ describe('Auth Middleware', () => {
 
   test('should throw if the jwt payload is invalid', () => {
     const mockNext = jest.fn();
-    const jwtString = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c' as JwtString;
+    const jwtString =
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c' as JwtString;
     const request = { headers: { authorization: `Bearer ${jwtString}` } } as Request;
     expect(() => authMiddleware(request, {} as Response, mockNext)).toThrowError(
       Boom.unauthorized('Invalid jwt provided.')

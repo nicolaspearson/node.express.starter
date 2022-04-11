@@ -1,4 +1,4 @@
-import Boom from 'boom';
+import * as Boom from '@hapi/boom';
 import { Request, Response } from 'express';
 
 import { FindUserByIdReqDto, LoginReqDto } from '@/common/dto';

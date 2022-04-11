@@ -1,4 +1,4 @@
-import Boom from 'boom';
+import * as Boom from '@hapi/boom';
 
 import { LoginReqDto, RegisterUserReqDto } from '@/common/dto';
 import { findUserById, login, register } from '@/user/user.service';

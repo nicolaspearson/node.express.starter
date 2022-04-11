@@ -1,4 +1,4 @@
-import Boom from 'boom';
+import * as Boom from '@hapi/boom';
 import { NextFunction, Request, Response } from 'express';
 
 import { HttpException } from '@/common/models/http-exception.model';

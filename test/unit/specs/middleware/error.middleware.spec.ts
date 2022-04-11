@@ -1,4 +1,4 @@
-import Boom from 'boom';
+import * as Boom from '@hapi/boom';
 import { Request, Response } from 'express';
 
 import { HttpException } from '@/common/models/http-exception.model';
@@ -9,9 +9,9 @@ const mockSend = jest.fn();
 const mockStatus = jest.fn(() => ({
   send: mockSend,
 }));
-const mockResponse = ({
+const mockResponse = {
   status: mockStatus,
-} as unknown) as Response;
+} as unknown as Response;
 
 describe('Error Middleware', () => {
   beforeEach(jest.clearAllMocks);

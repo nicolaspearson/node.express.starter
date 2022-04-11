@@ -1,4 +1,4 @@
-import Boom from 'boom';
+import * as Boom from '@hapi/boom';
 import { Request, Response } from 'express';
 
 import { notFoundMiddleware } from '@/middleware/not-found.middleware';
@@ -8,9 +8,9 @@ const mockSend = jest.fn();
 const mockStatus = jest.fn(() => ({
   send: mockSend,
 }));
-const mockResponse = ({
+const mockResponse = {
   status: mockStatus,
-} as unknown) as Response;
+} as unknown as Response;
 
 describe('Not Found Middleware', () => {
   beforeEach(jest.clearAllMocks);

@@ -5,9 +5,10 @@ import * as config from '@/common/config';
 config.init({ envFilePath: [resolve(__dirname, '.env.integration')] });
 
 jest.mock('@/logger', () => ({
-  logger: {
+  ewl: {
     debug: jest.fn(),
     error: jest.fn(),
     info: jest.fn(),
   },
+  initEwl: jest.fn(),
 }));

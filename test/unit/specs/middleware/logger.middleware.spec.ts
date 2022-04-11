@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { logger } from '@/logger';
+import { ewl } from '@/logger';
 import { loggerMiddleware } from '@/middleware/logger.middleware';
 
 describe('Logger Middleware', () => {
@@ -10,7 +10,7 @@ describe('Logger Middleware', () => {
     loggerMiddleware(request, {} as Response, mockNext);
     expect(mockNext).toBeCalledTimes(1);
     expect(mockNext).toBeCalledWith();
-    expect(logger.debug).toBeCalledTimes(1);
-    expect(logger.debug).toBeCalledWith(`${request.method} ${request.path}`);
+    expect(ewl.debug).toBeCalledTimes(1);
+    expect(ewl.debug).toBeCalledWith(`${request.method} ${request.path}`);
   });
 });
