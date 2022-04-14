@@ -39,7 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.13"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/jsonwebtoken", "npm:8.5.8"],\
-            ["@types/node", "npm:16.11.26"],\
+            ["@types/node", "npm:16.11.27"],\
             ["@types/pg", "npm:8.6.5"],\
             ["@types/prettier", "npm:2.6.0"],\
             ["@types/supertest", "npm:2.0.12"],\
@@ -1840,10 +1840,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
-        ["npm:16.11.26", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.26-6163d95b7d-57757caaba.zip/node_modules/@types/node/",\
+        ["npm:16.11.27", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.27-f4555d5131-6ed0c8c4d2.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:16.11.26"]\
+            ["@types/node", "npm:16.11.27"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -7512,7 +7512,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.13"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/jsonwebtoken", "npm:8.5.8"],\
-            ["@types/node", "npm:16.11.26"],\
+            ["@types/node", "npm:16.11.27"],\
             ["@types/pg", "npm:8.6.5"],\
             ["@types/prettier", "npm:2.6.0"],\
             ["@types/supertest", "npm:2.0.12"],\
@@ -9654,7 +9654,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.9"],\
             ["@tsconfig/node14", "npm:1.0.1"],\
             ["@tsconfig/node16", "npm:1.0.2"],\
-            ["@types/node", "npm:16.11.26"],\
+            ["@types/node", "npm:16.11.27"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
