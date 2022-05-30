@@ -1,23 +1,25 @@
 {
-  "window.zoomLevel": 0,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.fixAll.eslint": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "search.exclude": {
-    "**/.yarn": true,
-    "**/.pnp.*": true
-  },
+  "editor.rulers": [100],
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.nodePath": ".yarn/sdks",
+  "files.autoSave": "off",
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+  "search.exclude": {
+    "**/.git": true,
+    "**/.yarn": true,
+    "**/.pnp.*": true,
+    "yarn.lock": true
+  },
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true
 }

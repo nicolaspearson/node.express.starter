@@ -5,9 +5,13 @@ export let ewl: Ewl;
 
 export function initEwl(app: Application): void {
   ewl = new Ewl({
-    environment: process.env.ENVIRONMENT || 'development',
+    enableRequestLogging: true,
+    environment: process.env.NODE_ENV || 'development',
     label: 'app',
     logLevel: (process.env.LOG_LEVEL as LogLevel) || 'error',
+    requestLoggingOptions: {
+      colorize: process.env.NODE_ENV === 'development',
+    },
     useLogstashFormat: false,
     version: process.env.VERSION || 'local',
   });
@@ -15,28 +19,6 @@ export function initEwl(app: Application): void {
   // Use the context middleware for request id injection
   app.use(ewl.contextMiddleware);
 
-  // Use express-winston for logging request information
-  app.use(
-    ewl.createHandler({
-      bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
-      colorize: true,
-      expressFormat: false,
-      headerBlacklist: ['cookie', 'token'],
-      ignoreRoute: () => false,
-      meta: true,
-      metaField: 'express',
-      msg: 'HTTP {{res.statusCode}} {{req.method}} {{res.responseTime}}ms {{req.url}}',
-      requestWhitelist: [
-        'headers',
-        'method',
-        'httpVersion',
-        'originalUrl',
-        'query',
-        'params',
-        'url',
-      ],
-      responseWhitelist: ['headers', 'statusCode'],
-      statusLevels: true,
-    })
-  );
+  // Use request middleware to inject express metadata.
+  app.use(ewl.requestMiddleware!);
 }

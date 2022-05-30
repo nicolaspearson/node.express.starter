@@ -37,6 +37,6 @@
     "target": "esnext",
     "types": ["jest", "node"]
   },
-  "include": ["src/**/*.ts", "test/**/*.ts", "types/**/*.d.ts"],
+  "include": ["src", "test", "types"],
   "exclude": ["dist"]
 }
