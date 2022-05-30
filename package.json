@@ -1,6 +1,6 @@
 {
   "name": "node.express.starter",
-  "version": "1.0.0",
+  "version": "0.3.0",
   "description": "A simple Node.js API, written using Typescript and Express",
   "main": "src/index.ts",
   "engines": {
