@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/bcryptjs", "npm:2.4.2"],\
             ["@types/dotenv", "npm:8.2.0"],\
             ["@types/express", "npm:4.17.13"],\
-            ["@types/jest", "npm:28.1.0"],\
+            ["@types/jest", "npm:28.1.1"],\
             ["@types/jsonwebtoken", "npm:8.5.8"],\
             ["@types/node", "npm:16.11.38"],\
             ["@types/pg", "npm:8.6.5"],\
@@ -1836,10 +1836,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/jest", [\
-        ["npm:28.1.0", {\
-          "packageLocation": "./.yarn/cache/@types-jest-npm-28.1.0-6a60b75918-be4d887b24.zip/node_modules/@types/jest/",\
+        ["npm:28.1.1", {\
+          "packageLocation": "./.yarn/cache/@types-jest-npm-28.1.1-10d24a6906-0a8b045a7b.zip/node_modules/@types/jest/",\
           "packageDependencies": [\
-            ["@types/jest", "npm:28.1.0"],\
+            ["@types/jest", "npm:28.1.1"],\
             ["jest-matcher-utils", "npm:27.5.1"],\
             ["pretty-format", "npm:27.5.1"]\
           ],\
@@ -4395,7 +4395,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["eslint-plugin-jest", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:26.4.6"],\
             ["@types/eslint", null],\
-            ["@types/jest", "npm:28.1.0"],\
+            ["@types/jest", "npm:28.1.1"],\
             ["@types/typescript-eslint__eslint-plugin", null],\
             ["@typescript-eslint/eslint-plugin", "virtual:aaeb4dc49f0810c3e22d8f8f653f92c8444ceee46e1c53649b302b9ecd114f34b8288be00e18c8b9b823dea1e2c524a737185121b670f283490aaeb4db48ea46#npm:5.27.0"],\
             ["@typescript-eslint/utils", "virtual:b2ebf6e681c84e41e5415b662ec28e18e3588e9a9702e47cf34e72b9d5961741049f1ad8a2d2111955b2102d3ea4234ebfe53949b4b6d13a13c7d214bfa4d806#npm:5.26.0"],\
@@ -7487,7 +7487,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/bcryptjs", "npm:2.4.2"],\
             ["@types/dotenv", "npm:8.2.0"],\
             ["@types/express", "npm:4.17.13"],\
-            ["@types/jest", "npm:28.1.0"],\
+            ["@types/jest", "npm:28.1.1"],\
             ["@types/jsonwebtoken", "npm:8.5.8"],\
             ["@types/node", "npm:16.11.38"],\
             ["@types/pg", "npm:8.6.5"],\
@@ -9462,7 +9462,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/babel-jest", null],\
             ["@types/babel__core", null],\
             ["@types/esbuild", null],\
-            ["@types/jest", "npm:28.1.0"],\
+            ["@types/jest", "npm:28.1.1"],\
             ["@types/typescript", null],\
             ["babel-jest", null],\
             ["bs-logger", "npm:0.2.6"],\
