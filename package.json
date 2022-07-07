@@ -4,7 +4,7 @@
   "description": "A simple Node.js API, written using Typescript and Express",
   "main": "src/index.ts",
   "engines": {
-    "node": ">=v16.15.1"
+    "node": ">=v16.16.0"
   },
   "author": "Nicolas Pearson",
   "repository": {
