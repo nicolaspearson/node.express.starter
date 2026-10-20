@@ -34,7 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@hapi/boom", "npm:10.0.0"],\
-            ["@types/bcryptjs", "npm:2.4.2"],\
+            ["@types/bcryptjs", "npm:2.4.6"],\
             ["@types/dotenv", "npm:8.2.0"],\
             ["@types/express", "npm:4.17.13"],\
             ["@types/jest", "npm:28.1.7"],\
@@ -1751,10 +1751,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/bcryptjs", [\
-        ["npm:2.4.2", {\
-          "packageLocation": "./.yarn/cache/@types-bcryptjs-npm-2.4.2-3a0c115732-220dade7b0.zip/node_modules/@types/bcryptjs/",\
+        ["npm:2.4.6", {\
+          "packageLocation": "./.yarn/cache/@types-bcryptjs-npm-2.4.6-50588b8234-25ae1fd1e8.zip/node_modules/@types/bcryptjs/",\
           "packageDependencies": [\
-            ["@types/bcryptjs", "npm:2.4.2"]\
+            ["@types/bcryptjs", "npm:2.4.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7237,7 +7237,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["node.express.starter", "workspace:."],\
             ["@hapi/boom", "npm:10.0.0"],\
-            ["@types/bcryptjs", "npm:2.4.2"],\
+            ["@types/bcryptjs", "npm:2.4.6"],\
             ["@types/dotenv", "npm:8.2.0"],\
             ["@types/express", "npm:4.17.13"],\
             ["@types/jest", "npm:28.1.7"],\
